@@ -36,6 +36,6 @@ jobs:
         git config --local user.name "GitHub Action"
         git add admin/*.pdf
         git commit -m "Add compiled PDF from Typst source in admin/source"
-        git push https://<YOUR_PERSONAL_ACCESS_TOKEN>@github.com/ASallin/BEcon_6243_Introduction_Programming.git HEAD:${GITHUB_REF#refs/heads/}
+        git push
       env:
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
