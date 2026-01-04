@@ -268,9 +268,12 @@ The workload of TA's is relatively high for two reasons. First, because this is 
 *Estimated workload breakdown (per TA)*
 - Grading of group projects and exams (~30 hours)\
 TAs will assist in evaluating the final group projects. This involves reviewing the code repositories for quality and style, verifying the functionality of the Python classes, and assessing the documentation notebooks (Analysis / User Guide).
+
 - Content creation and preparation (~25 hours)\
 TAs will develop and refine the exercise materials and sample solutions for the 8 skill-building tutorials, ensuring they align with the weekly lecture content.
+
 - Presence and teaching (~15 hours)\
 In addition to the lead teaching role (rotating), TAs provide intensive in-class support, which is critical for programming courses with beginners/intermediates.
+
 - Student support and admin (~10 hours)\
 During the project phase, TAs act as technical mentors, helping groups structure their code and resolve Git/collaboration conflicts.
