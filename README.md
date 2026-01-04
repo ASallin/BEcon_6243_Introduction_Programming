@@ -1,4 +1,4 @@
-# BEcon_6243_Introduction_Programming
+# 6,243 Introduction to Programming
 
 ## Welcome
 
