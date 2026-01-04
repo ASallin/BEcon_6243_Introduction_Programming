@@ -265,7 +265,7 @@ We request a budget of 80–90 hours per Teaching Assistant, divided in 5 TA pos
 
 The workload of TA's is relatively high for two reasons. First, because this is a new course: the teaching assistants will play a critical role in the co-development of course material for the tutorials. Unlike established courses where materials are reused, the TAs will be creating the tutorial exercises from scratch. Second, we need assistance of the TAs in grading the group projects. We have deliberately chosen a Group Project as the primary assessment method (70% of the grade). We believe this is superior to standard exams because it compels students to actively apply their knowledge, which is essential because programming is a skill mastered primarily through practice. However, this pedagogical choice creates a significantly higher workload than standard grading. TAs must perform detailed code reviews of Git repositories, verify the functionality of custom Python classes, and evaluate technical documentation. This requires TAs to act as technical mentors and reviewers, rather than simple markers.
 
-Estimated workload breakdown (per TA):
+*Estimated workload breakdown (per TA)*
 - Grading of group projects and exams (~30 hours)\
 TAs will assist in evaluating the final group projects. This involves reviewing the code repositories for quality and style, verifying the functionality of the Python classes, and assessing the documentation notebooks (Analysis / User Guide).
 - Content creation and preparation (~25 hours)\
