@@ -1,0 +1,31 @@
+name: Compile LaTeX in admin/source to PDF in admin/
+
+on:
+  push:
+    paths:
+      - 'admin/source/*.tex'
+
+jobs:
+  build-and-upload-pdf:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: Set up TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra
+    - name: Compile LaTeX to PDF
+      run: |
+        for file in admin/source/*.tex; do
+          pdflatex -output-directory admin "$file"
+        done
+    - name: Commit PDF back to repo
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add admin/*.pdf
+        git commit -m "Add compiled PDF from LaTeX source in admin/source"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
