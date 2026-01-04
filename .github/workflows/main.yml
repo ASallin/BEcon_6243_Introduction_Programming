@@ -5,6 +5,9 @@ on:
     paths:
       - 'admin/source/*.typ'
 
+permissions:
+  contents: write
+  
 jobs:
   build-and-upload-pdf:
     runs-on: ubuntu-latest
@@ -22,12 +25,17 @@ jobs:
           typst compile "$file" "admin/$filename.pdf"
         done
 
+    - name: Set up Git user
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+    
     - name: Commit PDF back to repo
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add admin/*.pdf
         git commit -m "Add compiled PDF from Typst source in admin/source"
-        git push
+        git push https://<YOUR_PERSONAL_ACCESS_TOKEN>@github.com/ASallin/BEcon_6243_Introduction_Programming.git HEAD:${GITHUB_REF#refs/heads/}
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
