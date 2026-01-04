@@ -1,9 +1,9 @@
-name: Compile LaTeX in admin/source to PDF in admin/
+name: Compile Typst files in admin/source to PDF in admin/
 
 on:
   push:
     paths:
-      - 'admin/source/*.tex'
+      - 'admin/source/*.typ'
 
 jobs:
   build-and-upload-pdf:
@@ -11,21 +11,26 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-    - name: Set up TeX Live
+
+    - name: Install Typst
       run: |
-        sudo apt-get update
-        sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra
-    - name: Compile LaTeX to PDF
+        curl -Ls https://github.com/typst/typst/releases/download/v0.10.0/typst-x86_64-linux.tar.xz | tar -xJ
+        sudo mv typst-x86_64-linux/typst /usr/local/bin
+        typst --version
+
+    - name: Compile Typst to PDF
       run: |
-        for file in admin/source/*.tex; do
-          pdflatex -output-directory admin "$file"
+        for file in admin/source/*.typ; do
+          filename=$(basename "$file" .typ)
+          typst compile "$file" "admin/$filename.pdf"
         done
+
     - name: Commit PDF back to repo
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add admin/*.pdf
-        git commit -m "Add compiled PDF from LaTeX source in admin/source"
+        git commit -m "Add compiled PDF from Typst source in admin/source"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
