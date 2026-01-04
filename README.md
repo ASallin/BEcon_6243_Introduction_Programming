@@ -4,21 +4,21 @@
 
 Welcome to the course "6,243 Introduction to Programming"! This repository contains all course materials, exercises, and administrative information you'll need throughout the semester.
 
+## Course Philosophy
+
+The course aims to teach and coach young economists to code and work in a collaborative, structured and impactful way. The focus is on both traditional teaching and practical work, with guided exercises and project coaching in settings that reflect real work in research and industry.
+
 ## Course Goals
 
 By the end of this course, students will be able to:
 
-1. **Understand Programming Fundamentals**: Grasp core programming concepts including variables, data types, control structures, and functions.
+1. **Understand programming fundamentals and develop intermediate programming skills**: Grasp core programming concepts including variables, data types, control structures, and functions. Know how to write modular code, document functions and implement error handling, use object oriented programming. *Note*: This course builds on the materials covered in the course "Data Handling". 
 
-2. **Write Clean and Efficient Code**: Develop the ability to write well-structured, readable, and maintainable code following best practices.
+2. **Write Clean and Efficient Code**: Develop the ability to write well-structured, readable, and maintainable code following best practices. Apply collaborative, reproducible code development practices.
 
-3. **Problem-Solving Skills**: Apply computational thinking to break down complex problems into manageable components and implement solutions.
+3. **Design and execute projects in Economics and Econometrics in a systematic and reproducible way.**: Apply computational thinking to break down complex problems into manageable components and implement solutions. This includes knowing how to design relational database schemas and interact with relational data from Python. If time permits, understand central concepts of DevOps, including continuous integration workflows and automated testing.
 
-4. **Debugging and Testing**: Learn to identify, diagnose, and fix errors in code, as well as write tests to ensure code correctness.
-
-5. **Work with Data**: Understand how to manipulate, analyze, and visualize data using programming tools and libraries.
-
-6. **Version Control**: Gain proficiency in using version control systems to manage code and collaborate with others.
+4. **Version Control**: Gain proficiency in using version control systems to manage code and collaborate with others.
 
 ## Repository Structure
 
