@@ -14,7 +14,8 @@ jobs:
 
     - name: Install Typst
       run: |
-        curl -Ls https://github.com/typst/typst/releases/download/v0.10.0/typst-x86_64-linux.tar.xz | tar -xJ
+        curl -L -o typst.zip https://github.com/typst/typst/releases/download/v0.10.0/typst-x86_64-linux.zip
+        unzip typst.zip
         sudo mv typst-x86_64-linux/typst /usr/local/bin
         typst --version
 
