@@ -1,0 +1,68 @@
+<section id="$idprefix$title-slide" $for(title-slide-attributes/pairs)$ $it.key$="$it.value$" $endfor$
+  class="quarto-title-block" style="text-align: left; margin-left: 35px; margin-top: 110px; padding: 0;">
+
+  <!-- Logo -->
+  <img src="../../assets/img/logo.png" alt="Logo" style="width: 115px; display: block; margin-bottom: 40px; ">
+
+  <!-- Title --> <!-- 40px margin below the title -->
+  <h1 class="title" style="text-align: left; font-size: 50px; margin: 0 0 40px 0; font-weight:bold;">$title$</h1>
+  <!-- 30px margin below the title -->
+
+  <!-- Subtitle -->
+  $if(subtitle)$
+  <p class="subtitle" style="text-align: left; font-size: 40px; margin: 0 0 25px 0;font-weight:bold; color:#6b7280;">$subtitle$</p>
+  <!-- 25px margin below the subtitle -->
+  $endif$
+
+  <!-- Authors -->
+  <div class="quarto-title-authors"
+    style="text-align: left; display: flex; flex-direction: column; align-items: flex-start; margin: 0 0 1px 0; padding: 0;color:#6b7280;">
+    $for(by-author)$
+    <div class="quarto-title-author"
+      style="text-align: left; display: flex; flex-direction: column; align-items: flex-start; margin: 0 0 1px 0; padding: 0;">
+      <!-- 5px margin between authors -->
+
+      <!-- Author name -->
+      <div class="quarto-title-author-name" style="text-align: left; margin: 0; padding: 0;">
+        $if(by-author.url)$
+        <a href="$by-author.url$" style="text-align: left; margin: 0; padding: 0;">
+          $endif$
+          $if(by-author.name.literal)$
+          $by-author.name.literal$
+          $endif$
+          $if(by-author.url)$
+        </a>
+        $endif$
+      </div>
+
+      <!-- Author email -->
+      $if(by-author.email)$
+      <div class="quarto-title-author-email" style="text-align: left; margin: 0; padding: 0;">
+        <a href="mailto:$by-author.email$">$by-author.email$</a>
+      </div>
+      $endif$
+
+      <!-- Author affiliation -->
+      $if(by-author.affiliations)$
+      $for(by-author.affiliations)$
+      <p class="quarto-title-affiliation" style="text-align: left; margin: 0; padding: 0;">
+        $if(it.url)$
+        <a href="$it.url$">$it.name$</a>
+        $else$
+        $it.name$
+        $endif$
+      </p>
+      $endfor$
+      $endif$
+
+    </div>
+    $endfor$
+  </div>
+
+  <!-- Date -->
+  $if(date)$
+  <p style="text-align: left; margin: 2px 0 0 0;color:#6b7280;"> <!-- 2px margin above the date -->
+    <span>$date$</span>
+  </p>
+  $endif$
+</section>

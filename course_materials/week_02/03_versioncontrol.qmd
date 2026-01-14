@@ -1,0 +1,44 @@
+---
+title: '6,243 Introduction to Programming'
+subtitle: 'Lecture 2: Getting Started'
+author: "Dr. Franziska Bender, Dr. Aurélien Sallin"
+date: "2025-09-16"
+code-line-numbers: false
+format:
+  revealjs:
+    template-partials:
+      - ../../assets/style/title-slide.html
+    width: 1280
+    height: 720
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    theme: ../../assets/style/hsgtheme.scss
+highlight-style: dracula 
+cache: false
+echo: false
+execute:
+  echo: true
+---
+
+
+```{r set-options, echo=FALSE, cache=FALSE, warning=FALSE}
+options(width = 100)
+library(knitr)
+library(purrr)
+```
+
+## Goals for today
+
+In this lecture, we will:
+
+- understand what is **version control** to collaborate
+- know basic in `git`
+- install and prepare `git`
+- create a github account
+
+
+## Vision
+
+Collaborate

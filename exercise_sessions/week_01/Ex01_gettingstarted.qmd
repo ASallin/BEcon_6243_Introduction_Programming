@@ -1,0 +1,179 @@
+---
+title: 'Exercise 1'
+subtitle: 'Getting started'
+author: ""
+date: "2025-09-16"
+code-line-numbers: false
+format:
+  html:
+    # template-partials:
+      #  - ../../style/title-slide.html
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    # theme: ../../style/hsgtheme.scss
+highlight-style: dracula 
+cache: false
+echo: false
+execute:
+  echo: true
+---
+
+
+# Install VS Code
+
+Install VS Code. 
+
+Create the "data science profile". See here for an introduction: https://code.visualstudio.com/docs/terminal/profiles
+
+Install the following extensions: 
+
+  - Jupyter
+  - Python 
+
+
+# Use the terminal in VS Code
+
+two exercises: find your working directory using `pwd`. 
+
+For the course: where you want to save your course materials, create a folder: BECON_6243_Introduction_programming using the terminal. In this folder, create a subdir "my_work". 
+
+We will have the following folder structure:
+
+```
+BECON_6243_Introduction_programming/
+├── course_materials/       # GitHub repo (read-only for students)
+│   ├── week_01/
+│   ├── week_02/
+│   ├── ...
+│   └── README.md
+├── my_work/               # Student's own work
+│   ├── week01/
+│   ├── week02/
+│   ├── ...
+│   ├── week12/
+│   └── group_project/
+```
+where BECON_6243_Introduction_programming is the main folder, "course materials" will be created next week with git, and "my_work" will contain students' own work. We suggest to organize "my_work" with weekly subfolders "week01, ..., week12, group_project".
+
+Create a file "hello.txt" in the "week01" folder. Remove the file "hello.txt". 
+
+Finally, move your working directory to "BECON_6243_Introduction_programming".
+
+
+Solution.
+
+# Install python via `uv`
+
+go on the uv website for more information. 
+
+::: {.panel-tabset}
+
+### Windows
+
+```powershell
+# Install uv using standalone installer
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Add uv to PATH (follow instructions in the terminal)
+$env:PATH = $env:PATH + ";$env:USERPROFILE\.local\bin"
+
+# Make the PATH change permanent
+[Environment]::SetEnvironmentVariable("PATH", $env:PATH + ";$env:USERPROFILE\.local\bin", "User")
+
+# Verify installation
+uv 
+```
+
+### Mac
+
+```bash
+# Install uv standalone installer
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or using pip
+pip install uv
+
+# Verify installation
+uv --version
+```
+:::
+
+THen check if it works in your terminal:
+
+```bash
+uv
+```
+
+
+### Install python using `uv`
+
+Now, we can install python. If Python is already installed on your system (on Windows mostly the case), uv will detect and use it without configuration.
+
+```
+uv python install
+```
+
+We will Python 3. 
+
+
+### Create a project (your "environment")
+
+Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with uv, which will manage our python version and our packages. 
+
+use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_6243_Introduction_programming`. Then specify your version of python. We will use python 3.14
+
+```
+uv init --python 3.11.9
+```
+You should observe the creation of a .venv folder, and of different files:
+
+```
+BECON_6243_Introduction_programming/
+├── .venv/                    # Virtual environment folder
+├── .python-version          # Specifies Python version (3.11.9)
+├── pyproject.toml           # Project configuration file
+├── README.md                # Basic project documentation
+└── hello.py                 # Example Python script
+```
+
+**Key files explained:**
+- **.venv/**: Contains the isolated Python environment
+- **.python-version**: Pins the Python version for this project
+- **pyproject.toml**: Defines project dependencies and settings
+- **hello.py**: A simple "Hello World" script to get you started
+
+Now, we will install the following packages in our environment: `ipykernel`, `pandas`, `numpy`. Install them using `uv add `
+
+```
+uv add ipykernel pandas numpy
+```
+
+You should see your file `pyproject.toml` being updated under "dependencies". 
+
+
+
+# Using a python script in VS code
+
+In VScode, observe in the left bar that you can access all your files. It is better to work from vscode directly in your directory. Either use the terminal and navigate to BECON_6243_Introduction_programming using `cd`. Then use
+
+```
+code .
+```
+
+to open VS code in your directory. You can also use File/Open Folder.
+
+Once in BECON_6243_Introduction_programming, open the hello.py. The trick now is to **choose the right python interpreter**. Python interpreters are... We need the one from our environment. Either CTRL + SHIFT + P to open the palette. Then write "Select Python Interpreter". 
+
+
+
+## Create a Python script
+
+Create a first python script called hello.py, which contains the command `print('hello world')`. Run it from the script and run it with uv using the following command: 
+
+```
+uv run hello.py
+```
+
+

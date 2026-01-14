@@ -180,19 +180,6 @@ cat("success!")
 
 <!-- ## {class="inverse" background-image="../../img/roadahead2.jpg" background-size="100%" background-repeat="cover"} -->
 
-## Two special lectures
-
-<br>
-
-#### **23.10.2025**: APIs
-
-  - Minna Heim, Ex-BEcon in St. Gallen, Data Science at ETH Zurich
-
-
-#### **27.11.2025**: Data Handling @Bank for International Settlements
-
-  - Andrew Li, Ex-MiQeF, Macroeconomic Analyst
-
 
 
 ## Part I: Data (Science) fundamentals 
@@ -200,7 +187,7 @@ cat("success!")
 
 ## Exam information
 
-The examination consists of three parts:
+The examination consists of two parts:
 
 - [Group written project]{.green-bold}, 35% of final grade.
 - [Short examination on the group project]{.green-bold}, 15% of final grade.

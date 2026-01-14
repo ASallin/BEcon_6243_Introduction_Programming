@@ -1,0 +1,449 @@
+---
+title: '6,243 Introduction to Programming'
+subtitle: 'Lecture 2: Getting Started'
+author: "Dr. Franziska Bender, Dr. Aurélien Sallin"
+date: "2025-09-16"
+code-line-numbers: false
+format:
+  revealjs:
+    template-partials:
+      - ../../assets/style/title-slide.html
+    width: 1280
+    height: 720
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    theme: ../../assets/style/hsgtheme.scss
+highlight-style: dracula 
+cache: false
+echo: false
+execute:
+  echo: true
+---
+
+
+```{r set-options, echo=FALSE, cache=FALSE, warning=FALSE}
+options(width = 100)
+library(knitr)
+library(purrr)
+```
+
+## Goals for today
+
+In this lecture, we will:
+
+- learn what a **terminal** is and why we use it
+- set up an efficient (and professional) programming **environment** with an IDE
+- install **Python** and understand environments
+- prepare everything needed for the next lectures
+
+
+## Vision
+
+Tooling: all the tools you need to work efficiently and in flow!
+
+
+
+# Using a terminal
+
+## What is a terminal?
+
+The terminal is a text-based interface that allows you to interact directly with your computer by typing commands. keyboard-driven interaction with your operating systems
+
+#### Alternate names:
+
+"terminal", "command line", "shell", "command prompt"
+
+#### Some terminology:
+
+  - Terminal: the window where you type commands and see output
+  - Shell: the program that interprets your commands (e.g. bash, zsh, PowerShell)
+
+<br>
+
+###### You usually don’t need to worry about the difference at the beginning.
+
+
+## Why use a terminal
+
+Almost everything you can do with a graphical interface can also be done from the terminal.
+
+#### The terminal is often:
+  
+  - faster for repetitive tasks
+  - more precise and reproducible
+  - easier to automate
+  - available on almost every system
+
+Because of this, terminals are widely used in programming, data science, and research workflows.
+
+
+
+## Opening a terminal
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### macOS
+
+**How to open:**
+
+- Press Cmd + Space
+- Type "Terminal"
+- Press Enter
+
+:::
+
+::: {.column width="50%"}
+
+### Windows
+
+**How to open:**
+
+- Open the Start menu
+- Search for "PowerShell" or <br> "Windows Terminal"
+:::
+
+:::
+
+#### On Windows, you may see different terminals:
+
+- **Command Prompt (CMD)**: lightweight, text-based, older (early days of Windows), very basic
+- **PowerShell**: modern, powerful, widely used, CMD on steroids
+- **Windows Terminal**: a modern app that can host both
+
+For this course:
+Use PowerShell or Windows Terminal.
+
+
+
+
+## What is a file
+A file is a container of data (remember: 0s and 1s). 
+
+- Files usually have **extensions** (.txt, .csv, .pdf)
+  These are conventions, not strict rules.
+- Files live inside **directories** (folders)
+- Every file has a unique location called a **path**
+
+
+## Paths
+
+Paths describe where a file is located.
+
+##### Absolute path:
+
+- starts from the root of the file system
+- example: `/Users/Bilbo/Documents/TheRedBookofWestmarch.txt`
+
+##### Relative path:
+
+- starts from your current working directory
+- example: `Documents/TheRedBookofWestmarch.txt`
+
+
+## On Shortcuts and Paths
+
+##### Useful path shortcuts:
+
+<div style="font-family: monospace;">
+`.`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current directory  
+`..`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent directory  
+`~`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your home directory  
+</div>
+
+#### Examples:
+  - file in the parent directory: `../file.txt`      
+  - your Documents folder: `~/Documents`      
+
+Running `cd` without arguments takes you to ~
+
+
+
+## On Shortcuts and Paths in the terminal
+
+
+##### Main commands:
+
+  - Check your current directory: `pwd `
+  - List files in the current folder: `ls`(macOS, Linux) or `dir` (Windows)
+  - Move into and out of the directory: `cd dir` or `cd .. `
+
+##### Output from `dir`
+```bash
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+lar--          04/01/2026    09:33                .github
+lar--          04/01/2026    11:05                admin
+lar--          04/01/2026    11:06                course_materials
+lar--          04/01/2026    09:33                examination
+lar--          04/01/2026    09:33                exercise_sessions
+```
+
+#####  Tips:
+
+- Use Tab for auto-completion
+- Use arrow keys to browse command history
+- Use clear (macOS/Linux) or Ctrl+L to clear the screen
+
+
+
+## Working with files  in a terminal
+
+| Command | Description |
+|:--------|:------------|
+| `mkdir data` | Create a directory |
+| `touch hello.txt` | Create an empty text file named "hello" |
+| `rm hello.txt` | Delete a file (Careful! Can't be undone!) |
+| `cat hello.txt` | Print contents of a file |
+| `nano hello.txt` | Edit a file |
+| `cp hello.txt hello_copy.txt` | Copy a file (`cp <source> <target>`) |
+| `mv hello.txt goodbye.txt` | Move a file (`mv <source> <target>`)  |
+
+Look at bradtraversy's [Common Terminal Commands](https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce)
+
+
+## Naming Conventions: Snake, Camel or Kebab Case
+
+Let me drop a quick and general note on naming. As in how to name files, folders and functions. It may look like a mere detail, but concise formatting and styling of your code will be appreciated by your peers and by those you ask for help. Plus, following an established convention will not make you look like a complete novice.
+
+Do not use spaces in folder or file names! Never. If you need lengthy descriptions, use underscores ’_‘, dashes’-’ or camelCase.
+
+Avoid umlauts and special characters. Encoding and internationalization is worth a book of its own. It’s not like modern programming environments can’t handle it, but encoding will introduce further complications. These are exactly the type of complications that may lead to an unplanned, frustrating waste of hours. You may be lucky enough to find a quick fix, but you may as well not. Avoid encoding issues if you do not plan to build a deeper understanding of encoding on the fly. This is especially true for cross-platform collaborations (Windows vs. Unix/OSX).
+
+either go for camelCase, snake_case or kebab-case. Otherwise, prefer lower-case characters. Also make sure to not switch styles within a project. There a plenty of style guides around, go with whatever your lab or community goes.
+
+
+# On IDEs
+
+## What is an IDE? 
+
+An IDE (Integrated Development Environment) is a tool designed to help you write, run, and manage code efficiently.
+
+Compared to a basic text editor, an IDE typically provides:
+
+  - syntax highlighting
+  - code completion and suggestions
+  - error detection
+  - integrated terminal
+  - debugging tools
+  - version control integration (e.g. Git)
+
+These features reduce errors and make programming more structured and productive.
+
+
+## IDE is more complete than a code editor (to remove)
+
+A text editor edits plain text and has no understanding of programming languages
+
+A code editor understands programming languages and provides syntax highlighting and basic assistance
+
+An IDE combines a code editor with tools to run, debug, test, and manage projects (cf RStudio)
+
+
+## Visual Studio Code
+
+Visual Studio Code (VS Code) is a lightweight but powerful code editor that behaves like a full IDE through **extensions**.
+
+  - free and open source
+  - available on Windows, macOS, and Linux
+  - widely used in academia and industry
+  - well suited for Python, R, and many other languages
+  - very versatile and flexible!
+
+
+## Why we use VS Code in this course (remove)
+
+#### VS Code a good default choice for learning programming:
+
+  - same setup on all operating systems
+  - integrated terminal
+  - strong Python support
+  - project-based work with folders
+  - extensions for Git, notebooks, linters, and formatters
+  - integrated Copilot!
+
+
+
+## First setup
+
+First step today:
+
+- Install VS Code
+- Open it once
+- Install the “Data Science” profile
+  (File > Preferences > Profiles)
+- Extensions to install:
+  - Python (Microsoft): For linting, IntelliSense, debugging, and testing
+  - Pylance (Microsoft): type checking, code navigation, autocompletion
+  - Ruff: for better linting, import sorting
+  - Jupyter: runs notebooks directly in VS Code.
+
+We will build on this setup throughout the course.
+
+*Linting is the process of analyzing code to identify potential errors, style violations, and code quality issues before running the program. Using linting tools can help detect problems such as syntax errors, unused variables, and code that doesn’t conform to style guidelines
+
+
+
+# Python
+
+## Why python?
+
+Python is:
+
+- easy to read and write
+- widely used in data science, economics, research, web development, automation, and AI
+- flexible enough for small scripts and large projects
+
+It is a good first programming language.
+
+
+## Python vs R: What the heck?
+
+#### The choice that does not matter
+
+tbd
+
+## Environments in Python and R
+
+In R:
+
+- strong(er) standards (CRAN)
+- more backward compatibility
+
+In Python:
+
+- Python relies heavily on project-specific environments
+- Managing dependencies is essential
+- "Wild West": many packages, many versions
+- environments are critical to avoid conflicts
+
+
+## Virtual environment
+
+A **virtual environment** is an isolated Python setup for a project.
+
+- install project-specific packages and python version for a specific project without affecting other projects
+- use different versions across projects
+- avoid conflicts and broken setups, minimizes the risk of bad surprises
+
+A **project** is simply a folder that contains your code, its configuration, and its dependencies.
+
+
+## Virtual Environment Manager: `uv` 
+
+`uv` is a modern, fast Python package manager that simplifies working with environment:
+
+- manages virtual environments automatically
+- installs packages very fast
+- works consistently across systems
+- uses modern project standards
+
+(Replaces pip, pip-tools, and virtualenv.)
+
+
+## Virtual Environment Manager: `uv` 
+
+With uv, each project has:
+
+- its own environment
+- a clear list of dependencies
+- reproducible setup
+
+This is how professional Python projects are structured.
+
+
+## Getting started using `uv`
+
+```{python}
+#| eval: false
+# Initialize a new project with its own environment
+uv init my_project
+cd my_project
+
+# Add dependencies (creates/updates pyproject.toml)
+uv add rich pandas
+
+# Run code (automatically uses the project's venv)
+uv run main.py
+```
+
+Project based on the pyproject.toml. 
+
+
+
+
+## Python in the shell or in a .py file
+
+You can use Python in two ways:
+
+- interactively in the terminal
+- by writing code in .py files
+
+We will mainly work with .py files inside projects.
+
+```{python}
+print('Hello World')
+print(2 + 3)             # addition(+)
+print(3 - 1)             # subtraction(-)
+```
+
+
+## Coming from R
+
+If you know R (which you do...), Python will feel familiar, but not identical.
+
+#### Key differences to keep in mind:
+
+- indentation is part of the language
+- indexing starts at 0
+- Python prefers explicit, readable code
+
+We will revisit these ideas throughout the course.
+
+
+## Indentation
+
+In Python, indentation defines structure.
+
+Blocks of code are created by indentation, not by curly braces {} like in many other languages.
+
+- indentation is mandatory
+- inconsistent indentation will break your code
+
+```{python}
+#| eval: false
+#| echo: true
+if x > 0:
+    print("positive")
+    print("still inside the block")
+
+print("outside the block")
+```
+
+
+## Counting starts at 0
+
+In Python, many things start counting at 0 (**zero-based indexing**).
+
+#### Example:
+- the first element has index 0
+- the second element has index 1
+
+Common in programming, even if it feels unintuitive at first.
+
+
+## For next time
+
+- install Git
+- create a GitHub account
+- create groups of five
+
+We will start using version control from the next lecture.
+
+
+## References:
+
+- Matthias Bannert, [Research Software Engineering](https://rse-book.github.io/interaction.html)
