@@ -1,6 +1,6 @@
 ---
-title: 'Exercise 1'
-subtitle: 'Getting started'
+title: 'Exercise 2'
+subtitle: 'First commits with git'
 author: ""
 date: "2025-09-16"
 code-line-numbers: false
@@ -21,25 +21,20 @@ execute:
 ---
 
 
-# Install VS Code
+# Install `git`
 
-Install VS Code.
+This step has to be done before the exercise session. Please follow the instructions on the git website: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-Create the "data science profile". See here for an introduction: https://code.visualstudio.com/docs/terminal/profiles
+For Windows users, we recommend installing git via the Git for Windows installer: https://git-scm.com/download/win. For Mac users, git is often already installed. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time.
 
-Install the following extensions:
+```bash
+$ git --version
+```
 
-  - Jupyter
-  - Python
+If you don’t have it installed already, it will prompt you to install it. If you want a more up to date version, you can also install it via a binary installer. A macOS Git installer is maintained and available for download at the Git website, at https://git-scm.com/download/mac.
 
+<br>
 
-# Use the terminal in VS Code
-
-two exercises: find your working directory using `pwd`.
-
-For the course: where you want to save your course materials, create a folder: BECON_6243_Introduction_programming using the terminal. In this folder, create a subdir "my_work".
-
-We will have the following folder structure:
 
 ```
 BECON_6243_Introduction_programming_exercises/

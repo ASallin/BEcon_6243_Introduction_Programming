@@ -1,0 +1,61 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "BEcon 6243 - Introduction to Programming"
+  navbar:
+    title: "Course Materials"
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Lectures"
+        menu:
+          - text: "Week 1: Introduction"
+            file: course_materials/week_01/01a_introduction.qmd
+          - text: "Week 1: Getting Started"
+            file: course_materials/week_01/01b_gettingstarted.qmd
+          - text: "Week 2: [Coming Soon]"
+            href: "#"
+          - text: "Week 3: [Coming Soon]"
+            href: "#"
+      - text: "Exercises"
+        menu:
+          - text: "Exercise 1: Getting Started"
+            file: course_materials/week_01/Ex01_gettingstarted.qmd
+      - text: "Admin"
+        menu:
+          - text: "Syllabus"
+            file: admin/source/syllabus_v1.pdf
+    right:
+      - icon: github
+        href: https://github.com/your-username/BEcon_6243_Introduction_Programming
+        text: "GitHub"
+
+format:
+  html:
+    theme: 
+      - flatly
+      - assets/style/hsgtheme.scss
+    css: assets/style/custom.css
+    toc: true
+    toc-location: right
+    code-line-numbers: false
+    highlight-style: dracula
+    
+  revealjs:
+    template-partials:
+      - assets/style/title-slide.html
+    width: 1280
+    height: 720
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    theme: assets/style/hsgtheme.scss
+    highlight-style: dracula
+    code-line-numbers: false
+
+execute:
+  echo: true
+  cache: false

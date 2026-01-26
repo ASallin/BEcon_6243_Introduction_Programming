@@ -94,7 +94,7 @@
 = Examination
 
 The student assessment consists of two main components:
-1. *Final Exam (30% of the grade)*: This exam will cover the core theoretical concepts of the course. Form: digital exam, BYOD, duration tbd. Multiple-choice questions.
+1. *Final Exam (30% of the grade)*: This exam will cover the core theoretical concepts of the course. Form: digital exam, BYOD, 60'. Multiple-choice questions.
 2. *Group Project (70% of the grade)*: This is the primary applied assessment. Students will work in groups of 4-5 to design and build a 'software tool' that applies the skills learned in the course.\
 The central goal of the project is for students to develop a custom Python class that is useful for a specific economic analysis. The emphasis is on the technical implementation, not the depth of the economic analysis. This could involve, for example, handling a unique data source, automating common analytical tasks, displaying results in a novel way, etc. We'll provide general ideas on how classes can be used throughout the course.
 
