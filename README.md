@@ -1,4 +1,4 @@
-# 6,243 Introduction to Programming
+# 4,222 Introduction to Programming
 
 ## Welcome
 
