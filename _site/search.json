@@ -44,210 +44,210 @@
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#goals-for-today",
     "href": "course_materials/week_01/01b_gettingstarted.html#goals-for-today",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Goals for today",
-    "text": "Goals for today\nIn this lecture, we will:\n\nlearn what a terminal is and why we use it\nset up an efficient (and professional) programming environment with an IDE\ninstall Python and understand environments\nprepare everything needed for the next lectures"
+    "text": "Goals for today\nIn the next 60 minutes, we will:\n\nlearn what a terminal is and why we use it\nset up an efficient (and professional) programming environment with an IDE\ninstall Python and understand environments\nprepare everything needed for the next lectures"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#vision",
     "href": "course_materials/week_01/01b_gettingstarted.html#vision",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Vision",
     "text": "Vision\nTooling: all the tools you need to work efficiently and in flow!"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#what-is-a-terminal",
     "href": "course_materials/week_01/01b_gettingstarted.html#what-is-a-terminal",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "What is a terminal?",
-    "text": "What is a terminal?\nThe terminal is a text-based interface that allows you to interact directly with your computer by typing commands. keyboard-driven interaction with your operating systems\nAlternate names:\n“terminal”, “command line”, “shell”, “command prompt”\nSome terminology:\n\nTerminal: the window where you type commands and see output\nShell: the program that interprets your commands (e.g. bash, zsh, PowerShell)\n\n\nYou usually don’t need to worry about the difference at the beginning."
+    "text": "What is a terminal?\nThe terminal is a text-based interface that allows you to interact directly with your computer/operating system by typing commands.\nAlternative names:\n“terminal”, “command line”, “shell”, “command prompt”\nSome terminology:\n\nTerminal: the window where you type commands and see output\nShell: the program that interprets your commands (e.g. bash, zsh, PowerShell)\n\n\nYou don’t need to worry about the difference at the beginning."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#why-use-a-terminal",
     "href": "course_materials/week_01/01b_gettingstarted.html#why-use-a-terminal",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Why use a terminal",
     "text": "Why use a terminal\nAlmost everything you can do with a graphical interface can also be done from the terminal.\nThe terminal is often:\n\nfaster for repetitive tasks\nmore precise and reproducible\neasier to automate\navailable on almost every system\n\nBecause of this, terminals are widely used in programming, data science, and research workflows."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#opening-a-terminal",
     "href": "course_materials/week_01/01b_gettingstarted.html#opening-a-terminal",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Opening a terminal",
     "text": "Opening a terminal\n\n\nmacOS\nHow to open:\n\nPress Cmd + Space\nType “Terminal”\nPress Enter\n\n\nWindows\nHow to open:\n\nOpen the Start menu\nSearch for “PowerShell” or  “Windows Terminal”\n\n\nOn Windows, you may see different terminals:\n\nCommand Prompt (CMD): lightweight, text-based, older (early days of Windows), very basic\nPowerShell: modern, powerful, widely used, CMD on steroids\nWindows Terminal: a modern app that can host both\n\nFor this course: Use PowerShell or Windows Terminal."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#what-is-a-file",
     "href": "course_materials/week_01/01b_gettingstarted.html#what-is-a-file",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "What is a file",
     "text": "What is a file\nA file is a container of data (remember: 0s and 1s).\n\nFiles usually have extensions (.txt, .csv, .pdf) These are conventions, not strict rules.\nFiles live inside directories (folders)\nEvery file has a unique location called a path"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#paths",
     "href": "course_materials/week_01/01b_gettingstarted.html#paths",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Paths",
-    "text": "Paths\nPaths describe where a file is located.\nAbsolute path:\n\nstarts from the root of the file system\nexample: /Users/Bilbo/Documents/TheRedBookofWestmarch.txt\n\nRelative path:\n\nstarts from your current working directory\nexample: Documents/TheRedBookofWestmarch.txt"
+    "text": "Paths\nPaths describe where a file is located.\nAbsolute path:\n\nstarts from the root of the file system\nexample: C:/Users/Bilbo/Documents/TheRedBookofWestmarch.txt\n\nRelative path:\n\nstarts from your current working directory\nexample: Documents/TheRedBookofWestmarch.txt"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#on-shortcuts-and-paths",
     "href": "course_materials/week_01/01b_gettingstarted.html#on-shortcuts-and-paths",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "On Shortcuts and Paths",
-    "text": "On Shortcuts and Paths\nUseful path shortcuts:\n\n.       current directory\n..      parent directory\n~       your home directory\n\nExamples:\n\nfile in the parent directory: ../file.txt\n\nyour Documents folder: ~/Documents\n\nRunning cd without arguments takes you to ~"
+    "text": "On Shortcuts and Paths\nUseful path shortcuts:\n\n.    current directory\n..    parent directory\n~    your home directory\n\nExamples:\n\nfile in the parent directory: ../file.txt\nyour Documents folder: ~/Documents\n\nRunning cd without arguments takes you to ~"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#on-shortcuts-and-paths-in-the-terminal",
     "href": "course_materials/week_01/01b_gettingstarted.html#on-shortcuts-and-paths-in-the-terminal",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "On Shortcuts and Paths in the terminal",
     "text": "On Shortcuts and Paths in the terminal\nMain commands:\n\nCheck your current directory: pwd\nList files in the current folder: ls(macOS, Linux) or dir (Windows)\nMove into and out of the directory: cd dir or cd ..\n\nOutput from dir\nMode                 LastWriteTime         Length Name\n----                 -------------         ------ ----\nlar--          04/01/2026    09:33                .github\nlar--          04/01/2026    11:05                admin\nlar--          04/01/2026    11:06                course_materials\nlar--          04/01/2026    09:33                examination\nlar--          04/01/2026    09:33                exercise_sessions\nTips:\n\nUse Tab for auto-completion\nUse arrow keys to browse command history\nUse clear (macOS/Linux) or Ctrl+L to clear the screen"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#working-with-files-in-a-terminal",
     "href": "course_materials/week_01/01b_gettingstarted.html#working-with-files-in-a-terminal",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Working with files in a terminal",
-    "text": "Working with files in a terminal\n\n\n\nCommand\nDescription\n\n\n\n\nmkdir data\nCreate a directory\n\n\ntouch hello.txt\nCreate an empty text file named “hello”\n\n\nrm hello.txt\nDelete a file (Careful! Can’t be undone!)\n\n\ncat hello.txt\nPrint contents of a file\n\n\nnano hello.txt\nEdit a file\n\n\ncp hello.txt hello_copy.txt\nCopy a file (cp &lt;source&gt; &lt;target&gt;)\n\n\nmv hello.txt goodbye.txt\nMove a file (mv &lt;source&gt; &lt;target&gt;)\n\n\n\nLook at bradtraversy’s Common Terminal Commands"
+    "text": "Working with files in a terminal\n\n\n\nCommand\nDescription\n\n\n\n\nmkdir data\nCreate/Make a directory called “data”\n\n\ntouch hello.txt\nCreate an empty text file named “hello”\n\n\nrm hello.txt\nDelete a file (Careful! Can’t be undone!)\n\n\ncat hello.txt\nPrint contents of a file\n\n\nnano hello.txt\nEdit a file\n\n\ncp hello.txt hello_copy.txt\nCopy a file (cp &lt;source&gt; &lt;target&gt;)\n\n\nmv hello.txt goodbye.txt\nMove a file (mv &lt;source&gt; &lt;target&gt;)\n\n\n\nLook at bradtraversy’s Common Terminal Commands"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-snake-camel-or-kebab-case",
     "href": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-snake-camel-or-kebab-case",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Naming Conventions: Snake, Camel or Kebab Case",
-    "text": "Naming Conventions: Snake, Camel or Kebab Case\nLet me drop a quick and general note on naming. As in how to name files, folders and functions. It may look like a mere detail, but concise formatting and styling of your code will be appreciated by your peers and by those you ask for help. Plus, following an established convention will not make you look like a complete novice.\nDo not use spaces in folder or file names! Never. If you need lengthy descriptions, use underscores ’_‘, dashes’-’ or camelCase.\nAvoid umlauts and special characters. Encoding and internationalization is worth a book of its own. It’s not like modern programming environments can’t handle it, but encoding will introduce further complications. These are exactly the type of complications that may lead to an unplanned, frustrating waste of hours. You may be lucky enough to find a quick fix, but you may as well not. Avoid encoding issues if you do not plan to build a deeper understanding of encoding on the fly. This is especially true for cross-platform collaborations (Windows vs. Unix/OSX).\neither go for camelCase, snake_case or kebab-case. Otherwise, prefer lower-case characters. Also make sure to not switch styles within a project. There a plenty of style guides around, go with whatever your lab or community goes."
+    "text": "Naming Conventions: Snake, Camel or Kebab Case\n\n\n\nDo not use spaces in folder or file names! Never.\nAvoid special characters (remember Data Handling and encoding nightmares).\nMake sure to not switch styles within a project.\nGo for camelCase, snake_case or kebab-case.\n\nExamples:\n\nsnake_case: my_file_name.py\ncamelCase: myFileName.py\nkebab-case: my-file-name.py"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#what-is-an-ide",
     "href": "course_materials/week_01/01b_gettingstarted.html#what-is-an-ide",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "What is an IDE?",
-    "text": "What is an IDE?\nAn IDE (Integrated Development Environment) is a tool designed to help you write, run, and manage code efficiently.\nCompared to a basic text editor, an IDE typically provides:\n\nsyntax highlighting\ncode completion and suggestions\nerror detection\nintegrated terminal\ndebugging tools\nversion control integration (e.g. Git)\n\nThese features reduce errors and make programming more structured and productive."
+    "text": "What is an IDE?\nAn IDE (Integrated Development Environment) is a tool designed to help you write, run, and manage code efficiently.\nCompared to a basic text editor, an IDE typically provides:\n\nsyntax highlighting\ncode completion and suggestions\nerror detection\nintegrated terminal\ndebugging tools\nversion control integration (e.g. Git)\n\nThese features reduce errors and make programming more structured and productive.\nExamples: VSCode, Pycharm, RStudio, Posit"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#ide-is-more-complete-than-a-code-editor-to-remove",
     "href": "course_materials/week_01/01b_gettingstarted.html#ide-is-more-complete-than-a-code-editor-to-remove",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "IDE is more complete than a code editor (to remove)",
     "text": "IDE is more complete than a code editor (to remove)\nA text editor edits plain text and has no understanding of programming languages\nA code editor understands programming languages and provides syntax highlighting and basic assistance\nAn IDE combines a code editor with tools to run, debug, test, and manage projects (cf RStudio)"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#visual-studio-code",
     "href": "course_materials/week_01/01b_gettingstarted.html#visual-studio-code",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Visual Studio Code",
-    "text": "Visual Studio Code\nVisual Studio Code (VS Code) is a lightweight but powerful code editor that behaves like a full IDE through extensions.\n\nfree and open source\navailable on Windows, macOS, and Linux\nwidely used in academia and industry\nwell suited for Python, R, and many other languages\nvery versatile and flexible!"
+    "text": "Visual Studio Code\nVisual Studio Code (VS Code) is a lightweight but powerful code editor that behaves like a full IDE through extensions.\n\n\n\n\nfree and open source\navailable on Windows, macOS, and Linux\nwidely used in academia and industry\nwell suited for Python, R, and many other languages\nvery versatile and flexible!"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#why-we-use-vs-code-in-this-course-remove",
     "href": "course_materials/week_01/01b_gettingstarted.html#why-we-use-vs-code-in-this-course-remove",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Why we use VS Code in this course (remove)",
     "text": "Why we use VS Code in this course (remove)\nVS Code a good default choice for learning programming:\n\nsame setup on all operating systems\nintegrated terminal\nstrong Python support\nproject-based work with folders\nextensions for Git, notebooks, linters, and formatters\nintegrated Copilot!"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#first-setup",
     "href": "course_materials/week_01/01b_gettingstarted.html#first-setup",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "First setup",
     "text": "First setup\nFirst step today:\n\nInstall VS Code\nOpen it once\nInstall the “Data Science” profile (File &gt; Preferences &gt; Profiles)\nExtensions to install:\n\nPython (Microsoft): For linting, IntelliSense, debugging, and testing\nPylance (Microsoft): type checking, code navigation, autocompletion\nRuff: for better linting, import sorting\nJupyter: runs notebooks directly in VS Code.\n\n\nWe will build on this setup throughout the course.\n*Linting is the process of analyzing code to identify potential errors, style violations, and code quality issues before running the program. Using linting tools can help detect problems such as syntax errors, unused variables, and code that doesn’t conform to style guidelines"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#why-python",
     "href": "course_materials/week_01/01b_gettingstarted.html#why-python",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Why python?",
     "text": "Why python?\nPython is:\n\neasy to read and write\nwidely used in data science, economics, research, web development, automation, and AI\nflexible enough for small scripts and large projects\n\nIt is a good first programming language."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#python-vs-r-what-the-heck",
     "href": "course_materials/week_01/01b_gettingstarted.html#python-vs-r-what-the-heck",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Python vs R: What the heck?",
     "text": "Python vs R: What the heck?\nThe choice that does not matter\ntbd"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#environments-in-python-and-r",
     "href": "course_materials/week_01/01b_gettingstarted.html#environments-in-python-and-r",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Environments in Python and R",
     "text": "Environments in Python and R\nIn R:\n\nstrong(er) standards (CRAN)\nmore backward compatibility\n\nIn Python:\n\nPython relies heavily on project-specific environments\nManaging dependencies is essential\n“Wild West”: many packages, many versions\nenvironments are critical to avoid conflicts"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#virtual-environment",
     "href": "course_materials/week_01/01b_gettingstarted.html#virtual-environment",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Virtual environment",
     "text": "Virtual environment\nA virtual environment is an isolated Python setup for a project.\n\ninstall project-specific packages and python version for a specific project without affecting other projects\nuse different versions across projects\navoid conflicts and broken setups, minimizes the risk of bad surprises\n\nA project is simply a folder that contains your code, its configuration, and its dependencies."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#virtual-environment-manager-uv",
     "href": "course_materials/week_01/01b_gettingstarted.html#virtual-environment-manager-uv",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Virtual Environment Manager: uv",
     "text": "Virtual Environment Manager: uv\nuv is a modern, fast Python package manager that simplifies working with environment:\n\nmanages virtual environments automatically\ninstalls packages very fast\nworks consistently across systems\nuses modern project standards\n\n(Replaces pip, pip-tools, and virtualenv.)"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#virtual-environment-manager-uv-1",
     "href": "course_materials/week_01/01b_gettingstarted.html#virtual-environment-manager-uv-1",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Virtual Environment Manager: uv",
     "text": "Virtual Environment Manager: uv\nWith uv, each project has:\n\nits own environment\na clear list of dependencies\nreproducible setup\n\nThis is how professional Python projects are structured."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#getting-started-using-uv",
     "href": "course_materials/week_01/01b_gettingstarted.html#getting-started-using-uv",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Getting started using uv",
     "text": "Getting started using uv\n\n# Initialize a new project with its own environment\nuv init my_project\ncd my_project\n\n# Add dependencies (creates/updates pyproject.toml)\nuv add rich pandas\n\n# Run code (automatically uses the project's venv)\nuv run main.py\n\nProject based on the pyproject.toml."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#python-in-the-shell-or-in-a-.py-file",
     "href": "course_materials/week_01/01b_gettingstarted.html#python-in-the-shell-or-in-a-.py-file",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Python in the shell or in a .py file",
     "text": "Python in the shell or in a .py file\nYou can use Python in two ways:\n\ninteractively in the terminal\nby writing code in .py files\n\nWe will mainly work with .py files inside projects.\n\nprint('Hello World')\n\nHello World\n\nprint(2 + 3)             # addition(+)\n\n5\n\nprint(3 - 1)             # subtraction(-)\n\n2"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#coming-from-r",
     "href": "course_materials/week_01/01b_gettingstarted.html#coming-from-r",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Coming from R",
     "text": "Coming from R\nIf you know R (which you do…), Python will feel familiar, but not identical.\nKey differences to keep in mind:\n\nindentation is part of the language\nindexing starts at 0\nPython prefers explicit, readable code\n\nWe will revisit these ideas throughout the course."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#indentation",
     "href": "course_materials/week_01/01b_gettingstarted.html#indentation",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Indentation",
     "text": "Indentation\nIn Python, indentation defines structure.\nBlocks of code are created by indentation, not by curly braces {} like in many other languages.\n\nindentation is mandatory\ninconsistent indentation will break your code\n\n\nif x &gt; 0:\n    print(\"positive\")\n    print(\"still inside the block\")\n\nprint(\"outside the block\")"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#counting-starts-at-0",
     "href": "course_materials/week_01/01b_gettingstarted.html#counting-starts-at-0",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "Counting starts at 0",
     "text": "Counting starts at 0\nIn Python, many things start counting at 0 (zero-based indexing).\nExample:\n\nthe first element has index 0\nthe second element has index 1\n\nCommon in programming, even if it feels unintuitive at first."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#for-next-time",
     "href": "course_materials/week_01/01b_gettingstarted.html#for-next-time",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "For next time",
     "text": "For next time\n\ninstall Git\ncreate a GitHub account\ncreate groups of five\n\nWe will start using version control from the next lecture."
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#references",
     "href": "course_materials/week_01/01b_gettingstarted.html#references",
-    "title": "6,243 Introduction to Programming",
+    "title": "4,222 Introduction to Programming",
     "section": "References:",
     "text": "References:\n\nMatthias Bannert, Research Software Engineering"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#by-the-end-of-the-course-you-will-be-able-to",
     "href": "course_materials/week_01/01a_introduction.html#by-the-end-of-the-course-you-will-be-able-to",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "By the end of the course, you will be able to…",
     "text": "By the end of the course, you will be able to…\n\nUse essential tools for working with data  We will work with the programming language R, but the concepts apply to any programming language.\nManage a data project from start to finish  You will practice collecting, cleaning, and analyzing data to carry out a complete project in Economics (research, consulting, …).\nFormulate meaningful questions from data  You will learn how to explore datasets and identify relevant questions.\nCommunicate insights effectively  You will gain experience in presenting results clearly and persuasively."
   },
@@ -261,7 +261,7 @@
   {
     "objectID": "course_materials/week_01/01a_introduction.html#your-commitment-to-the-course",
     "href": "course_materials/week_01/01a_introduction.html#your-commitment-to-the-course",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Your commitment to the course",
     "text": "Your commitment to the course\n\nPrepare with reading, visit the lecture, recap key concepts in lecture notes (self-study)\nWork on exercises, come to exercise session, tackle the tricky exercises together!\nCode, code, and code. repeat…\n🤖 Use AI as a learning companion and sparring partner, not as a crutch 🩼! (more on that later)\n\n\ntry &lt;- 0\nwhile(try &lt; 999) {\n  try &lt;- try + 1\n}\ncat(\"success!\")\n\nsuccess!"
   },
@@ -289,49 +289,49 @@
   {
     "objectID": "course_materials/week_01/01a_introduction.html#course-concept-lectures",
     "href": "course_materials/week_01/01a_introduction.html#course-concept-lectures",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Course concept: lectures",
     "text": "Course concept: lectures\n\nLectures (Thursday morning)\n\nBackground/Concepts\nIllustration of concepts\nIllustration of ‘hands-on’ approaches"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#course-concept-exercises",
     "href": "course_materials/week_01/01a_introduction.html#course-concept-exercises",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Course concept: exercises",
     "text": "Course concept: exercises\n\nExercise sheets (handed out every other week)\n\nSome conceptual questions\nHands-on exercises/tutorials in R\nFirst Exercises (set up R/RStudio) is available on StudyNet/Canvas today"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#course-concept-exercise-sessions",
     "href": "course_materials/week_01/01a_introduction.html#course-concept-exercise-sessions",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Course concept: exercise sessions",
     "text": "Course concept: exercise sessions\n\nIn-class exercise sessions (bi-weekly evening sessions)\n\nDiscussion of exercises and additional input with Federica and Andrea\nRecap of concepts\nQ&A, support\ntime for more coding!"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#part-i-data-science-fundamentals",
     "href": "course_materials/week_01/01a_introduction.html#part-i-data-science-fundamentals",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Part I: Data (Science) fundamentals",
     "text": "Part I: Data (Science) fundamentals"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#exam-information",
     "href": "course_materials/week_01/01a_introduction.html#exam-information",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Exam information",
     "text": "Exam information\nThe examination consists of two parts:\n\nGroup written project, 35% of final grade.\nShort examination on the group project, 15% of final grade.\nCentral written examination, 50% of final grade."
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#exam-information-group-project",
     "href": "course_materials/week_01/01a_introduction.html#exam-information-group-project",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Exam information: group project",
     "text": "Exam information: group project\nGoals\n\nUse real-world data in a project to practice and reinforce the concepts covered in the course.\n\nProject timeline\n\nOctober 16: Release of Part 1 of the project (in lecture) and group formation.\nNovember 6, 23:59: Intermediate submission (not graded).\nNovember 7: Release of model solution for Part 1 and release of Part 2 of the project.\nDecember 11, 10:00: Final submission (graded).\n\nThe entire project will be evaluated after the final submission."
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#exam-information-short-examination",
     "href": "course_materials/week_01/01a_introduction.html#exam-information-short-examination",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Exam information: short examination",
     "text": "Exam information: short examination\nGoal\nBeyond the critical use of LLMs, students must demonstrate their own grasp of the material and ensure fair collaboration in group work, avoiding free-riding.\n\nImportant information\n\nDate: December 11th at the beginning of the lecture.\nWritten examination: digital, BYOD!.\nDuration: 20mn\nThis short exam consists of 2–3 questions about the homework project."
   },
@@ -352,7 +352,7 @@
   {
     "objectID": "course_materials/week_01/01a_introduction.html#core-course-resources",
     "href": "course_materials/week_01/01a_introduction.html#core-course-resources",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "Core course resources",
     "text": "Core course resources\n\nAll information and materials (notes, slides, course sheet, syllabus, etc.) are available on Canvas.\nUse github to be always updated about the course material\n\nInstall git on your computer as explained here\nClone the course repository using:\n\n\n\ngit clone https://github.com/ASallin/datahandling-lecture.git # to clone\ngit checkout 2025 # to switch to the branch \"2025*\ngit pull origin 2025 # to update"
   },
@@ -387,28 +387,28 @@
   {
     "objectID": "course_materials/week_01/01a_introduction.html#use-ai-as-your-learning-companion",
     "href": "course_materials/week_01/01a_introduction.html#use-ai-as-your-learning-companion",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "1. Use AI as your Learning Companion",
-    "text": "1. Use AI as your Learning Companion\n\n\n❌ Ask AI to write full programs for you\n✅ Ask structured questions based on your own knowledge (idea: knowledge reinforcement)\n✅ Use AI to explore unknown and new approaches\n\nYou want to compute the mean of each element of the list x.\n\nx &lt;- list(\n  c(1,2,3), \n  c(4,5,6)\n  )\n\n\nAsk AI: “I know that the function to compute the mean is mean(), and I know that it takes atomic vectors as argument. How do I apply the mean to each vector in the list? Give me two options, and explain pros/cons?”"
+    "text": "1. Use AI as your Learning Companion\n\n\n❌ Ask AI to write full programs for you\n✅ Ask structured questions based on your own knowledge (idea: knowledge reinforcement)\n✅ Use AI to explore unknown and new approaches\n\nYou want to compute the mean of each element of the list x.\n\nx &lt;- list(\n  c(1,2,3),\n  c(4,5,6)\n  )\n\n\nAsk AI: “I know that the function to compute the mean is mean(), and I know that it takes atomic vectors as argument. How do I apply the mean to each vector in the list? Give me two options, and explain pros/cons?”"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#use-ai-to-better-understand-your-code",
     "href": "course_materials/week_01/01a_introduction.html#use-ai-to-better-understand-your-code",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "2. Use AI to better understand your code",
-    "text": "2. Use AI to better understand your code\n\n\n✅ Use AI as a translator\n✅ Ask for explanations in plain language\n✅ Get step-by-step descriptions\n\nYou have the following piece of code:\n\nmat &lt;- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3, \n             byrow = TRUE,\n             dimnames = list(c(\"row1\", \"row2\"),\n                             c(\"C.1\", \"C.2\", \"C.3\")))\nmat[1,] &lt;- mat[1, ] + 10\nmat[1,] == mat[2,]\n\n C.1  C.2  C.3 \nTRUE TRUE TRUE \n\n\nAsk AI: “Explain line by line what this R code does in plain English. What does the option byrow = TRUE do?”"
+    "text": "2. Use AI to better understand your code\n\n\n✅ Use AI as a translator\n✅ Ask for explanations in plain language\n✅ Get step-by-step descriptions\n\nYou have the following piece of code:\n\nmat &lt;- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3,\n             byrow = TRUE,\n             dimnames = list(c(\"row1\", \"row2\"),\n                             c(\"C.1\", \"C.2\", \"C.3\")))\nmat[1,] &lt;- mat[1, ] + 10\nmat[1,] == mat[2,]\n\n C.1  C.2  C.3 \nTRUE TRUE TRUE \n\n\nAsk AI: “Explain line by line what this R code does in plain English. What does the option byrow = TRUE do?”"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#use-ai-to-debug",
     "href": "course_materials/week_01/01a_introduction.html#use-ai-to-debug",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "3. Use AI to debug",
     "text": "3. Use AI to debug\n\n\n✅ Share error messages and context\n✅ Ask for possible causes\n✅ Ask for alternative solutions\n\nYou try:\nlog(\"text\")\nR sends the following error message: “non-numeric argument to mathematical function”\nAsk AI: “Why does this error occur in R and how can I fix it?”"
   },
   {
     "objectID": "course_materials/week_01/01a_introduction.html#use-ai-as-your-motivational-coach",
     "href": "course_materials/week_01/01a_introduction.html#use-ai-as-your-motivational-coach",
-    "title": "Introduction to Programming",
+    "title": "4222 Introduction to Programming",
     "section": "4. Use AI as your Motivational Coach 🔥",
     "text": "4. Use AI as your Motivational Coach 🔥\n\n\n✅ Ask for tips to stay motivated and understand WHY you’re learning what you’re learning\n✅ Ask for ways to make coding more enjoyable and directly relevant to your goals\n✅ Ask for ways to make your code and thinking process more like the product of experts\n\nYou don’t see the point of learning to code functions and loops since AI can do it for you.\nAsk AI: “Why is learning to program functions important for an economist/data scientist? Give me some real-life examples.”"
   },
@@ -823,7 +823,7 @@
     "href": "exercise_sessions/week_02/Ex02_FirstCommitsInGit.html#initialize-a-git-repository",
     "title": "Exercise 2",
     "section": "Initialize a git repository",
-    "text": "Initialize a git repository\nWe will work with our folder structure:\nBECON_6243_Introduction_programming_exercises/\n├── materials/              # is empty for now, you will clone the git repo in week 3\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ...\n\n\nIdentify the filepath of the directory BECON_6243_Introduction_programming_exercises/exercises.\nIn the terminal of your VSCode, navigate to the directory.\nNavigate back to exercises. There, initialize a git repository using git init. Check your git repo using git status.\n\n\nSolution:\nIn your terminal from VSCode, navigate to your cd BECON_6243_Introduction_programming/exercises. Then:\ngit init\n# Initialized empty Git repository in /Users/BECON_6243_Introduction_programming/exercises"
+    "text": "Initialize a git repository\nWe will work with our folder structure:\nBECON_6243_Introduction_programming/\n├── materials/              # is empty for now, you will clone the git repo in week 3\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ...\n\n\nIdentify the filepath of the directory BECON_6243_Introduction_programming_exercises/exercises.\nIn the terminal of your VSCode, navigate to the directory.\nNavigate back to exercises. There, initialize a git repository using git init. Check your git repo using git status.\n\n\nSolution:\nIn your terminal from VSCode, navigate to your cd BECON_6243_Introduction_programming/exercises. Then:\ngit init\n# Initialized empty Git repository in /Users/BECON_6243_Introduction_programming/exercises"
   },
   {
     "objectID": "exercise_sessions/week_02/Ex02_FirstCommitsInGit.html#first-tracking-and-commit",
@@ -928,7 +928,7 @@
     "href": "course_materials/week_02/03_versioncontrol.html#illustration-for-merge-conflicts",
     "title": "6,243 Introduction to Programming",
     "section": "Illustration for merge conflicts",
-    "text": "Illustration for merge conflicts"
+    "text": "Illustration for merge conflicts\nprint screen."
   },
   {
     "objectID": "course_materials/week_02/03_versioncontrol.html#resolving-merge-conflicts",
@@ -936,5 +936,418 @@
     "title": "6,243 Introduction to Programming",
     "section": "Resolving merge conflicts",
     "text": "Resolving merge conflicts\n\nTo resolve a merge conflict, we will have to pick one of the two versions\nOnce a solution is picked for every conflict you can commit the solution and the merge continues / finishes\nPicking a solution is easiest to do by using GUI tools\n\nDownloading a repository: git clone Alternatively, we can download a repository from the internet using the clone command. This will create a new repository on our machine and fill it with the remote repository’s contents.\ngit clone https://github.com/open-teaching/git-murder-mystery.git"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#goals-for-today",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#goals-for-today",
+    "title": "6,243 Introduction to Programming",
+    "section": "",
+    "text": "In this lecture and exercise session, we will:\n\ngo remote with our repository\nset up a collaborative project on git"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#vision",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#vision",
+    "title": "6,243 Introduction to Programming",
+    "section": "Vision",
+    "text": "Vision\nCollaborate on programming/data science projects."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#you-have-been-working-locally-what-now",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#you-have-been-working-locally-what-now",
+    "title": "6,243 Introduction to Programming",
+    "section": "You have been working locally, what now?",
+    "text": "You have been working locally, what now?\n\nThree levels: changes can be either unstaged, staged or commited.\n\nWhen we first make a change it is unstaged\nOnce we add the change to the staging area it is staged\nWe can then commit all staged changes"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#what-is-github",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#what-is-github",
+    "title": "6,243 Introduction to Programming",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\n\nGitHub is a website to host git repositories\nBy having your git repository online, you can easily collaborate with others\nSimilar, alternative websites like Bitbucket or GitLab"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#why-use-a-website",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#why-use-a-website",
+    "title": "6,243 Introduction to Programming",
+    "section": "Why use a website?",
+    "text": "Why use a website?\n\nBackup of your project\nCollaboration in groups and also with people you don’t know\nFree and Open-Source Software (FOSS)\nVisibility"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#authenticating-with-github",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#authenticating-with-github",
+    "title": "6,243 Introduction to Programming",
+    "section": "Authenticating with GitHub 🗝️",
+    "text": "Authenticating with GitHub 🗝️\n\nAuthentication when pushing and pulling\n\nWhen you connect to a GitHub repository, GitHub needs to verify who you are using a username and password. Since August 2021 stronger authentication is required, and there are several secure methods available.\nWe’ll use SSH keys: you keep a private key on your computer and upload the matching public key to GitHub; when they match correctly, GitHub grants access.\nUsing SSH keys is more secure than passwords, avoids repeated credential prompts, and is a common, portable method for authenticating to remote services.\n\n\n\nHow to?\n\nSetting up the authentication with GitHub could be somewhat cumbersome.\nPlease go to this website from LMU Munich and follow the steps to authenticate with GitHub.Credits: Open Science Center at LMU Munich (Mike Croucher & Malika Ihle)"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-a-repository",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-a-repository",
+    "title": "6,243 Introduction to Programming",
+    "section": "Cloning a Repository",
+    "text": "Cloning a Repository\n\nYou can download repositories from GitHub (and anywhere else), by cloning them\nFor public repositories, git clone just works, for private ones you will need to be authenticated\ngit clone &lt;remote URL&gt;"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-a-repository-1",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-a-repository-1",
+    "title": "6,243 Introduction to Programming",
+    "section": "Cloning a Repository",
+    "text": "Cloning a Repository\n\nYou can find the remote URL by going to a repository on GitHub and clicking the Code buttongit clone git@github.com:jansim/intro-to-git.git"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#practical-cloning-a-private-repository",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#practical-cloning-a-private-repository",
+    "title": "6,243 Introduction to Programming",
+    "section": "Practical: Cloning a private repository",
+    "text": "Practical: Cloning a private repository\n\nGo to the website of the repository I added you all to: https://github.com/open-teaching/git-course-summary-&lt;current-term&gt;\nCopy the SSH clone URL from the repositories website\nClone the repository to check whether you can authenticate with github"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#remotes-1",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#remotes-1",
+    "title": "6,243 Introduction to Programming",
+    "section": "Remotes",
+    "text": "Remotes\n\nA remote is a version of your repository stored on a website like GitHub.\nRemotes also have branches, just like your local repository.\nThe main remote is usually called origin.\n\nIf you use git clone, the remote named origin is set up for you automatically."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#adding-a-remote",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#adding-a-remote",
+    "title": "6,243 Introduction to Programming",
+    "section": "Adding a Remote",
+    "text": "Adding a Remote\nWhen you want to add an existing repository to GitHub, you will have to add the remote yourself\ngit remote add &lt;remote name&gt; &lt;remote URL&gt;\n\nIt only works if you are not in a repo which has already been linked to a remote.\ngit remote add origin git@github.com:asallin/BECON_4222_Introduction_Programming.git\n\nTo learn about all possible commands for remotes use -h\ngit remote -h"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#push-and-pull",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#push-and-pull",
+    "title": "6,243 Introduction to Programming",
+    "section": "push and pull",
+    "text": "push and pull"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#test-your-connection",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#test-your-connection",
+    "title": "6,243 Introduction to Programming",
+    "section": "Test your connection",
+    "text": "Test your connection\nTest your connection using the following code.\nssh -T git@github.com\n&gt; Hi ASallin! You've successfully authenticated, but GitHub does not provide shell access."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository",
+    "title": "6,243 Introduction to Programming",
+    "section": "Cloning the course repository",
+    "text": "Cloning the course repository\n\n1. Navigate to your course directory BECON_4222_Introduction_programming_exercises using the terminal.\nRemember our course structure:\nBECON_4222_Introduction_programming/\n├── materials/              # is empty for now, you will clone the git repo in week 3\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ..."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#push-and-pull-to-communicate-with-the-world",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#push-and-pull-to-communicate-with-the-world",
+    "title": "6,243 Introduction to Programming",
+    "section": "push and pull to communicate with the world",
+    "text": "push and pull to communicate with the world"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#why-having-your-code-on-github",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#why-having-your-code-on-github",
+    "title": "6,243 Introduction to Programming",
+    "section": "Why having your code on GitHub?",
+    "text": "Why having your code on GitHub?\n\nBackup of your project (you can work from different machines)\nCollaboration in groups and also with people you don’t know\nFree and Open-Source Software (FOSS)\nVisibility as Coder (your porfolio - GitHub fulfills some function of a social network for programmers)"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#github.com-a-demo",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#github.com-a-demo",
+    "title": "6,243 Introduction to Programming",
+    "section": "Github.com: a demo",
+    "text": "Github.com: a demo\nCheck some interesting GitHub repositories: PaddleOCR, an open-source optical character recognition, or Awesome Datascience, a full collection of resources on data science\nOr GitHub pages, like the GitHub profile of the World Bank or build your own page with “build-your-own” projects."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository-1",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository-1",
+    "title": "6,243 Introduction to Programming",
+    "section": "Cloning the course repository",
+    "text": "Cloning the course repository\n\n2. Find the HTTPS or SSH on the GitHub course repo\nGo on https://github.com/ASallin/BECON_4222_Introduction_Programming and click on &lt;&gt;Code\n\n\n\nYou can find the remote URL by going to a repository on GitHub and clicking the Code button"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository-2",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository-2",
+    "title": "6,243 Introduction to Programming",
+    "section": "Cloning the course repository",
+    "text": "Cloning the course repository\n\n3. Clone the course repository.\nThe course is public, so cloning via HTTPS will work without an SSH key; cloning via the SSH URL requires a configured SSH key.\ngit clone https://github.com/ASallin/BECON_4222_Introduction_Programming.git\nor\ngit clone git@github.com:ASallin/BECON_4222_Introduction_Programming.git"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository-3",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#cloning-the-course-repository-3",
+    "title": "6,243 Introduction to Programming",
+    "section": "Cloning the course repository",
+    "text": "Cloning the course repository\nNow you’ve cloned the course repository in your directory. You’ll have a new folder called “BECON_4222_Introduction_Programming”. You can remove the “materials” folder.\nBECON_4222_Introduction_programming/\n├── BECON_4222_Introduction_Programming/\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ...\n\nEvery week, you can refresh the course content with git pull."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#getting-changes-git-pull",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#getting-changes-git-pull",
+    "title": "6,243 Introduction to Programming",
+    "section": "Getting Changes: git pull",
+    "text": "Getting Changes: git pull\n\nTo get the newest updates from GitHub, type git pull in your terminal.\nThis command downloads any changes from the online repository and adds them to your current work.\nUsually, your branch is already set up to follow the matching branch on GitHub.\n\nIf it isn’t, Git will show you a warning and tell you what to do.\n\n\n# Pull from the tracked remote branch\ngit pull\n\n# Pull from a specific branch\ngit pull &lt;remote&gt; &lt;branch&gt;\n\ngit pull does does things under the hood: it fetches the latest changes and merges them into the current branch.\n(You can also run git fetch to fetch the latest changes and then git merge &lt;remote&gt;/branch to merge them)"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#getting-changes-git-pull-1",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#getting-changes-git-pull-1",
+    "title": "6,243 Introduction to Programming",
+    "section": "Getting Changes: git pull",
+    "text": "Getting Changes: git pull\n\nThis fetches the latest changes and merges them into your current branch\n\ngit pull really does two things here\n\nYou can also run git fetch to fetch the latest changes and then git merge &lt;remote&gt;/branch to merge them\ngit fetch will always fetch the latest changes without doing anything with them (which can be useful)"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#getting-changes-git-pull-2",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#getting-changes-git-pull-2",
+    "title": "6,243 Introduction to Programming",
+    "section": "Getting Changes: git pull",
+    "text": "Getting Changes: git pull\n\nWhen you run git pull for the first time, you will need to choose a default merge strategy\nWhen you receive the message, just copy this line of code (or the one you prefer)\n\n\n# Default to merge\ngit config pull.rebase false"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#pushing-your-changes-git-push",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#pushing-your-changes-git-push",
+    "title": "6,243 Introduction to Programming",
+    "section": "Pushing Your Changes: git push",
+    "text": "Pushing Your Changes: git push\n\nYou can send your changes to github by running git push\nThis only works if there are no new changes at the remote\n\nIf there have been changes since your last pull you need to pull again\n\n\n# Push to the tracked remote branch\ngit push\n\n# Push a branch to the remote for the first time\n# -u is short for --set-upstream\ngit push -u &lt;remote&gt; &lt;branch&gt;"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#practical-adding-your-own-repository-to-github",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#practical-adding-your-own-repository-to-github",
+    "title": "6,243 Introduction to Programming",
+    "section": "Practical: Adding your own repository to Github",
+    "text": "Practical: Adding your own repository to Github\n\nCreate a new repository on GitHub with the name git-intro-example\n\nMake sure NOT to add a README or any other file when creating it\n\nIn the example git repository we’ve been working in so far, add the just created GitHub repo as a remote\n\ngit remote add origin &lt;URL&gt;\n\nPush you changes so far to GitHub\n\ngit push -u origin main"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#optional-practical-collaboration",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#optional-practical-collaboration",
+    "title": "6,243 Introduction to Programming",
+    "section": "Optional Practical: Collaboration",
+    "text": "Optional Practical: Collaboration\n\nForm pairs\nOne person adds the other to their git-intro-example repository\n\nVia the GitHub UI (write privileges)\n\nEach, add a new entry to the library.txt\nTry to provoke a merge conflict"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#end-of-section",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#end-of-section",
+    "title": "6,243 Introduction to Programming",
+    "section": "End of Section 🎉",
+    "text": "End of Section 🎉\n\nAny Questions?\n\n[🏡 Back to Overview]\n[⏩️ Next Section]"
+  },
+  {
+    "objectID": "course_materials/week_03/Ex03_GitHub.html",
+    "href": "course_materials/week_03/Ex03_GitHub.html",
+    "title": "Exercise 3",
+    "section": "",
+    "text": "For this exercise, we’ve prepared a GitHub Classroom. A GitHub Classroom is a special type of repository created for a class, where each student gets their own copy to complete and submit assignments. It works like a normal GitHub repository. We will use it for the group project.\n\n\nWith the following link https://classroom.github.com/a/LrPyk79h, accept the invitaton to connect. Once you’ve accepted the invitation, you should see a link to a repository:\n\n\n\n\nClone the repository using either HTTPS or SSH. Make sure you are cloning the repository in the directory BECON_4222_Introduction_programming/exercises/week03. Check that your repo has been downloaded using git status.\nBECON_4222_Introduction_programming/\n├── BECON_4222_Introduction_Programming/\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ...\n\nSolution:\ngit clone https://github.com/&lt;org&gt;/&lt;their-repo&gt;.git\ncd &lt;their-repo&gt;\ngit status"
+  },
+  {
+    "objectID": "course_materials/week_03/Ex03_GitHub.html#cloning-a-repository",
+    "href": "course_materials/week_03/Ex03_GitHub.html#cloning-a-repository",
+    "title": "Exercise 3",
+    "section": "",
+    "text": "For this exercise, we’ve prepared a GitHub Classroom. A GitHub Classroom is a special type of repository created for a class, where each student gets their own copy to complete and submit assignments. It works like a normal GitHub repository. We will use it for the group project.\n\n\nWith the following link https://classroom.github.com/a/LrPyk79h, accept the invitaton to connect. Once you’ve accepted the invitation, you should see a link to a repository:\n\n\n\n\nClone the repository using either HTTPS or SSH. Make sure you are cloning the repository in the directory BECON_4222_Introduction_programming/exercises/week03. Check that your repo has been downloaded using git status.\nBECON_4222_Introduction_programming/\n├── BECON_4222_Introduction_Programming/\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ...\n\nSolution:\ngit clone https://github.com/&lt;org&gt;/&lt;their-repo&gt;.git\ncd &lt;their-repo&gt;\ngit status"
+  },
+  {
+    "objectID": "course_materials/week_03/Ex03_GitHub.html#practical-adding-your-own-repository-to-github",
+    "href": "course_materials/week_03/Ex03_GitHub.html#practical-adding-your-own-repository-to-github",
+    "title": "Exercise 3",
+    "section": "Practical: Adding your own repository to Github",
+    "text": "Practical: Adding your own repository to Github\n\nCreate a new repository on GitHub with the name git-intro-example\n\nMake sure NOT to add a README or any other file when creating it\n\nIn the example git repository we’ve been working in so far, add the just created GitHub repo as a remote\n\ngit remote add origin &lt;URL&gt;\n\nPush you changes so far to GitHub\n\ngit push -u origin main"
+  },
+  {
+    "objectID": "course_materials/week_03/Ex03_GitHub.html#optional-practical-collaboration",
+    "href": "course_materials/week_03/Ex03_GitHub.html#optional-practical-collaboration",
+    "title": "Exercise 3",
+    "section": "Optional Practical: Collaboration",
+    "text": "Optional Practical: Collaboration\n\nForm pairs\nOne person adds the other to their git-intro-example repository\n\nVia the GitHub UI (write privileges)\n\nEach, add a new entry to the library.txt\nTry to provoke a merge conflict"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html",
+    "title": "6,243 Introduction to Programming",
+    "section": "",
+    "text": "In this lecture and exercise session, we will:\n\ngo remote with our repository\nset up a collaborative project on git"
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#syncing-changes-overview",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#syncing-changes-overview",
+    "title": "6,243 Introduction to Programming",
+    "section": "Syncing Changes: Overview",
+    "text": "Syncing Changes: Overview\nYou first pull the latest changes from the remote and then push your own changes."
+  },
+  {
+    "objectID": "course_materials/week_02/04_versioncontrolwithothers.html#note-on-getting-changes-git-pull",
+    "href": "course_materials/week_02/04_versioncontrolwithothers.html#note-on-getting-changes-git-pull",
+    "title": "6,243 Introduction to Programming",
+    "section": "Note on Getting Changes: git pull",
+    "text": "Note on Getting Changes: git pull\n\nWhen you run git pull for the first time, you will need to choose a default merge strategy\nWhen you receive the message, just copy this line of code (or the one you prefer)\n\n# Default to merge\ngit config pull.rebase false"
+  },
+  {
+    "objectID": "course_materials/week_03/Ex03_GitHub.html#pushing-and-pulling",
+    "href": "course_materials/week_03/Ex03_GitHub.html#pushing-and-pulling",
+    "title": "Exercise 3",
+    "section": "Pushing and pulling",
+    "text": "Pushing and pulling\n\nFirst edit + push\nOpen exercise.txt (best if you use VSCode, but you can also use any other editor). Edit the file following the instructions. Then push your changes to remote.\nSolution:\ngit status\ngit add exercise.txt # or git add .\ngit commit -m \"Fill in exercise\"\ngit push\n\n\nCheck changes in remote\nAfter your first push, do nothing for a moment. Something changes on GitHub (your colleague pushed a change). GitHub will automatically add a new line to exercise.txt. In this simulated situation, your local files are unchanged but the the remote repository is ahead.\n\n\nLocal commits vs remote commits\nWe are in the situation where you have already pushed once and the remote repo has changed. Imagine you forgot to pull the remote and you are working ahead on your local directory.\nOpen exercise.txt again. Add a new line at the end, for example: “I made another local change before pulling.” Save the file and commit. Do not push yet.\nSolution:\ngit status\ngit add exercise.txt\ngit commit -m \"Add another local change\"\nAt this point, you are ahead locally and the remote is also ahead. The histories have “diverged”.\nNow pull the changes to your computer, then open exercise.txt again. Check the changes using git status. Notice the new commits in your GUI.\nSolution:\ngit pull\nYour local changes are not erased: Git combines your local commit and the remote commit. The file now contains both changes.\nCheck the history in your GUI.\ngit log --oneline\nAs a final step, push the combined history back to GitHub.\n\nKey takeaway\nIf the remote is ahead, and you commit locally, and you then pull, Git does not delete your work, but tries to combine the histories automatically."
+  },
+  {
+    "objectID": "course_materials/week_03/Ex03_GitHub.html#branching-and-a-first-merge-conflict",
+    "href": "course_materials/week_03/Ex03_GitHub.html#branching-and-a-first-merge-conflict",
+    "title": "Exercise 3",
+    "section": "Branching and a first merge conflict",
+    "text": "Branching and a first merge conflict\n\nCreate a new branch\nCreate and switch to a new branch called answer-42. Check where you are.\nSolution:\ngit checkout -b answer-42\ngit branch\nYou should see answer-42 marked with *.\n\n\nChanges on the branch\nOpen exercise.txt. Find the sentence: “The answer to everything is ____.”, where ____ is your previous answer. You should also observe the added line. Replace it with “The answer to everything is 42!”\nSave the file and commit with a meaningful commit message.\nSolution:\ngit add exercise.txt\ngit commit -m \"Answer the ultimate question\"\n\n\nPush the branch\nPush the branch to GitHub. Open the repository on GitHub. You should now see two branches.\nSolution:\ngit push -u origin answer-42\n\n\nConflicting change\nGo back to the main branch in your local directory. Open exercise.txt again. Change the same sentence to: “The answer to everything is still unknown.” Then commit and push.\nSolution:\ngit checkout main\ngit add exercise.txt\ngit commit -m \"Change the answer on main\"\ngit push\n\n\nMerge the branch into main\nNow try to merge your branch:\ngit merge answer-42\n💥 You should get a merge conflict.\nThis is expected.\n7.5 Resolve the conflict\nOpen exercise.txt.\nYou will see conflict markers like:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nThe answer to everything is still unknown.\n=======\nThe answer to everything is 42.\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; answer-42\nResolve the conflict by choosing one version, or combine them, for example:\nThe answer to everything is 42 (even if it sometimes feels unknown).\nRemove the conflict markers, save the file.\nThen:\ngit add exercise.txt git commit -m “Resolve merge conflict about the answer” git push\nObservations\n💡 Observation: Remote was ahead, but you had not changed the same lines."
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html",
+    "title": "Exercise 3",
+    "section": "",
+    "text": "Clone the course repo as shown in class."
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#cloning-a-repository",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#cloning-a-repository",
+    "title": "Exercise 3",
+    "section": "Cloning a repository",
+    "text": "Cloning a repository\nFor this exercise, we’ve prepared a GitHub Classroom. A GitHub Classroom is a special type of repository created for a class, where each student gets their own copy to complete and submit assignments. It works like a normal GitHub repository. We will use it for the group project.\n\nConnect to the repo\nWith the following link https://classroom.github.com/a/LrPyk79h, accept the invitaton to connect. Once you’ve accepted the invitation, you should see a link to a repository:\n\n\n\nClone\nClone the repository using either HTTPS or SSH. Make sure you are cloning the repository in the directory BECON_4222_Introduction_programming/exercises/week03. Check that your repo has been downloaded using git status.\nBECON_4222_Introduction_programming/\n├── BECON_4222_Introduction_Programming/\n├── exercises/              # Student's own work\n│   ├── week01/\n│   ├── week02/\n│   ├── ...\n│   ├── week12/\n├── group_project/\n│   ├── ...\n\nSolution:\ngit clone https://github.com/&lt;org&gt;/&lt;their-repo&gt;.git\ncd &lt;their-repo&gt;\ngit status"
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#pushing-and-pulling",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#pushing-and-pulling",
+    "title": "Exercise 3",
+    "section": "Pushing and pulling",
+    "text": "Pushing and pulling\n\nFirst edit + push\nOpen exercise.txt (best if you use VSCode, but you can also use any other editor). Edit the file following the instructions. Then push your changes to remote.\nSolution:\ngit status\ngit add exercise.txt # or git add .\ngit commit -m \"Fill in exercise\"\ngit push\n\n\nCheck changes in remote\nAfter your first push, do nothing for a moment. Something changes on GitHub (your colleague pushed a change). GitHub will automatically add a new line to exercise.txt. In this simulated situation, your local files are unchanged but the the remote repository is ahead.\nNote that the github action won’t be triggered if students do not change the name.\nAfter 1 minute, pull again. You should notice the change. Look at git status to follow the difference.\n\n\nLocal vs remote\nNow you should have an exercise.txt file that looks like this:\nStep 1:\nAurelien\n\nStep 2:\nComplete the following sentence: “The answer to everything is beer.”\n\nThe answer is close to 42 🤖\nEverything is synchronized. Git would send you the following message: “Your branch is up to date with ‘origin/main’. Nothing to commit, working tree clean”.\nSince you now know the answer, change your answer to 42 in exercise.txt and push your changes."
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#branching-and-a-first-merge-conflict",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#branching-and-a-first-merge-conflict",
+    "title": "Exercise 3",
+    "section": "Branching and a first merge conflict",
+    "text": "Branching and a first merge conflict\n\nCreate a new branch\nCreate and switch to a new branch called answer-42. Check where you are.\nSolution:\ngit checkout -b answer-42\ngit branch\nYou should see answer-42 marked with *.\n\n\nChanges on the branch\nOpen exercise.txt. Find the sentence: “The answer is close to 42 🤖”. Replace it with “The answer is equal to 42 🤖”.\nSave the file and commit with a meaningful commit message.\nSolution:\ngit add exercise.txt\ngit commit -m \"Answer the ultimate question\"\n\n\nPush the branch\nPush the branch to GitHub. Open the repository on GitHub. You should now see two branches.\nSolution:\ngit push -u origin answer-42\nYou can now continue to push on your branch. You notice that the text file on exercise contains the merged conflicts. In some way, you are ahead of main with your branch: “This branch is 1 commit ahead of main”.\n\n\nConflicting change (more advanced)\nNow merge both branches, from answer-42 into main.\ngit checkout main\ngit merge answer-42\ngit status\nNotice the message: On branch main- Your branch and ‘origin/main’ have diverged, and have 2 and 1 different commits each, respectively. (use “git pull” if you want to integrate the remote branch with yours).\nIf you try to push, you’ll receive the following message:\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n\nReflection: what has happened?\n\n\nAction\nAs suggested, pull remote main. Now you’ll have a conflict to solve (The answer is equal to 42 🤖 &lt;-&gt; The answer is close to 42 🤖). Solve the conflict by chosing “The answer is equal to 42 🤖” and push to remote."
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#practical-adding-your-own-repository-to-github",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#practical-adding-your-own-repository-to-github",
+    "title": "Exercise 3",
+    "section": "Practical: Adding your own repository to Github",
+    "text": "Practical: Adding your own repository to Github\n\nCreate a new repository on GitHub with the name git-intro-example\n\nMake sure NOT to add a README or any other file when creating it\n\nIn the example git repository we’ve been working in so far, add the just created GitHub repo as a remote\n\ngit remote add origin &lt;URL&gt;\n\nPush you changes so far to GitHub\n\ngit push -u origin main"
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#optional-practical-collaboration",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#optional-practical-collaboration",
+    "title": "Exercise 3",
+    "section": "Optional Practical: Collaboration",
+    "text": "Optional Practical: Collaboration\n\nForm pairs\nOne person adds the other to their git-intro-example repository\n\nVia the GitHub UI (write privileges)\n\nEach, add a new entry to the library.txt\nTry to provoke a merge conflict"
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#conflicts-with-remote",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#conflicts-with-remote",
+    "title": "Exercise 3",
+    "section": "Conflicts with remote",
+    "text": "Conflicts with remote\nLet’s simulate another situation in which your local version conflicts with the remote version. Create a new line in exercise.txt with one additional line of text (make sure you have one and only one empty line inbetween):\nStep 1:\nAurelien\n\nStep 2:\nComplete the following sentence: “The answer to everything is 42.”\n\nThe answer is close to 42 🤖\n\nI agree with this answer.\nThen add and commit locally, but do not push.\n\nReflection\nBefore running any code, reflect on the situation you are in. What is happening? What could have happened? Use git status to understand what is happening.\nSolution: the danger is that at this moment, it could be that my colleagues have pushed conflicting changes to the repo.\n\n\nAction\nNow pull the remote repo again. You should see a conflict: “CONFLICT (content): Merge conflict in exercise.txt” Explain why. How do you solve the conflict?\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nI agree.\n=======\nyou are now closer to the TRUTH\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; f4b343b02f6bfc29d7fe78f2551a6ba90e2b172d\nThe conflict must be solved. In this case, you can easily choose between the two lines. In longer code, this requires going through each line. For this exercise, please choose “Accept both changes”, and have the following file:\nStep 1:\nAurelien.\n\nStep 2:\nComplete the following sentence: “The answer to everything is 42.”\n\nThe answer is close to 42 🤖\n\nI agree.\nyou are now closer to the TRUTH"
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#bonus-adding-your-own-repository-to-github",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#bonus-adding-your-own-repository-to-github",
+    "title": "Exercise 3",
+    "section": "Bonus Adding your own repository to Github",
+    "text": "Bonus Adding your own repository to Github\n\nCreate a new repository on GitHub with the name git-intro-example\n\nMake sure NOT to add a README or any other file when creating it\n\nCreate an empty dir in your week_03 folder.\nAd the just created GitHub repo as a remote\n\ngit remote add origin &lt;URL&gt;\n\nPush you changes so far to GitHub\n\ngit push -u origin main"
+  },
+  {
+    "objectID": "exercise_sessions/week_03/Ex03_GitHub.html#cloning-a-repository-course-repo",
+    "href": "exercise_sessions/week_03/Ex03_GitHub.html#cloning-a-repository-course-repo",
+    "title": "Exercise 3",
+    "section": "",
+    "text": "Clone the course repo as shown in class."
+  },
+  {
+    "objectID": "course_materials/week_01/01a_introduction.html#our-commitment-to-these-goals-and-to-your-learning-process",
+    "href": "course_materials/week_01/01a_introduction.html#our-commitment-to-these-goals-and-to-your-learning-process",
+    "title": "4222 Introduction to Programming",
+    "section": "Our commitment to these goals and to your learning process",
+    "text": "Our commitment to these goals and to your learning process\n\nTransferrable skills\nHands-on approach\nEmphasis on real-world relevance (caveat: this course is mandatory for Econ students, I have limited freedom in the syllabus)\nAs much fun as possible (as coding can be fun…😎)"
+  },
+  {
+    "objectID": "course_materials/week_01/01a_introduction.html#about-us",
+    "href": "course_materials/week_01/01a_introduction.html#about-us",
+    "title": "4222 Introduction to Programming",
+    "section": "About us",
+    "text": "About us"
+  },
+  {
+    "objectID": "course_materials/week_01/01a_introduction.html#course-concept-a-note",
+    "href": "course_materials/week_01/01a_introduction.html#course-concept-a-note",
+    "title": "4222 Introduction to Programming",
+    "section": "Course concept: a note",
+    "text": "Course concept: a note\nThis is the first time we give this course.\nThe materials are new, the syllabus is new."
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#on-paths-directories-and-files",
+    "href": "course_materials/week_01/01b_gettingstarted.html#on-paths-directories-and-files",
+    "title": "4,222 Introduction to Programming",
+    "section": "On paths, directories, and files",
+    "text": "On paths, directories, and files\nFiles\nA file is a container of data (remember: 0s and 1s).\n\nFiles have extensions (.txt, .csv, .pdf)\nFiles live inside directories (folders)\nEvery file has a unique location called a path\n\nPaths\nPaths describe where a file is located.\nAbsolute path:\n\nstarts from the root of the file system\nexample: C:/Users/Bilbo/Documents/TheRedBookofWestmarch.txt\n\nRelative path:\n\nstarts from your current working directory\nexample: Documents/TheRedBookofWestmarch.txt"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#opening-your-terminal",
+    "href": "course_materials/week_01/01b_gettingstarted.html#opening-your-terminal",
+    "title": "4,222 Introduction to Programming",
+    "section": "Opening your terminal",
+    "text": "Opening your terminal\n\n\n\nWhen you first open Terminal you typically are placed in your home directory. So let’s start looking and moving around."
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#a-terminal-accesses-files",
+    "href": "course_materials/week_01/01b_gettingstarted.html#a-terminal-accesses-files",
+    "title": "4,222 Introduction to Programming",
+    "section": "A terminal accesses files",
+    "text": "A terminal accesses files\nA file is a container of data (remember: 0s and 1s).\n\nFiles have extensions (.txt, .csv, .pdf)\nFiles live inside directories (folders)\nEvery file has a unique location called a path"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#to-access-files-the-location-must-be-given-with-paths",
+    "href": "course_materials/week_01/01b_gettingstarted.html#to-access-files-the-location-must-be-given-with-paths",
+    "title": "4,222 Introduction to Programming",
+    "section": "To access files, the location must be given with paths",
+    "text": "To access files, the location must be given with paths\nPaths describe where a file is located.\nAbsolute path:\n\nstarts from the root of the file system\nexample: C:/Users/Bilbo/Documents/TheRedBookofWestmarch.txt\n\nRelative path:\n\nstarts from your current working directory\nexample: Documents/TheRedBookofWestmarch.txt"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#on-files-paths-and-shortcuts",
+    "href": "course_materials/week_01/01b_gettingstarted.html#on-files-paths-and-shortcuts",
+    "title": "4,222 Introduction to Programming",
+    "section": "On files, paths, and shortcuts",
+    "text": "On files, paths, and shortcuts\nWith the terminal, you access and work with files. A file is a container of data (remember from Data Handling: 0s and 1s).\n\nFiles have extensions (.txt, .csv, .pdf)\nFiles live inside directories (folders)\nEvery file has a unique location called a path"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#on-files-paths-and-shortcuts-1",
+    "href": "course_materials/week_01/01b_gettingstarted.html#on-files-paths-and-shortcuts-1",
+    "title": "4,222 Introduction to Programming",
+    "section": "On files, paths, and shortcuts",
+    "text": "On files, paths, and shortcuts\nTo access files, their location must be given with paths. Paths describe where a file is located.\nAbsolute path:\n\nstarts from the root of the file system\nexample: C:/Users/Bilbo/Documents/TheRedBookofWestmarch.txt\n\nRelative path:\n\nstarts from your current working directory\nexample: Documents/TheRedBookofWestmarch.txt"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#on-files-paths-and-shortcuts-2",
+    "href": "course_materials/week_01/01b_gettingstarted.html#on-files-paths-and-shortcuts-2",
+    "title": "4,222 Introduction to Programming",
+    "section": "On files, paths, and shortcuts",
+    "text": "On files, paths, and shortcuts\nFrom the terminal, you can use shortcuts instead of absolute paths.\nUseful path shortcuts:\n\n.    current directory\n..    parent directory\n~    your home directory\n\nExamples:\n\nfile in the parent directory: ../file.txt\nyour Documents folder: ~/Documents"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#main-terminal-commands",
+    "href": "course_materials/week_01/01b_gettingstarted.html#main-terminal-commands",
+    "title": "4,222 Introduction to Programming",
+    "section": "Main terminal commands",
+    "text": "Main terminal commands\nAs said, when you first open Terminal you typically are placed in your home directory.\nMain commands:\n\nCheck your current directory: pwd (print working directory)\nList the files in the current directory: ls (macOS, Linux) or dir (Windows)\nMove into and out of the directory: cd dir or cd .. (change directory)\nRunning cd without arguments takes you to ~\n\n\nTips:\n\nUse Tab for auto-completion\nUse arrow keys to browse command history\nUse clear (macOS/Linux) or Ctrl+L to clear the screen"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-snake-camel-or-kebab-case-1",
+    "href": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-snake-camel-or-kebab-case-1",
+    "title": "4,222 Introduction to Programming",
+    "section": "Naming Conventions: Snake, Camel or Kebab Case",
+    "text": "Naming Conventions: Snake, Camel or Kebab Case\n\nFollowing an established convention will not make you look like a complete novice."
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-or",
+    "href": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-or",
+    "title": "4,222 Introduction to Programming",
+    "section": "Naming Conventions: 🐍, 🐫 or 🍢",
+    "text": "Naming Conventions: 🐍, 🐫 or 🍢\n\n\n\nDo not use spaces in folder or file names! Never.\nAvoid special characters (remember Data Handling and encoding nightmares).\nMake sure to not switch styles within a project.\nGo for camelCase, snake_case or kebab-case.\n\nExamples:\n\nsnake_case: my_file_name.py\ncamelCase: myFileName.py\nkebab-case: my-file-name.py"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-or-1",
+    "href": "course_materials/week_01/01b_gettingstarted.html#naming-conventions-or-1",
+    "title": "4,222 Introduction to Programming",
+    "section": "Naming Conventions: 🐍, 🐫 or 🍢",
+    "text": "Naming Conventions: 🐍, 🐫 or 🍢\n\n\n\nFollowing an established convention will not make you look like a complete novice. 😎🆒"
   }
 ]

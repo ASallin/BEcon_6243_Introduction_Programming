@@ -450,29 +450,7 @@ myfile.pdf
 *.xlsx
 ```
 
-## For exercise:
 
-```
-# Data and generated outputs
-*.csv
-*.tsv
-*.xlsx
-*.pdf
-*.png
-*.jpg
-*.html
-
-# Python
-__pycache__/
-*.pyc
-
-# Virtual environment (uv)
-.venv/
-
-# Editor / OS files
-.DS_Store # typical for macOS!
-.vscode/
-```
 
 
 ## Further notes on gitignore
@@ -549,6 +527,8 @@ git checkout 795780d
 If you merge your branches / edits before making more changes, you can avoid conflicts
 
 ## Illustration for merge conflicts
+
+print screen.
 
 ## Resolving merge conflicts
 

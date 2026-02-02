@@ -29,8 +29,10 @@ Create the "data science profile". See here for an introduction: https://code.vi
 
 Install the following extensions:
 
-  - Jupyter
-  - Python
+  - Python (Microsoft): For linting, IntelliSense, debugging, and testing
+  - Pylance (Microsoft): type checking, code navigation, autocompletion
+  - Ruff: for better linting, import sorting
+  - Jupyter: runs notebooks directly in VS Code.
 
 
 # Use the terminal in VS Code

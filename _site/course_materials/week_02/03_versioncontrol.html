@@ -234,7 +234,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
   <ul class="collapse">
   <li><a href="#ignoring-the-ignorable-git-ignore" id="toc-ignoring-the-ignorable-git-ignore" class="nav-link" data-scroll-target="#ignoring-the-ignorable-git-ignore">Ignoring the ignorable: <code>git ignore</code></a></li>
-  <li><a href="#for-exercise" id="toc-for-exercise" class="nav-link" data-scroll-target="#for-exercise">For exercise:</a></li>
   <li><a href="#further-notes-on-gitignore" id="toc-further-notes-on-gitignore" class="nav-link" data-scroll-target="#further-notes-on-gitignore">Further notes on gitignore</a></li>
   </ul></li>
   <li><a href="#branches-and-merging" id="toc-branches-and-merging" class="nav-link" data-scroll-target="#branches-and-merging">Branches and merging</a>
@@ -671,28 +670,6 @@ The default editor in git is (usually) vim
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="ex">*.xlsx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="for-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="for-exercise">For exercise:</h2>
-<pre><code># Data and generated outputs
-*.csv
-*.tsv
-*.xlsx
-*.pdf
-*.png
-*.jpg
-*.html
-
-# Python
-__pycache__/
-*.pyc
-
-# Virtual environment (uv)
-.venv/
-
-# Editor / OS files
-.DS_Store # typical for macOS!
-.vscode/</code></pre>
-</section>
 <section id="further-notes-on-gitignore" class="level2">
 <h2 class="anchored" data-anchor-id="further-notes-on-gitignore">Further notes on gitignore</h2>
 <p>There can be multiple different .gitignore files at different levels (one global, different local ones at the repo level). The .gitignore applies only within the directory.</p>
@@ -746,7 +723,7 @@ A classic example for files to ignore globally are .DS_Store files on macOS.
 <li>each commit has a “hash” (a commit id). You can go back to the a particular commit by referencing the hash.</li>
 <li>checkout sends you out of a branch, i.e.&nbsp;detached head. You need to explicitly switch to main (or to any other branch)</li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout 795780d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout 795780d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="merge-conflicts" class="level2">
 <h2 class="anchored" data-anchor-id="merge-conflicts">Merge conflicts</h2>
@@ -762,6 +739,7 @@ A classic example for files to ignore globally are .DS_Store files on macOS.
 </section>
 <section id="illustration-for-merge-conflicts" class="level2">
 <h2 class="anchored" data-anchor-id="illustration-for-merge-conflicts">Illustration for merge conflicts</h2>
+<p>print screen.</p>
 </section>
 <section id="resolving-merge-conflicts" class="level2">
 <h2 class="anchored" data-anchor-id="resolving-merge-conflicts">Resolving merge conflicts</h2>

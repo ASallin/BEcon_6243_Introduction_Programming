@@ -66,7 +66,7 @@ git config --global core.autocrlf true
 We will work with our folder structure:
 
 ```
-BECON_6243_Introduction_programming_exercises/
+BECON_6243_Introduction_programming/
 ├── materials/              # is empty for now, you will clone the git repo in week 3
 ├── exercises/              # Student's own work
 │   ├── week01/
