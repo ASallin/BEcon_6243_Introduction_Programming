@@ -1,8 +1,8 @@
 ---
-title: '6,243 Introduction to Programming'
+title: '4,222 Introduction to Programming'
 subtitle: 'Lecture 2: Getting Started'
 author: "Dr. Franziska Bender, Dr. Aurélien Sallin"
-date: "2025-09-16"
+date: "2026-02-20"
 code-line-numbers: false
 format:
   revealjs:
@@ -15,7 +15,7 @@ format:
     self-contained: true
     slide-number: c
     theme: ../../assets/style/hsgtheme.scss
-highlight-style: dracula 
+highlight-style: dracula
 cache: false
 echo: false
 execute:
@@ -31,7 +31,7 @@ library(purrr)
 
 ## Goals for today
 
-In this lecture, we will:
+In the next 60 minutes, we will learn the basics together:
 
 - learn what a **terminal** is and why we use it
 - set up an efficient (and professional) programming **environment** with an IDE
@@ -49,9 +49,9 @@ Tooling: all the tools you need to work efficiently and in flow!
 
 ## What is a terminal?
 
-The terminal is a text-based interface that allows you to interact directly with your computer by typing commands. keyboard-driven interaction with your operating systems
+The terminal is a text-based interface that allows you to interact directly with your computer/operating system by typing commands.
 
-#### Alternate names:
+#### Alternative names:
 
 "terminal", "command line", "shell", "command prompt"
 
@@ -62,7 +62,7 @@ The terminal is a text-based interface that allows you to interact directly with
 
 <br>
 
-###### You usually don’t need to worry about the difference at the beginning.
+###### You don’t need to worry about the difference at the beginning.
 
 
 ## Why use a terminal
@@ -70,7 +70,7 @@ The terminal is a text-based interface that allows you to interact directly with
 Almost everything you can do with a graphical interface can also be done from the terminal.
 
 #### The terminal is often:
-  
+
   - faster for repetitive tasks
   - more precise and reproducible
   - easier to automate
@@ -118,25 +118,33 @@ For this course:
 Use PowerShell or Windows Terminal.
 
 
+## Opening your terminal
+
+<div style="text-align: center;">
+  <img src="../../assets/img/terminal.png" alt="Terminal" width="500px" />
+</div>
+
+When you first open Terminal you typically are placed in your **home directory**. So let's start looking and moving around.
 
 
-## What is a file
-A file is a container of data (remember: 0s and 1s). 
 
-- Files usually have **extensions** (.txt, .csv, .pdf)
-  These are conventions, not strict rules.
+## On files, paths, and shortcuts
+
+With the terminal, you access and work with **files**. A file is a container of data (remember from Data Handling: `0`s and `1`s).
+
+- Files have **extensions** (.txt, .csv, .pdf)
 - Files live inside **directories** (folders)
 - Every file has a unique location called a **path**
 
 
-## Paths
+## On files, paths, and shortcuts
 
-Paths describe where a file is located.
+To access files, their location must be given with **paths**. Paths describe where a file is located.
 
 ##### Absolute path:
 
 - starts from the root of the file system
-- example: `/Users/Bilbo/Documents/TheRedBookofWestmarch.txt`
+- example: `C:/Users/Bilbo/Documents/TheRedBookofWestmarch.txt`
 
 ##### Relative path:
 
@@ -144,33 +152,38 @@ Paths describe where a file is located.
 - example: `Documents/TheRedBookofWestmarch.txt`
 
 
-## On Shortcuts and Paths
+## On files, paths, and shortcuts
+
+From the terminal, you can use shortcuts instead of absolute paths.
 
 ##### Useful path shortcuts:
 
 <div style="font-family: monospace;">
-`.`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current directory  
-`..`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent directory  
-`~`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your home directory  
+`.`&nbsp;&nbsp;&nbsp;&nbsp;current directory
+
+`..`&nbsp;&nbsp;&nbsp;&nbsp;parent directory
+
+`~`&nbsp;&nbsp;&nbsp;&nbsp;your home directory
 </div>
 
 #### Examples:
-  - file in the parent directory: `../file.txt`      
-  - your Documents folder: `~/Documents`      
-
-Running `cd` without arguments takes you to ~
+  - file in the parent directory: `../file.txt`
+  - your Documents folder: `~/Documents`
 
 
 
-## On Shortcuts and Paths in the terminal
+## Main terminal commands
 
+As said, when you first open Terminal you typically are placed in your **home directory**.
 
 ##### Main commands:
 
-  - Check your current directory: `pwd `
-  - List files in the current folder: `ls`(macOS, Linux) or `dir` (Windows)
-  - Move into and out of the directory: `cd dir` or `cd .. `
+  - Check your current directory: `pwd ` (**p**rint **w**orking **d**irectory)
+  - List the files in the current directory: `ls` (macOS, Linux) or `dir` (Windows)
+  - Move into and out of the directory: `cd dir` or `cd .. ` (**c**hange **d**irectory)
+  - Running `cd` without arguments takes you to `~`
 
+<!--
 ##### Output from `dir`
 ```bash
 Mode                 LastWriteTime         Length Name
@@ -178,9 +191,8 @@ Mode                 LastWriteTime         Length Name
 lar--          04/01/2026    09:33                .github
 lar--          04/01/2026    11:05                admin
 lar--          04/01/2026    11:06                course_materials
-lar--          04/01/2026    09:33                examination
-lar--          04/01/2026    09:33                exercise_sessions
 ```
+-->
 
 #####  Tips:
 
@@ -189,12 +201,11 @@ lar--          04/01/2026    09:33                exercise_sessions
 - Use clear (macOS/Linux) or Ctrl+L to clear the screen
 
 
-
 ## Working with files  in a terminal
 
 | Command | Description |
 |:--------|:------------|
-| `mkdir data` | Create a directory |
+| `mkdir data` | Create/**M**a**k**e a **dir**ectory called "data" |
 | `touch hello.txt` | Create an empty text file named "hello" |
 | `rm hello.txt` | Delete a file (Careful! Can't be undone!) |
 | `cat hello.txt` | Print contents of a file |
@@ -205,22 +216,47 @@ lar--          04/01/2026    09:33                exercise_sessions
 Look at bradtraversy's [Common Terminal Commands](https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce)
 
 
-## Naming Conventions: Snake, Camel or Kebab Case
+## Naming Conventions: 🐍, 🐫 or 🍢
 
-Let me drop a quick and general note on naming. As in how to name files, folders and functions. It may look like a mere detail, but concise formatting and styling of your code will be appreciated by your peers and by those you ask for help. Plus, following an established convention will not make you look like a complete novice.
+::: {.columns}
+::: {.column width="55%"}
 
-Do not use spaces in folder or file names! Never. If you need lengthy descriptions, use underscores ’_‘, dashes’-’ or camelCase.
+- **Do not use spaces** in folder or file names! Never.
+- Avoid special characters (remember Data Handling and encoding nightmares).
+- Make sure to **not switch styles** within a project.
+- Go for `camelCase`, `snake_case` or `kebab-case`.
 
-Avoid umlauts and special characters. Encoding and internationalization is worth a book of its own. It’s not like modern programming environments can’t handle it, but encoding will introduce further complications. These are exactly the type of complications that may lead to an unplanned, frustrating waste of hours. You may be lucky enough to find a quick fix, but you may as well not. Avoid encoding issues if you do not plan to build a deeper understanding of encoding on the fly. This is especially true for cross-platform collaborations (Windows vs. Unix/OSX).
+#### Examples:
 
-either go for camelCase, snake_case or kebab-case. Otherwise, prefer lower-case characters. Also make sure to not switch styles within a project. There a plenty of style guides around, go with whatever your lab or community goes.
+- snake_case: `my_file_name.py`
+- camelCase: `myFileName.py`
+- kebab-case: `my-file-name.py`
+
+
+:::
+::: {.column width="45%"}
+
+![](../../assets/img/casesOr-cases.jpg){width="640px"}
+
+:::
+:::
+
+
+## Naming Conventions: 🐍, 🐫 or 🍢
+
+<div style="text-align: center;">
+  <img src="../../assets/img/userId_cases.jpeg" width="440px" />
+</div>
+
+Following an established convention will not make you look like a complete novice. 😎🆒
+
 
 
 # On IDEs
 
-## What is an IDE? 
+## What is an IDE?
 
-An IDE (Integrated Development Environment) is a tool designed to help you write, run, and manage code efficiently.
+An **IDE** (**I**ntegrated **D**evelopment **E**nvironment) is a tool designed to help you write, run, and manage code efficiently.
 
 Compared to a basic text editor, an IDE typically provides:
 
@@ -233,7 +269,10 @@ Compared to a basic text editor, an IDE typically provides:
 
 These features reduce errors and make programming more structured and productive.
 
+**Examples**: VSCode, Pycharm, RStudio, Posit
 
+
+<!--
 ## IDE is more complete than a code editor (to remove)
 
 A text editor edits plain text and has no understanding of programming languages
@@ -241,35 +280,39 @@ A text editor edits plain text and has no understanding of programming languages
 A code editor understands programming languages and provides syntax highlighting and basic assistance
 
 An IDE combines a code editor with tools to run, debug, test, and manage projects (cf RStudio)
-
+-->
 
 ## Visual Studio Code
 
 Visual Studio Code (VS Code) is a lightweight but powerful code editor that behaves like a full IDE through **extensions**.
+
+::: {.columns}
+::: {.column width="55%"}
+
+<br>
 
   - free and open source
   - available on Windows, macOS, and Linux
   - widely used in academia and industry
   - well suited for Python, R, and many other languages
   - very versatile and flexible!
-
-
-## Why we use VS Code in this course (remove)
-
-#### VS Code a good default choice for learning programming:
-
-  - same setup on all operating systems
   - integrated terminal
   - strong Python support
-  - project-based work with folders
   - extensions for Git, notebooks, linters, and formatters
   - integrated Copilot!
+  - syncs to all machines with a GitHub account
 
 
+:::
+::: {.column width="45%"}
 
-## First setup
+![](../../assets/img/vscode_logo.jpg){width="40%"}
 
-First step today:
+:::
+:::
+
+
+## First setup (exercise session today)
 
 - Install VS Code
 - Open it once
@@ -291,29 +334,28 @@ We will build on this setup throughout the course.
 
 ## Why python?
 
-Python is:
+Python is a good first (and second...) programming language.
 
 - easy to read and write
 - widely used in data science, economics, research, web development, automation, and AI
 - flexible enough for small scripts and large projects
 
-It is a good first programming language.
 
+#### Python or R?
 
-## Python vs R: What the heck?
+"**It simply does not matter**. If you stick around in data science long enough, you will eventually get in touch with both languages and, in turn, learn both. There is a huge overlap of what you can do with either of those languages. The point is, if you just start doing analytics using a programming language, both languages are guaranteed to carry you a long way. There is no way to tell for sure which one will be the more dominant language 10 years from now, or whether both will be around holding their ground the way they do now." Matthias Bannert, "Research Software Engineering"
 
-#### The choice that does not matter
-
-tbd
 
 ## Environments in Python and R
 
-In R:
+A first striking difference (and a source of lots of sweat) between R and Python is dependency management.
+
+#### In R:
 
 - strong(er) standards (CRAN)
 - more backward compatibility
 
-In Python:
+#### In Python:
 
 - Python relies heavily on project-specific environments
 - Managing dependencies is essential
@@ -332,7 +374,7 @@ A **virtual environment** is an isolated Python setup for a project.
 A **project** is simply a folder that contains your code, its configuration, and its dependencies.
 
 
-## Virtual Environment Manager: `uv` 
+## Virtual Environment Manager: `uv`
 
 `uv` is a modern, fast Python package manager that simplifies working with environment:
 
@@ -344,7 +386,7 @@ A **project** is simply a folder that contains your code, its configuration, and
 (Replaces pip, pip-tools, and virtualenv.)
 
 
-## Virtual Environment Manager: `uv` 
+## Virtual Environment Manager: `uv`
 
 With uv, each project has:
 
@@ -370,7 +412,7 @@ uv add rich pandas
 uv run main.py
 ```
 
-Project based on the pyproject.toml. 
+Project based on the pyproject.toml.
 
 
 
@@ -399,14 +441,14 @@ If you know R (which you do...), Python will feel familiar, but not identical.
 
 - indentation is part of the language
 - indexing starts at 0
-- Python prefers explicit, readable code
+- Python prefers **explicit, readable code**
 
 We will revisit these ideas throughout the course.
 
 
 ## Indentation
 
-In Python, indentation defines structure.
+In Python, indentation defines the structure of your code.
 
 Blocks of code are created by indentation, not by curly braces {} like in many other languages.
 
@@ -438,8 +480,6 @@ Common in programming, even if it feels unintuitive at first.
 ## For next time
 
 - install Git
-- create a GitHub account
-- create groups of five
 
 We will start using version control from the next lecture.
 

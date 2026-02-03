@@ -1,0 +1,60 @@
+---
+title: "BEcon 6243 - Introduction to Programming"
+subtitle: "Course Materials and Resources"
+author: "Dr. Franziska Bender, Dr. Aurélien Sallin"
+date: last-modified
+format: 
+  html:
+    toc: false
+---
+
+# Welcome to BEcon 6243
+
+This course introduces you to programming fundamentals using Python, with applications in economics and data science.
+
+## Course Structure
+
+### Lectures
+Access weekly lecture slides and materials through the navigation menu above.
+
+### Exercises
+Hands-on exercises to practice programming concepts.
+
+### Administration
+Course syllabus, schedule, and administrative information.
+
+## Quick Links
+
+::: {.grid}
+
+::: {.g-col-6}
+### 🎯 Current Week
+**Week 1: Getting Started**
+
+- [Lecture 1: Introduction](course_materials/week_01/01a_introduction.qmd)
+- [Lecture 2: Getting Started](course_materials/week_01/01b_gettingstarted.qmd)
+- [Common Terminal Commands](course_materials/week_01/CommontTerminalCommands_BradTraversy.qmd)
+:::
+
+::: {.g-col-6}
+### 🔧 Setup Required
+**Before our first class:**
+
+
+:::
+
+:::
+
+## Learning Objectives
+
+By the end of this course, you will be able to:
+
+- Use the terminal and command line effectively
+- Write and run Python programs
+- Work with data using Python libraries
+- Use Git and GitHub for version control
+- Apply programming concepts to economic problems
+
+---
+
+*Last updated: `{r} Sys.Date()`*

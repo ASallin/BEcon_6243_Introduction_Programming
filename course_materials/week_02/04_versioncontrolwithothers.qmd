@@ -1,0 +1,281 @@
+---
+title: '6,243 Introduction to Programming'
+subtitle: 'Lecture 3: Git with others'
+author: "Dr. Franziska Bender, Dr. Aurélien Sallin"
+date: "2025-09-16"
+code-line-numbers: false
+format:
+  revealjs:
+    template-partials:
+      - ../../assets/style/title-slide.html
+    width: 1280
+    height: 720
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    theme: ../../assets/style/hsgtheme.scss
+highlight-style: dracula
+cache: false
+echo: false
+execute:
+  echo: true
+---
+
+
+```{r set-options, echo=FALSE, cache=FALSE, warning=FALSE}
+options(width = 100)
+library(knitr)
+library(purrr)
+```
+
+## Goals for today
+
+In this lecture and exercise session, we will:
+
+- go remote with our repository
+- set up a collaborative project on git
+
+
+
+## Vision
+
+Collaborate on programming/data science projects.
+
+
+
+## You have been working locally, what now?
+
+![](../../assets/img/git_process5.png)
+
+Three levels: changes can be either **unstaged**, **staged** or **commited**.
+
+  - When we first make a change it is unstaged
+  - Once we **add** the change to the staging area it is **staged**
+  - We can then **commit** all staged changes
+
+
+## `push` and `pull` to communicate with the world
+
+![](../../assets/img/git_process6.png)
+
+
+
+
+
+## What is GitHub?
+
+- GitHub is a website to host git repositories
+- By having your git repository online, you can easily collaborate with others
+- Similar, alternative websites like Bitbucket or GitLab
+
+
+## Why having your code on GitHub?
+
+- Backup of your project (you can work from different machines)
+- Collaboration in groups and also with people you don't know
+- Free and Open-Source Software (FOSS)
+- Visibility as Coder (your porfolio - GitHub fulfills some function of a social network for programmers)
+
+
+## Github.com: a demo
+
+Check some interesting **GitHub repositories**: [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), an open-source optical character recognition, or [Awesome Datascience](https://github.com/academic/awesome-datascience), a full collection of resources on data science
+
+Or **GitHub pages**, like [the GitHub profile of the World Bank](https://github.com/worldbank) or [build your own](https://github.com/codecrafters-io/build-your-own-x) page with "build-your-own" projects.
+
+
+
+# Connecting git and github
+
+## Authenticating with GitHub 🗝️
+
+#### Authentication when pushing and pulling
+
+- When you connect to a GitHub repository, GitHub needs to verify who you are using a username and password. Since August 2021 stronger authentication is required, and there are several secure methods available.
+- We'll use **SSH keys**: you keep a private key on your computer and upload the matching public key to GitHub; when they match correctly, GitHub grants access.
+- Using SSH keys is more secure than passwords, avoids repeated credential prompts, and is a common, portable method for authenticating to remote services.
+
+
+#### How to?
+
+- Setting up the authentication with GitHub could be somewhat cumbersome.
+- Please go to this [website from LMU Munich](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/SSH.html) and follow the steps to authenticate with GitHub.<br>*Credits*: Open Science Center at LMU Munich (Mike Croucher & Malika Ihle)
+
+
+
+## Test your connection
+
+Test your connection using the following code.
+
+```bash
+ssh -T git@github.com
+> Hi ASallin! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+
+## Cloning a Repository
+
+- You can download repositories from GitHub (and anywhere else), by **cloning** them
+- For public repositories, `git clone` just works, for private ones you will need to be authenticated
+- `git clone <remote URL>`
+
+
+## Cloning the course repository
+
+#### 1. Navigate to your course directory `BECON_4222_Introduction_programming_exercises` using the terminal.
+
+Remember our course structure:
+
+```
+BECON_4222_Introduction_programming/
+├── materials/              # is empty for now, you will clone the git repo in week 3
+├── exercises/              # Student's own work
+│   ├── week01/
+│   ├── week02/
+│   ├── ...
+│   ├── week12/
+├── group_project/
+│   ├── ...
+
+```
+
+
+
+## Cloning the course repository
+
+##### 2. Find the HTTPS or SSH on the GitHub course repo
+Go on [https://github.com/ASallin/BECON_4222_Introduction_Programming](https://github.com/ASallin/BECON_4222_Introduction_Programming) and click on **<>Code**
+
+![You can find the remote URL by going to a repository on GitHub and clicking the Code button](../../assets/img/clone_repo.png)
+
+
+## Cloning the course repository
+
+##### 3. Clone the course repository.
+
+The course is public, so cloning via HTTPS will work without an SSH key; cloning via the SSH URL requires a configured SSH key.
+
+
+```bash
+git clone https://github.com/ASallin/BECON_4222_Introduction_Programming.git
+```
+
+or
+
+```bash
+git clone git@github.com:ASallin/BECON_4222_Introduction_Programming.git
+```
+
+## Cloning the course repository
+
+Now you've cloned the course repository in your directory. You'll have a new folder called "BECON_4222_Introduction_Programming". You can remove the "materials" folder.
+
+```
+BECON_4222_Introduction_programming/
+├── BECON_4222_Introduction_Programming/
+├── exercises/              # Student's own work
+│   ├── week01/
+│   ├── week02/
+│   ├── ...
+│   ├── week12/
+├── group_project/
+│   ├── ...
+
+```
+
+Every week, you can refresh the course content with `git pull`.
+
+
+
+# Remotes
+
+## Remotes
+
+- A **remote** is a version of your repository stored on a website like GitHub.
+- Remotes also have branches, just like your local repository.
+- The main remote is usually called `origin`.
+  - If you use `git clone`, the remote named `origin` is set up for you automatically.
+
+
+## Adding a Remote
+
+When you want to add an **existing** repository to GitHub, you will have to add the remote yourself
+
+```bash
+git remote add <remote name> <remote URL>
+```
+
+<br>
+
+It only works if you are not in a repo which has already been linked to a remote.
+
+```bash
+git remote add origin git@github.com:asallin/BECON_4222_Introduction_Programming.git
+```
+
+<br>
+
+To learn about all possible commands for remotes use `-h`
+
+```bash
+git remote -h
+```
+
+
+
+# Syncing Changes
+
+## Syncing Changes: Overview
+
+You first `pull` the latest changes from the remote and then `push` your own changes.
+
+![](../../assets/img/git_process7.png)
+
+
+## Getting Changes: `git pull`
+
+- To get the newest updates from GitHub, type `git pull` in your terminal.
+- This command downloads any changes from the online repository and adds them to your current work.
+- Usually, your branch is already set up to follow the matching branch on GitHub.
+  - If it isn't, Git will show you a warning and tell you what to do.
+
+```bash
+# Pull from the tracked remote branch
+git pull
+
+# Pull from a specific branch
+git pull <remote> <branch>
+```
+
+- `git pull` does does things under the hood: it fetches the latest changes and merges them into the current branch.
+- (You can also run `git fetch` to fetch the latest changes and then `git merge <remote>/branch` to merge them)
+
+
+
+## Note on Getting Changes: `git pull`
+
+- When you run `git pull` for the first time, you will need to choose a default *merge strategy*
+- When you receive the message, just copy this line of code (or the one you prefer)
+
+```bash
+# Default to merge
+git config pull.rebase false
+```
+
+
+## Pushing Your Changes: `git push`
+
+- You can send *your* changes to github by running `git push`
+- This only works if there are no new changes at the remote
+  - If there have been changes since your last `pull` you need to `pull` again
+
+```bash
+# Push to the tracked remote branch
+git push
+
+# Push a branch to the remote for the first time
+# -u is short for --set-upstream
+git push -u <remote> <branch>
+```
+

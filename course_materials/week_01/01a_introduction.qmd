@@ -1,8 +1,8 @@
 ---
-title: 'Introduction to Programming'
+title: '4,222 Introduction to Programming'
 subtitle: 'Lecture 1: Introduction'
 author: "Dr. Franziska Bender, Dr. Aurélien Sallin"
-date: "2025-09-16"
+date: "2026-02-20"
 code-line-numbers: false
 format:
   revealjs:
@@ -15,7 +15,7 @@ format:
     self-contained: true
     slide-number: c
     # theme: ../../style/hsgtheme.scss
-highlight-style: dracula 
+highlight-style: dracula
 cache: false
 echo: false
 execute:
@@ -36,8 +36,13 @@ library(purrr)
 
 # Vision for this course
 
+## It's an introductory course, and it is not
 
-## {class="inverse" background-image="../../img/mechanics.webp" background-size="100%" background-repeat="cover"}
+Introductory yes, but not in the traditional sense of the term.
+
+You know R, Data Handling, some of you did DSF, you are learning Econometrics.
+
+
 
 
 ## By the end of the course, you will be able to...
@@ -49,7 +54,7 @@ library(purrr)
 
 
 
-## My commitment to these goals and to your learning process
+## Our commitment to these goals and to your learning process
 
 - **Transferrable skills**
 - **Hands-on approach**
@@ -65,18 +70,11 @@ library(purrr)
 - Code, code, and code. repeat...
 - 🤖 Use AI as a learning companion and sparring partner, not as a crutch 🩼! (more on that later)
 
-```{r}
-try <- 0
-while(try < 999) {
-  try <- try + 1
-}
-cat("success!")
-```
 
 
 
-## Our Team - At Your Service
-<!-- 
+## About us
+<!--
 <br>
 
 <div class="custom-table">
@@ -105,46 +103,6 @@ cat("success!")
 
 
 
-## Your instructors - Aurélien Sallin
-
-##### Short CV
-- 2022-today: Expert in Health Care Research and Member of Management,  SWICA Health Organization, Winterthur
-- 2022-today: Lecturer, HSG
-- 2017-2022: Research Associate, Swiss Institute for Empirical Economic Research (SEW-HSG)
-
-##### Education
-
-- 2018-2022: PhD Economic and Finance, HSG (Lund and Federal Reserve)
-- 2018: MA in Philosophy, Fribourg
-- 2017: MA in Economics, Fribourg
-
-
-##### Others
-<!-- <img src="../../img/gsp.png" height="70"/> &nbsp;&nbsp;
-<img src="../../img/biking.jpg" height="70"/> &nbsp;&nbsp;
-<img src="../../img/Logo_GLP.png" height="70"/> &nbsp;&nbsp;
-<img src="../../img/rusergroupzh.png" height="70"/> &nbsp;&nbsp; -->
-
-
-
-## Your instructor - Aurélien Sallin
-
-##### Research at SWICA
-
- - Evaluate effects of insurance products on health care consumption, costs, and medical behaviors 
- - Use Real-World Data from claims to assess effectiveness of health technological tools
- - Use (Causal) Machine Learning to evaluate the effect of health policies on doctors' prescription behaviors
- - Develop financing models for mandatory health care in Switzerland
-
-<br>
-
-##### Other Research 
-
- - Missclassification rates for gifted students
- - Evaluation of Special Education programs
-
-
-
 
 # Organisation of the Course
 
@@ -161,7 +119,7 @@ cat("success!")
 
 - Exercise sheets (handed out every other week)
   - Some conceptual questions
-  - Hands-on exercises/tutorials in R 
+  - Hands-on exercises/tutorials in R
   - *First Exercises (set up R/RStudio) is available on StudyNet/Canvas today*
 
 
@@ -176,13 +134,21 @@ cat("success!")
 
 
 
+## Course concept: a note
+
+This is the first time we give this course.
+
+The materials are new, the syllabus is new.
+
+
+
 # The road ahead
 
 <!-- ## {class="inverse" background-image="../../img/roadahead2.jpg" background-size="100%" background-repeat="cover"} -->
 
 
 
-## Part I: Data (Science) fundamentals 
+## Part I: Data (Science) fundamentals
 
 
 ## Exam information
@@ -194,14 +160,14 @@ The examination consists of two parts:
 - [Central written examination]{.green-bold}, 50% of final grade.
 
 
-## Exam information: group project 
+## Exam information: group project
 
 #### Goals
 - Use real-world data in a project to practice and reinforce the concepts covered in the course.
 
 #### Project timeline
 
-- **October 16**: Release of Part 1 of the project (in lecture) and group formation. 
+- **October 16**: Release of Part 1 of the project (in lecture) and group formation.
 
 - **November 6, 23:59**: Intermediate submission (not graded).
 
@@ -224,29 +190,7 @@ Beyond the critical use of LLMs, students must demonstrate their own grasp of th
 - Date: **December 11th at the beginning of the lecture**.
 - Written examination: *digital, BYOD!*.
 - Duration: 20mn
-- This short exam consists of 2–3 questions about the homework project. 
-
-
-
-## Central written examination
-
-#### Goal
-Demonstrate your understanding of the concepts and practical applications covered in the course.
-
-#### Important information
-- Central, written examination: *digital, BYOD!*.
-- Multiple choice questions.
-- Duration: 60mn. 
-
-#### What to expect
-- We will release samples of multiple choice questions in the lecture and via Quizzes on Canvas/Studynet (exact same format and style of exam questions).
-
-
-
-## Exam for exchange students
-- Exchange students who need to take the exam before the central exam block:
-    - Date, time place: **18.12.2025, 16:15-18:00, room tbd**.
-    - Questions: *andrea.burro@unisg.ch*
+- This short exam consists of 2–3 questions about the homework project.
 
 
 
@@ -270,49 +214,6 @@ git pull origin 2025 # to update
 
 
 
-## Why R?
-
-
-##### *The* data language
-
-- Widely used in Data Science jobs.
-- Originally designed as a tool for statistical analysis.
-- Particularly useful to program with data.
-
-
-##### High-level language
-
-- Relatively easy to learn.
-- A lot of free tutorials and support online.
-
-
-##### Free, open-source, large community
-
-- Used in various fields.
-- Thousands of 'R-packages' covering diverse aspects of data analysis.
-- Learn from open sources.
-
-
-## R
-
-
-## Main textbooks
-
-- [Data Handling Pocket Reference](https://umatter.github.io/datahandling/)
-- [Murrell, Paul (2009). *Introduction to Data Technologies*, London: Chapman & Hall/CRC.](https://www.stat.auckland.ac.nz/~paul/ItDT/)
-- [Wickham, Hadley and Garred Grolemund (2017). *R for Data Science*, 1st Edition. Sebastopol, CA: O’Reilly.](http://r4ds.had.co.nz/)
-- [Baumer, Kaplan and Norton (2023). *Modern Data Science with R*, 2nd Edition. ](https://mdsr-book.github.io/mdsr3e/)
-
-
-
-## Further resources
-
-- [Stackoverflow](https://stackoverflow.com/questions)
-- [Get inspired in the R blogsphere](https://www.r-bloggers.com)
-- ChatGPT
-
-
-
 # How to best use AI for this course
 
 <br>
@@ -321,11 +222,11 @@ git pull origin 2025 # to update
 
 :::: {.columns}
 ::: {.column width="55%"}
-❌ Ask AI to write full programs for you  
+❌ Ask AI to write full programs for you
 
 ✅ Ask **structured questions** based on your own knowledge (idea: knowledge reinforcement)
 
-✅ Use AI to explore unknown and new approaches  
+✅ Use AI to explore unknown and new approaches
 
 :::
 ::: {.column width="45%"}
@@ -334,7 +235,7 @@ You want to compute the mean of each element of the list `x`.
 
 ```{r}
 x <- list(
-  c(1,2,3), 
+  c(1,2,3),
   c(4,5,6)
   )
 ```
@@ -364,7 +265,7 @@ x <- list(
 You have the following piece of code:
 
 ```{r}
-mat <- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3, 
+mat <- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3,
              byrow = TRUE,
              dimnames = list(c("row1", "row2"),
                              c("C.1", "C.2", "C.3")))
@@ -420,11 +321,11 @@ R sends the following error message: "non-numeric argument to mathematical funct
 
 :::
 ::: {.column width="45%"}
-You don't see the point of learning to code functions and loops since AI can do it for you. 
+You don't see the point of learning to code functions and loops since AI can do it for you.
 
 **Ask AI**:
 “Why is learning to program functions important for an economist/data scientist? Give me some real-life examples. ”
 :::
 ::::
 
-# Questions?  
+# Questions?

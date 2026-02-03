@@ -1,0 +1,236 @@
+---
+title: 'Exercise 3'
+subtitle: 'First commits with git'
+author: ""
+date: "2025-09-16"
+code-line-numbers: false
+format:
+  html:
+    # template-partials:
+      #  - ../../style/title-slide.html
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    # theme: ../../style/hsgtheme.scss
+highlight-style: dracula
+cache: false
+echo: false
+execute:
+  echo: true
+  eval: false
+---
+
+
+## Cloning a repository
+
+For this exercise, we've prepared a GitHub Classroom. A GitHub Classroom is a special type of repository created for a class, where each student gets their own copy to complete and submit assignments. It works like a normal GitHub repository. We will use it for the group project.
+
+### Connect to the repo
+With the following link https://classroom.github.com/a/LrPyk79h, accept the invitaton to connect. Once you've accepted the invitation, you should see a link to a repository:
+
+![](../../assets/img/githubclassroom_invitation.png)
+
+### Clone
+Clone the repository using either HTTPS or SSH. Make sure you are cloning the repository in the directory `BECON_4222_Introduction_programming/exercises/week03`. Check that your repo has been downloaded using `git status`.
+
+```
+BECON_4222_Introduction_programming/
+├── BECON_4222_Introduction_Programming/
+├── exercises/              # Student's own work
+│   ├── week01/
+│   ├── week02/
+│   ├── ...
+│   ├── week12/
+├── group_project/
+│   ├── ...
+
+```
+
+Solution:
+
+```bash
+git clone https://github.com/<org>/<their-repo>.git
+cd <their-repo>
+git status
+```
+
+
+## Pushing and pulling
+
+### First edit + push
+
+Open exercise.txt (best if you use VSCode, but you can also use any other editor). Edit the file following the instructions. Then push your changes to remote.
+
+Solution:
+
+```bash
+git status
+git add exercise.txt # or git add .
+git commit -m "Fill in exercise"
+git push
+```
+
+
+### Check changes in remote
+
+After your first push, do nothing for a moment. Something changes on GitHub (your colleague pushed a change). GitHub will automatically add a new line to exercise.txt. In this simulated situation, your local files are unchanged but the the remote repository is ahead.
+
+
+### Local commits vs remote commits
+
+We are in the situation where you have already pushed once and the remote repo has changed. Imagine you forgot to pull the remote and you are working ahead on your local directory.
+
+Open exercise.txt again. Add a new line at the end, for example: "I made another local change before pulling." Save the file and commit. Do not push yet.
+
+Solution:
+
+```bash
+git status
+git add exercise.txt
+git commit -m "Add another local change"
+```
+
+At this point, you are ahead locally and the remote is also ahead. The histories have "diverged".
+
+Now pull the changes to your computer, then open `exercise.txt` again. Check the changes using `git status`. Notice the new commits in your GUI.
+
+Solution:
+```bash
+git pull
+```
+
+
+Your local changes are not erased: Git combines your local commit and the remote commit. The file now contains both changes.
+
+Check the history in your GUI.
+
+```bash
+git log --oneline
+```
+
+As a final step, push the combined history back to GitHub.
+
+
+#### Key takeaway
+
+If the remote is ahead, and you commit locally, and you then pull, Git does not delete your work, but tries to combine the histories automatically.
+
+
+
+
+
+
+
+## Branching and a first merge conflict
+
+### Create a new branch
+
+Create and switch to a new branch called `answer-42`. Check where you are.
+
+Solution:
+```bash
+git checkout -b answer-42
+git branch
+```
+
+You should see `answer-42` marked with *.
+
+
+### Changes on the branch
+
+Open `exercise.txt`. Find the sentence: "The answer to everything is ____.", where ____ is your previous answer. You should also observe the added line. Replace it with "The answer to everything is 42!"
+
+Save the file and commit with a meaningful commit message.
+
+Solution:
+```bash
+git add exercise.txt
+git commit -m "Answer the ultimate question"
+```
+
+
+### Push the branch
+
+Push the branch to GitHub. Open the repository on GitHub. You should now see two branches.
+
+Solution:
+```bash
+git push -u origin answer-42
+```
+
+
+### Conflicting change
+
+Go back to the `main` branch in your local directory. Open exercise.txt again. Change the same sentence to: "The answer to everything is still unknown." Then commit and push.
+
+Solution:
+
+```bash
+git checkout main
+git add exercise.txt
+git commit -m "Change the answer on main"
+git push
+```
+
+
+### Merge the branch into main
+
+Now try to merge your branch:
+
+git merge answer-42
+
+
+💥 You should get a merge conflict.
+
+This is expected.
+
+7.5 Resolve the conflict
+
+Open exercise.txt.
+
+You will see conflict markers like:
+
+```bash
+<<<<<<< HEAD
+The answer to everything is still unknown.
+=======
+The answer to everything is 42.
+>>>>>>> answer-42
+```
+
+Resolve the conflict by choosing one version, or combine them, for example:
+
+The answer to everything is 42 (even if it sometimes feels unknown).
+
+Remove the conflict markers, save the file.
+
+Then:
+
+git add exercise.txt
+git commit -m "Resolve merge conflict about the answer"
+git push
+
+
+Observations
+
+💡 Observation:
+Remote was ahead, but you had not changed the same lines.
+
+
+## Practical: Adding your own repository to Github
+
+1. Create a new repository on GitHub with the name `git-intro-example`
+    - Make sure NOT to add a README or any other file when creating it
+2. In the example git repository we've been working in so far, add the just created GitHub repo as a remote
+    - `git remote add origin <URL>`
+3. Push you changes so far to GitHub
+   - `git push -u origin main`
+
+## Optional Practical: Collaboration
+
+1. Form pairs
+2. One person adds the other to their `git-intro-example` repository
+   - Via the GitHub UI (write privileges)
+3. Each, add a new entry to the `library.txt`
+4. Try to provoke a merge conflict

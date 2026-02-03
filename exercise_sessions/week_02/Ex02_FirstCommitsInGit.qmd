@@ -1,0 +1,195 @@
+---
+title: 'Exercise 2'
+subtitle: 'First commits with git'
+author: ""
+date: "2025-09-16"
+code-line-numbers: false
+format:
+  html:
+    # template-partials:
+      #  - ../../style/title-slide.html
+    smaller: true
+    embed-resources: true
+    self-contained: true
+    slide-number: c
+    # theme: ../../style/hsgtheme.scss
+highlight-style: dracula
+cache: false
+echo: false
+execute:
+  echo: true
+---
+
+
+## Install `git` and the VSCode extension `Git Graph`
+
+**This step has to be done before the exercise session.** Please follow the instructions on the git website: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+For Windows users, we recommend installing git via the Git for Windows installer: https://git-scm.com/download/win. For Mac users, git is often already installed. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time.
+
+```bash
+$ git --version
+```
+
+If you don’t have it installed already, it will prompt you to install it. If you want a more up to date version, you can also install it via a binary installer. A macOS Git installer is maintained and available for download at the Git website, at https://git-scm.com/download/mac.
+
+<br>
+
+## Configurate git on your machine
+
+Follow the step here to configurate your git installation.
+
+```{bash}
+# Add your name
+git config --global user.name "Your Name"
+
+# Add your email address
+git config --global user.email "your.email@unisg.ch"
+
+# Use modern main branch name
+git config --global init.defaultbranch main
+```
+
+```{bash}
+# For Linux/Mac:
+git config --global core.autocrlf input
+
+# For Windows:
+git config --global core.autocrlf true
+```
+
+
+<br>
+
+## Initialize a `git` repository
+
+We will work with our folder structure:
+
+```
+BECON_6243_Introduction_programming/
+├── materials/              # is empty for now, you will clone the git repo in week 3
+├── exercises/              # Student's own work
+│   ├── week01/
+│   ├── week02/
+│   ├── ...
+│   ├── week12/
+├── group_project/
+│   ├── ...
+
+```
+
+1. Identify the filepath of the directory BECON_6243_Introduction_programming_exercises/exercises.
+2. In the terminal of your VSCode, navigate to the directory.
+3. Navigate back to exercises. There, initialize a git repository using `git init`. Check your git repo using `git status`.
+
+
+### Solution:
+In your terminal from VSCode, navigate to your cd BECON_6243_Introduction_programming/exercises. Then:
+
+```bash
+git init
+# Initialized empty Git repository in /Users/BECON_6243_Introduction_programming/exercises
+```
+
+<br>
+
+## First tracking and commit
+
+1. Navigate to week02. There, create a text file named `humorforprogrammers.txt` containing the sentence "*Code is like humor. When you have to explain it, it’s bad.*" using your terminal or simply using VSCode (new file -> save)
+2. Observe what happens with `git status`. Check `git log`.
+3. Add the file to the staging area. Check with `git status`.
+4. Create your first commit. Commit the new file with the commit message "text file created". Check with `git status`.
+5. Change the text in `humorforprogrammers.txt` to "*Code is absolutely not like humor.*" and save. Use `git diff` to see the actual unstaged changes.
+6. Add the file to the staging area and commit the new file with the commit message "text file modified".  Check with `git status` and with `git log`.
+--
+7. Look at your sidebar in VSCode. You'll notice the `git` GUI. Now create a new file `hello.txt` containing "hello world!". Observe the sidebar. Using the GUI, add and commit, using a nice commit message.
+8. Delete `hello.txt` and restore it.
+
+```bash
+#| eval = false
+echo "Code is like humor. When you have to explain it, it’s bad." > humorforprogrammers.txt
+
+# verify
+cat humorforprogrammers.txt
+```
+
+```bash
+git add humorforprogrammers.txt
+git status
+git commit -m "text file created"
+```
+
+```bash
+echo "*Code is absolutely not like humor.*" > humorforprogrammers.txt
+```
+
+```bash
+git add humorforprogrammers.txt
+git status
+git commit -m "text file modified"
+```
+
+
+<br>
+
+## Ignore some files
+
+1. Navigate to your repo in exercises.
+2. If you haven't done it from the course, download the [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) and save it in /week02
+4. Create a new .gitignore file to ignore only this cheatsheet
+5. Commit the .gitignore file. Notice what's happening.
+6. Change the .gitignore file to the following file. Explain what the new .gitignore file does. Commit.
+
+```bash
+# Data and generated outputs
+*.csv
+*.tsv
+*.xlsx
+*.pdf
+*.png
+*.jpg
+*.html
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment (uv)
+.venv/
+
+# Editor / OS files
+.DS_Store # typical for macOS!
+.vscode/
+```
+
+<br>
+
+## Time-Travel ⏱️
+
+- Go back to your Terminal
+- Open the git log of your respository or call it with `git log`. From the log, identify the commit hash (identifier) of your first commit. Note that `HEAD` is used to reference commits relatively, with `HEAD` being the current commit, `HEAD~1` the previous commit, `HEAD~2` the commit two commits ago, and so on.
+- Checkout the previous commit using the `git checkout` function. As seen in the course, you can checkout to a git commit using the commit identifier. Or, you can use the following syntax: `checkout HEAD~1`.
+- Go back to your main branch using `git checkout`.
+
+### Solution
+Tutors, explain briefly what a detached head is.
+
+
+<br>
+
+## Option:
+Demo: learngitbranching.js.org
+
+
+<br>
+
+## On 🪵, 🌲 and 💥
+
+- Go back to your Terminal and navigate to your repo
+- Create a new branch called fixCode. Checkout the new branch. Make sure you're on the right branch using `git status`.
+- Add a commit on that new branch
+- Go back to main
+- Merge the new-feature branch into main
+- Repeat all the above steps (with a different branch name & commit) using the GUI on VSCode.
+
+
