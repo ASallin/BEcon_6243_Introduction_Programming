@@ -14,7 +14,7 @@ format:
     embed-resources: true
     self-contained: true
     slide-number: c
-    theme: ../../style/hsgtheme.scss
+    # theme: ../../style/hsgtheme.scss
 highlight-style: dracula
 cache: false
 echo: false

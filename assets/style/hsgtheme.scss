@@ -97,14 +97,14 @@ code {
     padding: 20px;
 }
 
-// add footnote-style 
+// add footnote-style
 .footnote-pin {
   position: absolute;
   bottom: 1.2rem;
   left: 1.2rem;
   right: 1.2rem;
   font-size: 1.3rem;
-  color: #6b7280; 
+  color: #6b7280;
 }
 
 
@@ -181,3 +181,19 @@ code {
     display: none;
 }
 
+// Custom bullet styles for nested lists
+ul ul {
+    list-style-type: circle !important;
+}
+
+ul ul ul {
+    list-style-type: disc !important;
+}
+
+ul ul li::before {
+    content: none !important;
+}
+
+ul ul ul li::before {
+    content: none !important;
+}

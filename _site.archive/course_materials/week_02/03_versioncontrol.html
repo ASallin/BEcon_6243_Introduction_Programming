@@ -445,7 +445,7 @@
 
   <meta name="author" content="Dr. Franziska Bender, Dr. Aurélien Sallin">
   <meta name="dcterms.date" content="2025-09-16">
-  <title>6,243 Introduction to Programming</title>
+  <title>BEcon 6243 - Introduction to Programming – 6,243 Introduction to Programming</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1349,22 +1349,22 @@ margin-right: 0; }
 <h2>Setting up git</h2>
 <p>Run the following commands in your terminal to correctly configure git on your computer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Add your name</span></span>
-<span id="cb1-2"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Your Name&quot;</span></span>
-<span id="cb1-3"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Add your email address</span></span>
-<span id="cb1-5"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;your.email@unisg.ch&quot;</span></span>
-<span id="cb1-6"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Use modern main branch name</span></span>
-<span id="cb1-8"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultbranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Add your name</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Your Name&quot;</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Add your email address</span></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;your.email@unisg.ch&quot;</span></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use modern main branch name</span></span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultbranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h4 id="a-detail-you-only-need-to-do-this-once-at-config-not-to-remember-for-the-course">A detail (you only need to do this once at config, not to remember for the course):</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># For Linux/Mac:</span></span>
-<span id="cb2-2"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> core.autocrlf input</span>
-<span id="cb2-3"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># For Windows:</span></span>
-<span id="cb2-5"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> core.autocrlf true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># For Linux/Mac:</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> core.autocrlf input</span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># For Windows:</span></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> core.autocrlf true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Why? Windows saves linebreaks (enter) differently then Linux/Mac does. Remember Data Handling (Linux / macOS: LF <code>\n</code>, Windows: CRLF <code>\r\n</code>). Git may interpret this as code changes. This setting prevents unnecessary diffs and conflicts.</p>
 </section></section>
@@ -1392,18 +1392,18 @@ margin-right: 0; }
 <h2>Initialize a repo</h2>
 <p>This is done via the <code>init</code> command.</p>
 <p>In your terminal from VSCode, navigate to your cd BECON_6243_Introduction_programming/exercises. Then:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb4-2"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Initialized empty Git repository in /Users/BECON_6243_Introduction_programming/exercises</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Initialized empty Git repository in /Users/BECON_6243_Introduction_programming/exercises</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With git init we turn the directory into a repository.</p>
 <p>At this point, 🗂️ <strong>tracking has started!</strong></p>
 </section>
 <section id="see-whats-happening-git-status" class="slide level2">
 <h2>See what’s happening: <code>git status</code></h2>
 <p>To see the current status of a git repository you can run the status command.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb5-2"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># On branch main</span></span>
-<span id="cb5-3"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># No commits yet</span></span>
-<span id="cb5-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># nothing to commit (create/copy files and use &quot;git add&quot; to track)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># On branch main</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="co"># No commits yet</span></span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># nothing to commit (create/copy files and use &quot;git add&quot; to track)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="process-in-git-edit-select-commit" class="slide level2">
 <h2>Process in git: edit, select, commit</h2>
@@ -1473,21 +1473,21 @@ margin-right: 0; }
 <section id="illustration" class="slide level2">
 <h2>Illustration</h2>
 <p>Let’s write a text file “example.txt” using our terminal.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#| eval = false</span></span>
-<span id="cb6-2"><a href aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;first steps in git&quot;</span> <span class="op">&gt;</span> example.txt</span>
-<span id="cb6-3"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># verify</span></span>
-<span id="cb6-4"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> example.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb7-2"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Untracked files:</span></span>
-<span id="cb7-3"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span></span>
-<span id="cb7-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   example.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">#| eval = false</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;first steps in git&quot;</span> <span class="op">&gt;</span> example.txt</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="co"># verify</span></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> example.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Untracked files:</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   example.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Add example.txt to the staging area. Changes are added to the staging area with git add <path to file or directory>.</path></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add example.txt</span>
-<span id="cb8-2"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb8-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Changes to be committed:</span></span>
-<span id="cb8-5"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span></span>
-<span id="cb8-6"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   new file:   example.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add example.txt</span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Changes to be committed:</span></span>
+<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span></span>
+<span id="cb8-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   new file:   example.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>You can use git add . to add all unstaged changes in the current directory to the staging area</li>
 <li>You can also use * to represent any sort of filename e.g. add all .txt files via *.txt</li>
@@ -1496,19 +1496,19 @@ margin-right: 0; }
 <section id="tracking-changes-git-commit" class="slide level2">
 <h2>Tracking Changes: git commit</h2>
 <p>All changes in the staging area are commited with <code>git commit</code>. Every commit needs a message!</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb9-2"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Changes to be committed:</span></span>
-<span id="cb9-3"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span></span>
-<span id="cb9-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   new file:   example.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Changes to be committed:</span></span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span></span>
+<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   new file:   example.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let’s commit the new change</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Creating example.txt&quot;</span></span>
-<span id="cb10-2"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># [main (root-commit) ed61bb5] Adding example.txt</span></span>
-<span id="cb10-3"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#  1 file changed, 1 insertion(+)</span></span>
-<span id="cb10-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#  create mode 100644 example.txt</span></span>
-<span id="cb10-5"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb10-7"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># On branch main</span></span>
-<span id="cb10-8"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># nothing to commit, working tree clean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Creating example.txt&quot;</span></span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># [main (root-commit) ed61bb5] Adding example.txt</span></span>
+<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">#  1 file changed, 1 insertion(+)</span></span>
+<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">#  create mode 100644 example.txt</span></span>
+<span id="cb10-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb10-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># On branch main</span></span>
+<span id="cb10-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># nothing to commit, working tree clean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Once a change is commited it becomes significantly harder to remove it. <!--
 The classic way to undo a commited change in git would be to make another commit with the reverse change.
 Modifying a commit is possible, but you should now what you are doing. Typically this is called “changing history” and is (esp. in collaborative settings) frowned upon.
@@ -1530,14 +1530,14 @@ The default editor in git is (usually) vim
 <h2>Seeing Changes: git status 👀</h2>
 <p>You can see the high-level changes and what is about to happen with <code>git status</code></p>
 <p>Let’s change the content of example.txt. Save it. Then run:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb11-2"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># On branch main</span></span>
-<span id="cb11-3"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Changes not staged for commit:</span></span>
-<span id="cb11-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span></span>
-<span id="cb11-5"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span></span>
-<span id="cb11-6"><a href aria-hidden="true" tabindex="-1"></a><span class="co">#         modified:   example.txt</span></span>
-<span id="cb11-7"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># On branch main</span></span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Changes not staged for commit:</span></span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span></span>
+<span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">#   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span></span>
+<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">#         modified:   example.txt</span></span>
+<span id="cb11-7"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="additional-commands" class="slide level2">
 <h2>Additional commands</h2>
@@ -1550,12 +1550,12 @@ The default editor in git is (usually) vim
 <section id="the-anatomy-of-a-git-command" class="slide level2">
 <h2>The anatomy of a git command 🔍️</h2>
 <p>Git commands, like many other CLI tools follow a certain structure:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb12-2"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Adding example.txt&quot;</span></span>
-<span id="cb12-3"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Your Name&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Adding example.txt&quot;</span></span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Your Name&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With -h you can get help on any git command 🚨</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-h</span></span>
-<span id="cb13-2"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-h</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="lessons-dos-and-donts" class="slide level2">
 <h2>Lessons, Do’s and don’ts</h2>
@@ -1587,15 +1587,15 @@ The default editor in git is (usually) vim
 <li>(The .gitignore file itself is tracked just like any other file)</li>
 </ul>
 <h4 id="classic-examples">Classic examples</h4>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore every file called data_countries.csv</span></span>
-<span id="cb14-2"><a href aria-hidden="true" tabindex="-1"></a><span class="ex">myfile.pdf</span></span>
-<span id="cb14-3"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore the file called data_countries.csv in the folder data at the root of your repository</span></span>
-<span id="cb14-5"><a href aria-hidden="true" tabindex="-1"></a><span class="ex">/data/data_countries.csv</span></span>
-<span id="cb14-6"><a href aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore all data and generated outputs</span></span>
-<span id="cb14-8"><a href aria-hidden="true" tabindex="-1"></a><span class="ex">*.csv</span></span>
-<span id="cb14-9"><a href aria-hidden="true" tabindex="-1"></a><span class="ex">*.xlsx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore every file called data_countries.csv</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="ex">myfile.pdf</span></span>
+<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore the file called data_countries.csv in the folder data at the root of your repository</span></span>
+<span id="cb14-5"><a aria-hidden="true" tabindex="-1"></a><span class="ex">/data/data_countries.csv</span></span>
+<span id="cb14-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore all data and generated outputs</span></span>
+<span id="cb14-8"><a aria-hidden="true" tabindex="-1"></a><span class="ex">*.csv</span></span>
+<span id="cb14-9"><a aria-hidden="true" tabindex="-1"></a><span class="ex">*.xlsx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="further-notes-on-gitignore" class="slide level2">
 <h2>Further notes on gitignore</h2>
@@ -1652,7 +1652,7 @@ A classic example for files to ignore globally are .DS_Store files on macOS.
 <li>each commit has a “hash” (a commit id). You can go back to the a particular commit by referencing the hash.</li>
 <li>checkout sends you out of a branch, i.e. detached head. You need to explicitly switch to main (or to any other branch)</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout 795780d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout 795780d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="merge-conflicts" class="slide level2">
 <h2>Merge conflicts</h2>
@@ -1677,6 +1677,7 @@ A classic example for files to ignore globally are .DS_Store files on macOS.
 </ul>
 <p>Downloading a repository: git clone Alternatively, we can download a repository from the internet using the clone command. This will create a new repository on our machine and fill it with the remote repository’s contents.</p>
 <p>git clone https://github.com/open-teaching/git-murder-mystery.git</p>
+
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 

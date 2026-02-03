@@ -289,7 +289,7 @@ Visual Studio Code (VS Code) is a lightweight but powerful code editor that beha
 ::: {.columns}
 ::: {.column width="55%"}
 
-<br>
+<div style="font-size: 0.85em;">
 
   - free and open source
   - available on Windows, macOS, and Linux
@@ -302,11 +302,16 @@ Visual Studio Code (VS Code) is a lightweight but powerful code editor that beha
   - integrated Copilot!
   - syncs to all machines with a GitHub account
 
+</div>
 
 :::
 ::: {.column width="45%"}
 
-![](../../assets/img/vscode_logo.jpg){width="40%"}
+<br>
+
+<div style="text-align: center;">
+  <img src="../../assets/img/vscode_logo.jpg" width="30%" />
+</div>
 
 :::
 :::
@@ -326,7 +331,7 @@ Visual Studio Code (VS Code) is a lightweight but powerful code editor that beha
 
 We will build on this setup throughout the course.
 
-*Linting is the process of analyzing code to identify potential errors, style violations, and code quality issues before running the program. Using linting tools can help detect problems such as syntax errors, unused variables, and code that doesn’t conform to style guidelines
+<!--*Linting is the process of analyzing code to identify potential errors, style violations, and code quality issues before running the program. Using linting tools can help detect problems such as syntax errors, unused variables, and code that doesn’t conform to style guidelines-->
 
 
 
@@ -394,7 +399,6 @@ With uv, each project has:
 - a clear list of dependencies
 - reproducible setup
 
-This is how professional Python projects are structured.
 
 
 ## Getting started using `uv`
@@ -479,9 +483,7 @@ Common in programming, even if it feels unintuitive at first.
 
 ## For next time
 
-- install Git
-
-We will start using version control from the next lecture.
+- install Git: we will start using version control from the next lecture.
 
 
 ## References:
