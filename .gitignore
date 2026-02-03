@@ -1,3 +1,5 @@
 # admin/source/
 
 /.quarto/
+
+**/*.quarto_ipynb
