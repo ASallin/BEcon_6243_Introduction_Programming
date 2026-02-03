@@ -1,9 +1,11 @@
 ---
-title: 'Exercise 1'
-subtitle: 'Getting started'
-author: ""
-date: "2025-09-16"
+title: '4,222 Introduction to Programming'
+subtitle: 'Exercise Week 1: Getting started'
+author: "Aurélien Sallin"
+date: "2025-02-20"
 code-line-numbers: false
+project:
+  type: default
 format:
   html:
     # template-partials:
@@ -12,65 +14,72 @@ format:
     embed-resources: true
     self-contained: true
     slide-number: c
-    # theme: ../../style/hsgtheme.scss
+    theme: ../../style/hsgtheme.scss
 highlight-style: dracula
 cache: false
 echo: false
 execute:
   echo: true
+  eval: false
 ---
 
 
 # Set up your course directory
 
-For the course: where you want to save your course materials, create a folder: BECON_6243_Introduction_programming using the terminal. In this folder, create a subdir "my_work".
+Create a directory for the course on your computer: `BECON_4222_Introduction_programming` using the terminal. Use command prompt or powershell. From there, navigate to the path of your choice using `cd` and create the directory using `mkdir`.
 
-We will have the following folder structure:
+We will have the following folder structure throughout the course. Notice our personal preference for snake case.
 
-```
-BECON_6243_Introduction_programming_exercises/
+```bash
+BECON_4222_Introduction_programming/
 ├── materials/              # is empty for now, you will clone the git repo in week 3
 ├── exercises/              # Student's own work
-│   ├── week01/
-│   ├── week02/
+│   ├── week_01/
+│   ├── week_02/
 │   ├── ...
-│   ├── week12/
+│   ├── week_12/
 ├── group_project/
 │   ├── ...
 
 ```
 
-where BECON_6243_Introduction_programming is the main folder, "course materials" will be created next week with git, and "my_work" will contain students' own work. We suggest to organize "my_work" with weekly subfolders "week01, ..., week12, group_project".
+where `BECON_4222_Introduction_programming` is the main folder, `materials` will be created next week with git, and `group_project` will contain students' own work.
 
+<br>
 
 # Install VS Code
 
-Install VS Code.
+Now install VS Code on your computer. Follow instructions online.
 
-Create the "data science profile". See here for an introduction: https://code.visualstudio.com/docs/terminal/profiles
+Create the "data science profile". See here for an introduction: [https://code.visualstudio.com/docs/terminal/profiles](https://code.visualstudio.com/docs/terminal/profiles)
 
 Install the following extensions:
 
-  - Python (Microsoft): For linting, IntelliSense, debugging, and testing
-  - Pylance (Microsoft): type checking, code navigation, autocompletion
-  - Ruff: for better linting, import sorting
-  - Jupyter: runs notebooks directly in VS Code.
+  - **Python** (Microsoft): For linting, IntelliSense, debugging, and testing
+  - **Pylance** (Microsoft): type checking, code navigation, autocompletion
+  - **Ruff**: for better linting, import sorting
+  - **Jupyter**: runs notebooks directly in VS Code.
 
+Get familiar with VS Code. Open a terminal (on Windows, you might want to choose between powershell or command prompt). Understand what extensions are. In VScode, you should observe a left bar. In this bar, there is a tab for git, for extensions, etc. The first tab is usually your file access tab.
+
+<br>
 
 # Use the terminal in VS Code
 
-two exercises: find your working directory using `pwd`.
+0. You should always make VS Code start from the directory your are working in. You can do this in the following ways:
 
-Create a file "hello.txt" in the "week01" folder. Remove the file "hello.txt".
+    1. Either use your terminal and navigate to `BECON_4222_Introduction_programming` using `cd`. Then use `code .` to open VS code in your directory.
+    2. You can also open VS Code, and then use File/Open Folder.
 
-Finally, move your working directory to "BECON_6243_Introduction_programming".
+1. In VS Code, open a terminal. In the terminal, understand where you are located. Find your current path directory using `pwd`.
+2. Create a file "hello.txt" in the `exercises/week_01` folder. Remove the file "hello.txt".
+3. Finally, move your working directory to `BECON_4222_Introduction_programming`.
 
-
-Solution.
+<br>
 
 # Install python via `uv`
 
-go on the uv website for more information.
+Go on the `uv` website for more information on how to install.
 
 ::: {.panel-tabset}
 
@@ -104,80 +113,101 @@ uv --version
 ```
 :::
 
-THen check if it works in your terminal:
+Then check if it works in your terminal:
 
 ```bash
 uv
 ```
 
+You should see something like this:
+
+```bash
+PS C:/.../BEcon_4222_Introduction_Programming> uv
+An extremely fast Python package manager.
+
+Usage: uv.exe [OPTIONS] <COMMAND>
+
+Commands:
+  auth     Manage authentication
+  run      Run a command or script
+  init     Create a new project
+  add      Add dependencies to the project
+  ...
+```
+
+<br>
 
 ### Install python using `uv`
 
-Now, we can install python. If Python is already installed on your system (on Windows mostly the case), uv will detect and use it without configuration.
+Now, we can install python. If Python is already installed on your system (on Windows mostly the case), `uv` will detect and use it without configuration.
 
-```
+```bash
 uv python install
 ```
 
-We will Python 3.
+We will use Python 3.
 
+<br>
 
-### Create a project (your "environment")
+### Create a project for the lecture (your "environment")
 
-Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with uv, which will manage our python version and our packages.
+Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with `uv`, which will manage our python version and our packages.
 
-use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_6243_Introduction_programming`. Then specify your version of python. We will use python 3.14
+In the terminal, use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14 (for this course, it does not matter much).
 
-```
-uv init --python 3.11.9
-```
-You should observe the creation of a .venv folder, and of different files:
-
-```
-BECON_6243_Introduction_programming/
-├── .venv/                    # Virtual environment folder
-├── .python-version          # Specifies Python version (3.11.9)
-├── pyproject.toml           # Project configuration file
-├── README.md                # Basic project documentation
-└── hello.py                 # Example Python script
+```bash
+uv init --python 3.14.1
 ```
 
-**Key files explained:**
-- **.venv/**: Contains the isolated Python environment
-- **.python-version**: Pins the Python version for this project
-- **pyproject.toml**: Defines project dependencies and settings
-- **hello.py**: A simple "Hello World" script to get you started
+You should observe the creation of different files:
 
-Now, we will install the following packages in our environment: `ipykernel`, `pandas`, `numpy`. Install them using `uv add `
-
+```bash
+BECON_4222_Introduction_programming/
+├── .python-version          # Specifies Python version (3.14.1) for this project
+├── pyproject.toml           # Project configuration file. Defines project dependencies and settings
+├── .gitignore               # Instructions for git. We will see this next week.
+├── README.md                #  README text file that contains your basic project documentation. Feel free to add some information. The syntax is `markdown` (`md`) syntax.
+└── main.py                  # Example Python script
 ```
+
+Now, we will install the following python packages in our environment: `ipykernel`, `pandas`, `numpy`. Install them using `uv add `
+
+```bash
 uv add ipykernel pandas numpy
 ```
 
-You should see your file `pyproject.toml` being updated under "dependencies".
+You should oberve different things happening:
+  - the creation of a `.venv` folder, which contains your isolated Python environment
+  - your file `pyproject.toml` being updated under "dependencies"
 
-
+<br>
 
 # Using a python script in VS code
 
-In VScode, observe in the left bar that you can access all your files. It is better to work from vscode directly in your directory. Either use the terminal and navigate to BECON_6243_Introduction_programming using `cd`. Then use
+Once in `BECON_4222_Introduction_programming`, open the `main.py`. The trick now is to **choose the right python interpreter**. Python interpreters are programs that read and execute your Python code. Each environment can have its own interpreter, which ensures you use the correct Python version and packages for your project. Since we defined our Python installation, we need to select the interpreter we chose from our `uv` environment.
 
-```
-code .
-```
+- In VS Code, use CTRL + SHIFT + P to open the palette. Then write "Select Python Interpreter". There will be a list of available Python interpreters. Chose the one corresponding to Python 3.14.1 in your `venv` (tagged "Workspace" by VS Code).
 
-to open VS code in your directory. You can also use File/Open Folder.
+![](../../assets/img/select_python_interpreter.png){width="640px"}
 
-Once in BECON_6243_Introduction_programming, open the hello.py. The trick now is to **choose the right python interpreter**. Python interpreters are... We need the one from our environment. Either CTRL + SHIFT + P to open the palette. Then write "Select Python Interpreter".
+- In VS Code, if you have a `.py` file open, check the Python interpreter at the bottom right and make sure you have the right one selected.
 
+![](../../assets/img/select_python_interpreter_bottomright.png){width="640px"}
 
+<br>
 
 ## Create a Python script
 
-Create a first python script called hello.py, which contains the command `print('hello world')`. Run it from the script and run it with uv using the following command:
+Create a first python script called `hello.py`, which contains the command `print('hello world')`. Run it from the script and run it with uv using the following command:
 
-```
+```bash
 uv run hello.py
 ```
 
+In the python file, right click and select "Run in Interactive Window". You've run your first Python script of the course. 🎊
 
+<br>
+
+## Using the terminal be like
+
+![](../../assets/img/terminal_meme.jpg){width="440px"}

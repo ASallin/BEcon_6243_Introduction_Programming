@@ -16,8 +16,10 @@ format:
 highlight-style: dracula
 cache: false
 echo: false
+eval: false
 execute:
   echo: true
+  eval: false
 ---
 
 
@@ -53,7 +55,7 @@ BECON_4222_Introduction_programming/
 
 Solution:
 
-```{bash}
+```bash
 git clone https://github.com/<org>/<their-repo>.git
 cd <their-repo>
 git status
@@ -69,7 +71,7 @@ Open `theMeaningOfEverything.py` (best if you use VSCode, but you can also use a
 
 Solution:
 
-```{bash}
+```bash
 git status
 git add theMeaningOfEverything.py # or git add .
 git commit -m "Fill in exercise"
@@ -89,6 +91,8 @@ After 1 minute, pull again. You should notice the change. Look at git status to 
 Now you should have an `theMeaningOfEverything.py` file that looks like this:
 
 ```{python}
+#| eval : false
+
 """
 The Meaning of Everything
 ==========================
@@ -112,7 +116,7 @@ print("Meaning of everything:", meaning_of_everything())
 # Test
 
 if a == b == c == meaning_of_everything():
-    print(\"All values are equal to 42, which proves that 42 is indeed the meaning of everything!\")
+    print("All values are equal to 42, which proves that 42 is indeed the meaning of everything!")
 ```
 
 Everything is synchronized. Git would send you the following message: "Your branch is up to date with 'origin/main'. Nothing to commit, working tree clean".
@@ -125,6 +129,7 @@ Since you now know the answer, change your answer to 42 in ``theMeaningOfEveryth
 Let's simulate another situation in which your local version conflicts with the remote version. Change the function in `theMeaningOfEverything.py` with another number (make sure you have one and only one empty line inbetween):
 
 ```{python}
+#| eval : false
 """
 The Meaning of Everything
 ==========================
@@ -211,7 +216,7 @@ Open ``theMeaningOfEverything.py``. Find the sentence: "The answer is close to 4
 Save the file and commit with a meaningful commit message.
 
 Solution:
-```{bash}
+```bash
 git add `theMeaningOfEverything.py`
 git commit -m "Answer the ultimate question"
 ```
@@ -222,7 +227,7 @@ git commit -m "Answer the ultimate question"
 Push the branch to GitHub. Open the repository on GitHub. You should now see two branches.
 
 Solution:
-```{bash}
+```bash
 git push -u origin answer-42
 ```
 
