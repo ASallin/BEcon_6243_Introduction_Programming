@@ -334,29 +334,28 @@ We will build on this setup throughout the course.
 
 ## Why python?
 
-Python is:
+Python is a good first (and second...) programming language.
 
 - easy to read and write
 - widely used in data science, economics, research, web development, automation, and AI
 - flexible enough for small scripts and large projects
 
-It is a good first (and second...) programming language.
 
+#### Python or R?
 
-## Python vs R: What the heck?
+"**It simply does not matter**. If you stick around in data science long enough, you will eventually get in touch with both languages and, in turn, learn both. There is a huge overlap of what you can do with either of those languages. The point is, if you just start doing analytics using a programming language, both languages are guaranteed to carry you a long way. There is no way to tell for sure which one will be the more dominant language 10 years from now, or whether both will be around holding their ground the way they do now." Matthias Bannert, "Research Software Engineering"
 
-#### The choice that does not matter
-
-tbd
 
 ## Environments in Python and R
 
-In R:
+A first striking difference (and a source of lots of sweat) between R and Python is dependency management.
+
+#### In R:
 
 - strong(er) standards (CRAN)
 - more backward compatibility
 
-In Python:
+#### In Python:
 
 - Python relies heavily on project-specific environments
 - Managing dependencies is essential

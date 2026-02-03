@@ -137,7 +137,7 @@
     "href": "course_materials/week_01/01b_gettingstarted.html#visual-studio-code",
     "title": "4,222 Introduction to Programming",
     "section": "Visual Studio Code",
-    "text": "Visual Studio Code\nVisual Studio Code (VS Code) is a lightweight but powerful code editor that behaves like a full IDE through extensions.\n\n\n\n\nfree and open source\navailable on Windows, macOS, and Linux\nwidely used in academia and industry\nwell suited for Python, R, and many other languages\nvery versatile and flexible!"
+    "text": "Visual Studio Code\nVisual Studio Code (VS Code) is a lightweight but powerful code editor that behaves like a full IDE through extensions.\n\n\n\n\nfree and open source\navailable on Windows, macOS, and Linux\nwidely used in academia and industry\nwell suited for Python, R, and many other languages\nvery versatile and flexible!\nintegrated terminal\nstrong Python support\nextensions for Git, notebooks, linters, and formatters\nintegrated Copilot!\nsyncs to all machines with a GitHub account"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#why-we-use-vs-code-in-this-course-remove",
@@ -158,7 +158,7 @@
     "href": "course_materials/week_01/01b_gettingstarted.html#why-python",
     "title": "4,222 Introduction to Programming",
     "section": "Why python?",
-    "text": "Why python?\nPython is:\n\neasy to read and write\nwidely used in data science, economics, research, web development, automation, and AI\nflexible enough for small scripts and large projects\n\nIt is a good first programming language."
+    "text": "Why python?\nPython is a good first (and second…) programming language.\n\neasy to read and write\nwidely used in data science, economics, research, web development, automation, and AI\nflexible enough for small scripts and large projects\n\nPython or R?\n“It simply does not matter. If you stick around in data science long enough, you will eventually get in touch with both languages and, in turn, learn both. There is a huge overlap of what you can do with either of those languages. The point is, if you just start doing analytics using a programming language, both languages are guaranteed to carry you a long way. There is no way to tell for sure which one will be the more dominant language 10 years from now, or whether both will be around holding their ground the way they do now.” Matthias Bannert, “Research Software Engineering”"
   },
   {
     "objectID": "course_materials/week_01/01b_gettingstarted.html#python-vs-r-what-the-heck",
@@ -1349,5 +1349,12 @@
     "title": "4,222 Introduction to Programming",
     "section": "Naming Conventions: 🐍, 🐫 or 🍢",
     "text": "Naming Conventions: 🐍, 🐫 or 🍢\n\n\n\nFollowing an established convention will not make you look like a complete novice. 😎🆒"
+  },
+  {
+    "objectID": "course_materials/week_01/01b_gettingstarted.html#first-setup-exercise-session-today",
+    "href": "course_materials/week_01/01b_gettingstarted.html#first-setup-exercise-session-today",
+    "title": "4,222 Introduction to Programming",
+    "section": "First setup (exercise session today)",
+    "text": "First setup (exercise session today)\n\nInstall VS Code\nOpen it once\nInstall the “Data Science” profile (File &gt; Preferences &gt; Profiles)\nExtensions to install:\n\nPython (Microsoft): For linting, IntelliSense, debugging, and testing\nPylance (Microsoft): type checking, code navigation, autocompletion\nRuff: for better linting, import sorting\nJupyter: runs notebooks directly in VS Code.\n\n\nWe will build on this setup throughout the course.\n*Linting is the process of analyzing code to identify potential errors, style violations, and code quality issues before running the program. Using linting tools can help detect problems such as syntax errors, unused variables, and code that doesn’t conform to style guidelines"
   }
 ]
