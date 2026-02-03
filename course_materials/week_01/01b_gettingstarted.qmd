@@ -31,7 +31,7 @@ library(purrr)
 
 ## Goals for today
 
-In the next 60 minutes, we will:
+In the next 60 minutes, we will learn the basics together:
 
 - learn what a **terminal** is and why we use it
 - set up an efficient (and professional) programming **environment** with an IDE
@@ -442,14 +442,14 @@ If you know R (which you do...), Python will feel familiar, but not identical.
 
 - indentation is part of the language
 - indexing starts at 0
-- Python prefers explicit, readable code
+- Python prefers **explicit, readable code**
 
 We will revisit these ideas throughout the course.
 
 
 ## Indentation
 
-In Python, indentation defines structure.
+In Python, indentation defines the structure of your code.
 
 Blocks of code are created by indentation, not by curly braces {} like in many other languages.
 
@@ -481,8 +481,6 @@ Common in programming, even if it feels unintuitive at first.
 ## For next time
 
 - install Git
-- create a GitHub account
-- create groups of five
 
 We will start using version control from the next lecture.
 
