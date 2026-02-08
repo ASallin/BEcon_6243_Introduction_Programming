@@ -3,3 +3,10 @@
 /.quarto/
 
 **/*.quarto_ipynb
+
+
+# Ignore all HTML files everywhere
+*.html
+
+# But keep HTML files inside _site/
+!_site/**/*.html
