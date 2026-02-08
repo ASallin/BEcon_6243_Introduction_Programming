@@ -179,9 +179,13 @@ As said, when you first open Terminal you typically are placed in your **home di
 ##### Main commands:
 
   - Check your current directory: `pwd ` (**p**rint **w**orking **d**irectory)
-  - List the files in the current directory: `ls` (macOS, Linux) or `dir` (Windows)
+  - List the files in the current directory: `ls` or `dir`
   - Move into and out of the directory: `cd dir` or `cd .. ` (**c**hange **d**irectory)
   - Running `cd` without arguments takes you to `~`
+  
+<!--
+@Aurelien - I just tested it and the commands work in Windows Powershell - thus, no system-specifics are needed. Feel free to delete the comment.
+-->
 
 <!--
 ##### Output from `dir`
@@ -198,10 +202,14 @@ lar--          04/01/2026    11:06                course_materials
 
 - Use Tab for auto-completion
 - Use arrow keys to browse command history
-- Use clear (macOS/Linux) or Ctrl+L to clear the screen
+- Use clear or Ctrl+L to clear the screen
 
 
 ## Working with files  in a terminal
+
+<!--
+@Aurelien - might be good to remember students that this is all relative to the directory and happens in the directory the shell is in.
+-->
 
 | Command | Description |
 |:--------|:------------|
@@ -243,6 +251,10 @@ Look at bradtraversy's [Common Terminal Commands](https://gist.github.com/bradtr
 
 
 ## Naming Conventions: 🐍, 🐫 or 🍢
+
+<!--
+@Aurelien - doesn't display full content (at least in my browser). Last line is not visible. Might be good to add a scroll option or reduce the width?
+-->
 
 <div style="text-align: center;">
   <img src="../../assets/img/userId_cases.jpeg" width="440px" />
@@ -319,6 +331,10 @@ Visual Studio Code (VS Code) is a lightweight but powerful code editor that beha
 
 ## First setup (exercise session today)
 
+<!--
+@Aurelien - do students know what linting is? will you introduce pre-commit hooks later?
+-->
+
 - Install VS Code
 - Open it once
 - Install the “Data Science” profile
@@ -370,6 +386,10 @@ A first striking difference (and a source of lots of sweat) between R and Python
 
 ## Virtual environment
 
+<!--
+@Aurelien - maybe one thing to check that I remember led to issues for me is that no packages should be installed outside of venvs. Otherwise, this can lead to conflicts and venvs not properly initializing. Don't know if you came accross it but maybe it's good to know should students encounter problems when setting up their venvs.
+-->
+
 A **virtual environment** is an isolated Python setup for a project.
 
 - install project-specific packages and python version for a specific project without affecting other projects
@@ -399,6 +419,9 @@ With uv, each project has:
 - a clear list of dependencies
 - reproducible setup
 
+<!--
+@Aurelien - Maybe add that pip freeze > requirements.txt is no longer needed in case some student uses that. (that's how understand it at least, I didn't work with uv before.)
+-->
 
 
 ## Getting started using `uv`
@@ -468,6 +491,10 @@ if x > 0:
 
 print("outside the block")
 ```
+
+<!--
+@Aurelien - Can enforce automatic indentation (at least in PyCharm) via Ctrl+alt+I
+-->
 
 
 ## Counting starts at 0
