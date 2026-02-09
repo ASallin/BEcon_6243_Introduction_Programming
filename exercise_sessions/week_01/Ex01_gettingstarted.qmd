@@ -53,14 +53,16 @@ Now install VS Code on your computer. Follow instructions online.
 
 Create the "data science profile". See here for an introduction: [https://code.visualstudio.com/docs/terminal/profiles](https://code.visualstudio.com/docs/terminal/profiles)
 
+<!-- @Aurelien: there is no data science profile mentioned - this certainly will lead to confusion. We should be specific what profile we expect students to set up. Also, we should tell them why such profiles are important and what they are needed for. -->
+  
+Get familiar with VS Code. Open a terminal (on Windows, you might want to choose between powershell or command prompt). Understand what extensions are. In VScode, you should observe a left bar. In this bar, there is a tab for git, for extensions, etc. The first tab is usually your file access tab.
+
 Install the following extensions:
 
   - **Python** (Microsoft): For linting, IntelliSense, debugging, and testing
   - **Pylance** (Microsoft): type checking, code navigation, autocompletion
   - **Ruff**: for better linting, import sorting
   - **Jupyter**: runs notebooks directly in VS Code.
-
-Get familiar with VS Code. Open a terminal (on Windows, you might want to choose between powershell or command prompt). Understand what extensions are. In VScode, you should observe a left bar. In this bar, there is a tab for git, for extensions, etc. The first tab is usually your file access tab.
 
 <br>
 
@@ -79,7 +81,7 @@ Get familiar with VS Code. Open a terminal (on Windows, you might want to choose
 
 # Install python via `uv`
 
-Go on the `uv` website for more information on how to install.
+You can use the following commands in your terminal to set everything up. Remember, left click works like copy-paste in many terminals. Go on the `uv` website for more information on how to install.
 
 ::: {.panel-tabset}
 
@@ -151,13 +153,16 @@ We will use Python 3.
 
 ### Create a project for the lecture (your "environment")
 
+<!-- @Aurelien: What is a bit annoying, is that it automatically creates a main.py file. Using python3 -m venv .venv. we could avoid this. I am wondering if, given that we stress the importance of having different environments for different projects, it would make more sense to create individual environments for every exercise? That way students get some practice in setting them up. Also, I have a follow-up question: in the bash, I must activate my environment in order to work in it. Does this happen with uv too? I don't see us doing it here so I conclude that uv is doing that in the background automatically based on the pwd. Happy to discuss :) -->
+
 Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with `uv`, which will manage our python version and our packages.
 
-In the terminal, use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14 (for this course, it does not matter much).
+In the terminal (not the Bash), use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14 (for this course, it does not matter much).
 
 ```bash
-uv init --python 3.14.1
+uv init --python 3.14.3
 ```
+
 
 You should observe the creation of different files:
 
@@ -170,11 +175,15 @@ BECON_4222_Introduction_programming/
 └── main.py                  # Example Python script
 ```
 
+<!-- @Aurelien - students can likely delete the main.py file (via the terminal?). -->
+
 Now, we will install the following python packages in our environment: `ipykernel`, `pandas`, `numpy`. Install them using `uv add `
 
 ```bash
 uv add ipykernel pandas numpy
 ```
+
+<!-- @Aurelien - it might make sense to work with requirements.txt for dependencies. Saves a lot of typing and allows exactly matching environments when students work in groups. -->
 
 You should oberve different things happening:
   - the creation of a `.venv` folder, which contains your isolated Python environment
