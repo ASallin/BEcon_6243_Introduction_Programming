@@ -51,7 +51,7 @@ where `BECON_4222_Introduction_programming` is the main folder, `materials` will
 
 Now install VS Code on your computer. Follow instructions online.
 
-Create the "data science profile". See here for an introduction: [https://code.visualstudio.com/docs/terminal/profiles](https://code.visualstudio.com/docs/terminal/profiles)
+Create the "data science profile". See here for an introduction: [https://code.visualstudio.com/docs/configure/profiles](https://code.visualstudio.com/docs/configure/profiles)
 
 <!-- @Aurelien: there is no data science profile mentioned - this certainly will lead to confusion. We should be specific what profile we expect students to set up. Also, we should tell them why such profiles are important and what they are needed for. -->
   
@@ -157,7 +157,7 @@ We will use Python 3.
 
 Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with `uv`, which will manage our python version and our packages.
 
-In the terminal (not the Bash), use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14 (for this course, it does not matter much).
+In the terminal, use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14 (for this course, it does not matter much).
 
 ```bash
 uv init --python 3.14.3
