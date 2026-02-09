@@ -1,8 +1,8 @@
 ---
-title: 'Exercise 2'
-subtitle: 'First commits with git'
-author: ""
-date: "2025-09-16"
+title: '4,222 Introduction to Programming'
+subtitle: 'Exercise Week 2: First commits in git'
+author: "Aurélien Sallin"
+date: "2025-02-27"
 code-line-numbers: false
 format:
   html:
@@ -19,6 +19,8 @@ echo: false
 execute:
   echo: true
 ---
+
+**in construction!!**
 
 
 ## Install `git` and the VSCode extension `Git Graph`
@@ -39,7 +41,7 @@ If you don’t have it installed already, it will prompt you to install it. If y
 
 Follow the step here to configurate your git installation.
 
-```{bash}
+```bash
 # Add your name
 git config --global user.name "Your Name"
 
@@ -50,7 +52,7 @@ git config --global user.email "your.email@unisg.ch"
 git config --global init.defaultbranch main
 ```
 
-```{bash}
+```bash
 # For Linux/Mac:
 git config --global core.autocrlf input
 
@@ -101,9 +103,10 @@ git init
 4. Create your first commit. Commit the new file with the commit message "text file created". Check with `git status`.
 5. Change the text in `humorforprogrammers.txt` to "*Code is absolutely not like humor.*" and save. Use `git diff` to see the actual unstaged changes.
 6. Add the file to the staging area and commit the new file with the commit message "text file modified".  Check with `git status` and with `git log`.
---
 7. Look at your sidebar in VSCode. You'll notice the `git` GUI. Now create a new file `hello.txt` containing "hello world!". Observe the sidebar. Using the GUI, add and commit, using a nice commit message.
 8. Delete `hello.txt` and restore it.
+
+### Solution:
 
 ```bash
 #| eval = false

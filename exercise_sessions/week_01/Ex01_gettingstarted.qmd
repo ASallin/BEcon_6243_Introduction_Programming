@@ -53,8 +53,7 @@ Now install VS Code on your computer. Follow instructions online.
 
 Create the "data science profile". See here for an introduction: [https://code.visualstudio.com/docs/configure/profiles](https://code.visualstudio.com/docs/configure/profiles)
 
-<!-- @Aurelien: there is no data science profile mentioned - this certainly will lead to confusion. We should be specific what profile we expect students to set up. Also, we should tell them why such profiles are important and what they are needed for. -->
-  
+
 Get familiar with VS Code. Open a terminal (on Windows, you might want to choose between powershell or command prompt). Understand what extensions are. In VScode, you should observe a left bar. In this bar, there is a tab for git, for extensions, etc. The first tab is usually your file access tab.
 
 Install the following extensions:
@@ -65,6 +64,10 @@ Install the following extensions:
   - **Jupyter**: runs notebooks directly in VS Code.
 
 <br>
+
+#### Solution:
+Tell them why such profiles are important and what they are needed for.
+
 
 # Use the terminal in VS Code
 
@@ -153,11 +156,19 @@ We will use Python 3.
 
 ### Create a project for the lecture (your "environment")
 
-<!-- @Aurelien: What is a bit annoying, is that it automatically creates a main.py file. Using python3 -m venv .venv. we could avoid this. I am wondering if, given that we stress the importance of having different environments for different projects, it would make more sense to create individual environments for every exercise? That way students get some practice in setting them up. Also, I have a follow-up question: in the bash, I must activate my environment in order to work in it. Does this happen with uv too? I don't see us doing it here so I conclude that uv is doing that in the background automatically based on the pwd. Happy to discuss :) -->
+<!-- @Aurelien: What is a bit annoying, is that it automatically creates a main.py file. Using python3 -m venv .venv. we could avoid this. I am wondering if, given that we stress the importance of having different environments for different projects, it would make more sense to create individual environments for every exercise? That way students get some practice in setting them up. Also, I have a follow-up question: in the bash, I must activate my environment in order to work in it. Does this happen with uv too? I don't see us doing it here so I conclude that uv is doing that in the background automatically based on the pwd. Happy to discuss :)
+
+
+@Lea: I like your suggestion of having an env for each exercise session (week01, week02, etc.). In uv you don't need to activate it in the same way as with pip. Either run `uv run main.py` or start `uv run python`. Or in vscode, make sure you select the right env.
+
+Feel free to make a suggestion. If not I'll change it myself.
+
+Regarding main.py: students can simply erase the file.
+-->
 
 Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with `uv`, which will manage our python version and our packages.
 
-In the terminal, use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14 (for this course, it does not matter much).
+In the terminal, use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14.3 (for this course, it does not matter much).
 
 ```bash
 uv init --python 3.14.3
@@ -172,10 +183,8 @@ BECON_4222_Introduction_programming/
 ├── pyproject.toml           # Project configuration file. Defines project dependencies and settings
 ├── .gitignore               # Instructions for git. We will see this next week.
 ├── README.md                #  README text file that contains your basic project documentation. Feel free to add some information. The syntax is `markdown` (`md`) syntax.
-└── main.py                  # Example Python script
+└── main.py                  # Example Python script, can be erased
 ```
-
-<!-- @Aurelien - students can likely delete the main.py file (via the terminal?). -->
 
 Now, we will install the following python packages in our environment: `ipykernel`, `pandas`, `numpy`. Install them using `uv add `
 
@@ -183,11 +192,20 @@ Now, we will install the following python packages in our environment: `ipykerne
 uv add ipykernel pandas numpy
 ```
 
-<!-- @Aurelien - it might make sense to work with requirements.txt for dependencies. Saves a lot of typing and allows exactly matching environments when students work in groups. -->
+<!-- @Aurelien - it might make sense to work with requirements.txt for dependencies. Saves a lot of typing and allows exactly matching environments when students work in groups.
+
+@Lea: actually, with uv you don't need this anymore. You have your .toml file and uv.lock that fulfill the same function. For later on with git and gitignore: we should push the pyproject.toml and the uv.lock files, but ignore the .venv folder. -->
 
 You should oberve different things happening:
   - the creation of a `.venv` folder, which contains your isolated Python environment
-  - your file `pyproject.toml` being updated under "dependencies"
+  - the creation of a `uv.lock` file, which "locks" the exact versions of all dependencies
+  - your file `pyproject.toml` being updated under "dependencies"`[^1]
+
+<br>
+
+# Open python using `uv`
+
+Open python with your terminal using `uv run python`.
 
 <br>
 
@@ -215,8 +233,12 @@ uv run hello.py
 
 In the python file, right click and select "Run in Interactive Window". You've run your first Python script of the course. 🎊
 
+
 <br>
 
 ## Using the terminal be like
 
 ![](../../assets/img/terminal_meme.jpg){width="440px"}
+
+
+[^1]: Note that `uv.lock` + `pyproject.toml` replace the traditional `requirements.txt` in `pip`. You can generate a requirements.txt file from uv using `uv pip freeze > requirements.txt`.
