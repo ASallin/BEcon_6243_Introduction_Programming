@@ -31,9 +31,9 @@ Create a directory for the course on your computer: `BECON_4222_Introduction_pro
 We will have the following folder structure throughout the course. Notice our personal preference for snake case.
 
 ```bash
-BECON_4222_Introduction_programming/
-├── materials/              # is empty for now, you will clone the git repo in week 3
-├── exercises/              # Student's own work
+Introduction_to_programming/
+├── github_course_materials/ # is empty for now, you will clone the git repo in week 3
+├── exercises/               # Student's own work
 │   ├── week_01/
 │   ├── week_02/
 │   ├── ...
