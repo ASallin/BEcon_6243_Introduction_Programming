@@ -86,6 +86,7 @@ Tell them why such profiles are important and what they are needed for.
 
 You can use the following commands in your terminal to set everything up. Remember, left click works like copy-paste in many terminals. Go on the `uv` website for more information on how to install.
 
+
 ::: {.panel-tabset}
 
 ### Windows
@@ -145,6 +146,8 @@ Commands:
 ### Install python using `uv`
 
 Now, we can install python. If Python is already installed on your system (on Windows mostly the case), `uv` will detect and use it without configuration.
+
+This should be done not in the uv branch but in the programs folder if they install python for the first time.
 
 ```bash
 uv python install
