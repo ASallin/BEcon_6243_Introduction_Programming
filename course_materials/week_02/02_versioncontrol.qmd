@@ -37,6 +37,8 @@ In this lecture, we will:
 - know basic in `git`
 - install and prepare `git`
 
+\
+
 In the next lecture, we will
 
 - create a github account
@@ -49,10 +51,12 @@ In the next lecture, we will
 Track your work. Collaborate on programming/data science projects.
 
 
-## Prerequisites
+## Prerequisites and foreword
 
 - git: The tool itself
 - VS Code with the git extension
+
+##### Git is complicated at first!!! I am trying to give you a good intuition for how it works and what it does. You will need to practice a lot to get used to it. Don't worry if you don't understand everything at first, just try to get the general idea and we will practice a lot in the exercises.
 
 
 # What is git?
@@ -179,13 +183,13 @@ A project in git is called a **repository** (or **repo** for short) and it alway
 Remember our folder structure:
 
 ```
-BECON_6243_Introduction_programming/
-├── materials/              # is empty for now, you will clone the git repo in week 3
-├── exercises/              # Student's own work
-│   ├── week01/
-│   ├── week02/
+Introduction_to_programming/
+├── github_course_materials/ # is empty for now, you will clone the git repo in week 3
+├── exercises/               # Student's own work
+│   ├── week_01/
+│   ├── week_02/
 │   ├── ...
-│   ├── week12/
+│   ├── week_12/
 ├── group_project/
 │   ├── ...
 ```
@@ -197,11 +201,11 @@ We will **initialize a repo** in the exercises folder. You will have to initiali
 
 This is done via the `init` command.
 
-In your terminal from VSCode, navigate to your cd BECON_6243_Introduction_programming/exercises. Then:
+In your terminal from VSCode, navigate to your `cd Introduction_to_programming/exercises`. Then:
 
 ```bash
 git init
-# Initialized empty Git repository in /Users/BECON_6243_Introduction_programming/exercises
+# Initialized empty Git repository in /Users/Introduction_to_programming/exercises
 ```
 
 With git init we turn the directory into a repository.

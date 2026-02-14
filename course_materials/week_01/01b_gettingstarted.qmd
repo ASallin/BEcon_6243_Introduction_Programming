@@ -31,18 +31,14 @@ library(purrr)
 
 ## Goals for today
 
-In the next 60 minutes, we will learn the basics together:
+In the next 45 minutes:
 
 - learn what a **terminal** is and why we use it
 - set up an efficient (and professional) programming **environment** with an IDE
 - install **Python** and understand environments
 - prepare everything needed for the next lectures
 
-
-## Vision
-
-Tooling: all the tools you need to work efficiently and in flow!
-
+We will address main concepts in the lecture, and then get hands-on in the guided exercise session this afternoon.
 
 
 # Using a terminal
@@ -57,12 +53,11 @@ The terminal is a text-based interface that allows you to interact directly with
 
 #### Some terminology:
 
-  - Terminal: the window where you type commands and see output
-  - Shell: the program that interprets your commands (e.g. bash, zsh, PowerShell)
+  - **Terminal**: the window where you type commands and see output
+  - **Shell**: the program that interprets your commands (e.g. bash, zsh, PowerShell)
 
 <br>
 
-###### You don’t need to worry about the difference at the beginning.
 
 
 ## Why use a terminal
@@ -103,7 +98,7 @@ Because of this, terminals are widely used in programming, data science, and res
 **How to open:**
 
 - Open the Start menu
-- Search for "PowerShell" or <br> "Windows Terminal"
+- Search for "Command Prompt" or <br> "Windows Terminal"
 :::
 
 :::
@@ -114,8 +109,7 @@ Because of this, terminals are widely used in programming, data science, and res
 - **PowerShell**: modern, powerful, widely used, CMD on steroids
 - **Windows Terminal**: a modern app that can host both
 
-For this course:
-Use PowerShell or Windows Terminal.
+For this course: Use Command Prompt in Windows Terminal.
 
 
 ## Opening your terminal
@@ -124,7 +118,7 @@ Use PowerShell or Windows Terminal.
   <img src="../../assets/img/terminal.png" alt="Terminal" width="500px" />
 </div>
 
-When you first open Terminal you typically are placed in your **home directory**. So let's start looking and moving around.
+When you first open Terminal you typically are placed in your **home directory**. You can navigate to other directories (folders) using terminal commands.
 
 
 
@@ -152,6 +146,7 @@ To access files, their location must be given with **paths**. Paths describe whe
 - example: `Documents/TheRedBookofWestmarch.txt`
 
 
+
 ## On files, paths, and shortcuts
 
 From the terminal, you can use shortcuts instead of absolute paths.
@@ -174,76 +169,123 @@ From the terminal, you can use shortcuts instead of absolute paths.
 
 ## Main terminal commands
 
-As said, when you first open Terminal you typically are placed in your **home directory**.
+When you first open Terminal you typically are placed in your **home directory**.
 
 ##### Main commands:
 
-  - Check your current directory: `pwd ` (**p**rint **w**orking **d**irectory)
-  - List the files in the current directory: `ls` or `dir`
-  - Move into and out of the directory: `cd dir` or `cd .. ` (**c**hange **d**irectory)
-  - Running `cd` without arguments takes you to `~`
-
-<!--
-##### Output from `dir`
-```bash
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-lar--          04/01/2026    09:33                .github
-lar--          04/01/2026    11:05                admin
-lar--          04/01/2026    11:06                course_materials
-```
--->
+<table style="width:100%; table-layout:fixed; font-size:0.75em;">
+  <colgroup>
+    <col style="width:45%;">
+    <col style="width:27.5%;">
+    <col style="width:27.5%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>bash/macOS</th>
+      <th>Command Prompt (Windows)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Check your current directory (<strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory)</td>
+      <td><code>pwd</code></td>
+      <td><code>cd</code></td>
+    </tr>
+    <tr>
+      <td>List the files in the current directory</td>
+      <td><code>ls</code></td>
+      <td><code>dir</code></td>
+    </tr>
+    <tr>
+      <td>Move into and out of the directory (<strong>c</strong>hange <strong>d</strong>irectory)</td>
+      <td><code>cd &lt;directory&gt;</code></td>
+      <td><code>cd &lt;directory&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Create a directory (<strong>m</strong>a<strong>k</strong>e <strong>dir</strong>ectory)</td>
+      <td><code>mkdir data</code></td>
+      <td><code>mkdir data</code></td>
+    </tr>
+  </tbody>
+</table>
 
 #####  Tips:
 
+- Running `cd` without arguments takes you to `~`
 - Use Tab for auto-completion
 - Use arrow keys to browse command history
-- Use clear or Ctrl+L to clear the screen
-
-
-## Working with files in a terminal
-
-| Command | Description |
-|:--------|:------------|
-| `mkdir data` | Create/**M**a**k**e a **dir**ectory called "data" |
-| `touch hello.txt` | Create an empty text file named "hello" |
-| `rm hello.txt` | Delete a file (Careful! Can't be undone!) |
-| `cat hello.txt` | Print contents of a file |
-| `nano hello.txt` | Edit a file |
-| `cp hello.txt hello_copy.txt` | Copy a file (`cp <source> <target>`) |
-| `mv hello.txt goodbye.txt` | Move a file (`mv <source> <target>`)  |
-
-<br>
-
-- All these commands work from wherever your shell is currently pointing.
+- All these commands work from wherever your shell is currently pointing
 - Look at Brad Traversy's [Common Terminal Commands](https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce)
 
 
-## Naming Conventions: 🐍, 🐫 or 🍢
+## Working with files in a terminal
+<table style="width:100%; table-layout:fixed; font-size:0.75em;">
+  <colgroup>
+    <col style="width:30%;">
+    <col style="width:35%;">
+    <col style="width:35%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>bash/macOS</th>
+      <th>Command Prompt (Windows)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create an empty file</td>
+      <td><code>touch hello.txt</code></td>
+      <td><code>echo. &gt; hello.txt</code></td>
+    </tr>
+    <tr>
+      <td>Delete a file</td>
+      <td><code>rm hello.txt</code></td>
+      <td><code>del hello.txt</code></td>
+    </tr>
+    <tr>
+      <td>Print file contents</td>
+      <td><code>cat hello.txt</code></td>
+      <td><code>type hello.txt</code></td>
+    </tr>
+    <tr>
+      <td>Edit a file</td>
+      <td><code>nano hello.txt</code></td>
+      <td><code>notepad hello.txt</code></td>
+    </tr>
+    <tr>
+      <td>Copy a file</td>
+      <td><code>cp hello.txt hello_copy.txt</code></td>
+      <td><code>copy hello.txt hello_copy.txt</code></td>
+    </tr>
+    <tr>
+      <td>Move/rename a file</td>
+      <td><code>mv hello.txt goodbye.txt</code></td>
+      <td><code>move hello.txt goodbye.txt</code></td>
+    </tr>
+  </tbody>
+</table>
 
-::: {.columns}
-::: {.column width="45%"}
+MacOS and Linux (`bash`, `zsh`) are unix systems. That's why Mac and Linux use the same terminal commands (ls, cat, etc.), while Windows uses different ones (dir, type, etc.).
 
-\
+
+## Naming Conventions
 
 #### Use Case Styles:
 
-- **`camelCase`** (`myFileName.py`)
-- **`snake_case`** (`my_file_name.py`)
-- **`kebab-case`**, (`my-file-name.py`)
+- 🐍 **`snake_case`** (`my_file_name.py`)
+- 🐫 **`camelCase`** (`myFileName.py`)
+- 🍢 **`kebab-case`** (`my-file-name.py`)
 
 
-:::
-::: {.column width="55%"}
+#### Don'ts:
 
-![](../../assets/img/casesOr-cases.jpg){width="600px"}
+  - **Do not use spaces** in folder or file names! Never.
+  - Avoid special characters (remember Data Handling and encoding nightmares).
+  - Make sure to **not switch styles** within a project.
 
-:::
-:::
 
-- **Do not use spaces** in folder or file names! Never.
-- Avoid special characters (remember Data Handling and encoding nightmares).
-- Make sure to **not switch styles** within a project.
 
 ## Naming Conventions: 🐍, 🐫 or 🍢
 
@@ -327,18 +369,9 @@ No, and no ;-)  I'll see with Franziska if she'll introduce it.
 -->
 
 - Install VS Code
-- Open it once
 - Install the “Data Science” profile
-  (File > Preferences > Profiles)
-- Extensions to install:
-  - Python (Microsoft): For linting, IntelliSense, debugging, and testing
-  - Pylance (Microsoft): type checking, code navigation, autocompletion
-  - Ruff: for better linting, import sorting
-  - Jupyter: runs notebooks directly in VS Code.
-
-We will build on this setup throughout the course.
-
-<!--*Linting is the process of analyzing code to identify potential errors, style violations, and code quality issues before running the program. Using linting tools can help detect problems such as syntax errors, unused variables, and code that doesn’t conform to style guidelines-->
+- Install extensions
+- Run first Python script
 
 
 
@@ -355,88 +388,17 @@ Python is a good first (and second...) programming language.
 
 #### Python or R?
 
-"**It simply does not matter**. If you stick around in data science long enough, you will eventually get in touch with both languages and, in turn, learn both. There is a huge overlap of what you can do with either of those languages. The point is, if you just start doing analytics using a programming language, both languages are guaranteed to carry you a long way. There is no way to tell for sure which one will be the more dominant language 10 years from now, or whether both will be around holding their ground the way they do now." Matthias Bannert, "Research Software Engineering"
-
-
-## Environments in Python and R
-
-A first striking difference (and a source of lots of sweat) between R and Python is dependency management.
-
-#### In R:
-
-- strong(er) standards (CRAN)
-- more backward compatibility
-
-#### In Python:
-
-- Python relies heavily on project-specific environments
-- Managing dependencies is essential
-- "Wild West": many packages, many versions
-- environments are critical to avoid conflicts
-
-
-## Virtual environment
-
-A **virtual environment** is an isolated Python setup for a project.
-
-- install project-specific packages and python version for a specific project without affecting other projects
-- use different versions across projects
-- avoid conflicts and broken setups, minimizes the risk of bad surprises
--  no packages should be installed outside of venvs. Otherwise, this can lead to conflicts.
-
-A **project** is simply a folder that contains your code, its configuration, and its dependencies.
-
-
-## Virtual Environment Manager: `uv`
-
-`uv` is a modern, fast Python package manager that simplifies working with environment:
-
-- manages virtual environments automatically
-- installs packages very fast
-- works consistently across systems
-- uses modern project standards
-
-(Replaces pip, pip-tools, and virtualenv.)
-
-
-## Virtual Environment Manager: `uv`
-
-With uv, each project has:
-
-- its own environment
-- a clear list of dependencies
-- reproducible setup
-
-(no need for `pip freeze > requirements.txt` anymore!)
-
-
-
-## Getting started using `uv`
-
-```{python}
-#| eval: false
-# Initialize a new project with its own environment
-uv init my_project
-cd my_project
-
-# Add dependencies (creates/updates pyproject.toml)
-uv add rich pandas
-
-# Run code (automatically uses the project's venv)
-uv run main.py
-```
-
-Project based on the pyproject.toml.
-
+"**It simply does not matter**. If you stick around in data science long enough, you will eventually get in touch with both languages and, in turn, learn both. There is a huge overlap of what you can do with either of those languages. The point is, if you just start doing analytics using a programming language, both languages are guaranteed to carry you a long way. There is no way to tell for sure which one will be the more dominant language 10 years from now, or whether both will be around holding their ground the way they do now." -- Matthias Bannert, "Research Software Engineering"
 
 
 
 ## Python in the shell or in a .py file
 
-You can use Python in two ways:
+You can use Python in different ways:
 
 - interactively in the terminal
 - by writing code in .py files
+- by writing code in .ipynb Jupyter or .qmd Quarto notebooks
 
 We will mainly work with .py files inside projects.
 
@@ -457,7 +419,8 @@ If you know R (which you do...), Python will feel familiar, but not identical.
 - indexing starts at 0
 - Python prefers **explicit, readable code**
 
-We will revisit these ideas throughout the course.
+<!-- here we're going more into details, but too much for students now. Python has less "weird" things than R, for instance in recycling vectors, or coercion, or compact writing loops with `apply` functions, etc. -->
+
 
 
 ## Indentation
@@ -495,11 +458,162 @@ In Python, many things start counting at 0 (**zero-based indexing**).
 Common in programming, even if it feels unintuitive at first.
 
 
+
+# Managing Python Projects
+
+## The Problem: Dependency Conflicts
+
+In R, you mostly use a single global library. In Python, **different projects need different python versions and package versions**.
+
+\
+
+#### What happens without isolation?
+
+Imagine you're working on two projects:
+
+- **Project A** (old research): needs `pandas` version 1.5
+- **Project B** (new assignment): needs `pandas` version 2.0
+
+If you install globally, updating for Project B **breaks Project A**!
+
+
+
+## A note on Python Interpreters
+
+A **Python interpreter** is the program that reads and executes your Python code.
+
+\
+
+Your computer may have zero, one, or even **multiple Python interpreters** installed:
+
+- **System Python**: might come pre-installed with your operating system (Windows, macOS, some Linux)
+- **User Python**: Python you install yourself (e.g. from python.org, Anaconda, or via `uv`)
+
+
+##### Each project can use a different interpreter with a different Python version (3.11, 3.12, etc.).
+
+
+## How R and Python differ
+
+::: {.columns}
+::: {.column width="50%"}
+**R:**
+
+  - Stronger standards for packages and package management (CRAN)
+  - More backward compatibility
+  - Global installation usually works
+:::
+::: {.column width="50%"}
+**Python:**
+
+  - Many packages, many python versions and interpreters
+  - "Wild West" ecosystem
+  - **Environments are essential**
+:::
+:::
+
+<!--Yes, this is more complex than R! The tradeoff: Python gives you precision and reproducibility at the cost of more upfront setup. Once you learn it, you'll appreciate having full control.-->
+
+
+
+## The Solution: Virtual Environments
+
+Think of each project as having its own **kitchen**:
+
+::: {.columns}
+::: {.column width="50%"}
+<div style="text-align: center;">
+  <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="280px" />
+</div>
+:::
+
+::: {.column width="50%"}
+<div style="text-align: center;">
+  <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="280px" />
+</div>
+:::
+:::
+
+- Each kitchen has its own tools, ingredients, and equipment
+- If one recipe needs an old oven and another needs a new one, they don't conflict
+
+**In Python:** A **virtual environment** is an isolated setup for each project with its own packages and Python version. This solves the conflict problem.
+
+
+
+## The Tool: `uv`
+
+##### `uv` is a modern Python package manager that makes environments **automatic and fast**
+
+- manages virtual environments automatically
+- installs packages very fast
+- ensures reproducible setups
+- works consistently across systems
+
+(Replaces pip, pip-tools, virtualenv, `pip freeze` or `requirements.txt`)
+
+\
+
+**⚠️ Important:** Never install packages globally with system Python! **Always use environments**.
+
+
+
+## Structure of a `uv` project
+
+:::{.columns}
+::: {.column width="50%"}
+
+#### Each `uv` project has 3 key files
+-  `.python-version`: python version to use
+-  `pyproject.toml`: dependencies
+-  `uv.lock`: exact versions of packages, automatically generated
+
+`uv` generates a `.venv/` folder containing the actual environment (don't delete it!).
+
+
+:::
+
+::: {.column width="50%"}
+
+<div style="text-align: center;">
+  <img src="../../assets/img/uv_projects.png" width="80%" />
+</div>
+
+:::
+:::
+
+
+
+## Getting started using `uv`
+
+```{python}
+#| eval: false
+# Initialize a new project with its own environment
+uv init my_project
+cd my_project
+
+# Add dependencies (creates/updates pyproject.toml)
+uv add rich pandas
+
+# When joining an existing project: install from lock file
+uv sync
+
+# Run code (automatically uses the project's venv)
+uv run main.py
+```
+
+`uv` will store in each environment the version of the interpreter, the packages, and will "lock" each package version for the project in a `lock` file.
+
+
+# Until next time
+
+
 ## For next time
 
-- install Git: we will start using version control from the next lecture.
+- install git: we will start using version control from the next lecture.
 
 
 ## References:
 
 - Matthias Bannert, [Research Software Engineering](https://rse-book.github.io/interaction.html)
+- Lecture notes of Basics of Computing Environments for Scientists, [Physics department of ETH Zurich](https://compenv.phys.ethz.ch/python/ecosystem_1/00_overview/)
