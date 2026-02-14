@@ -8,13 +8,11 @@ project:
   type: default
 format:
   html:
-    # template-partials:
-      #  - ../../style/title-slide.html
     smaller: true
     embed-resources: true
     self-contained: true
     slide-number: c
-    # theme: ../../style/hsgtheme.scss
+    theme: ../../assets/style/hsgtheme.scss
 highlight-style: dracula
 cache: false
 echo: false
@@ -24,9 +22,11 @@ execute:
 ---
 
 
-# Set up your course directory
+# Exercise 1: Set up your course directory
 
-Create a directory for the course on your computer: `BECON_4222_Introduction_programming` using the terminal. Use command prompt or powershell. From there, navigate to the path of your choice using `cd` and create the directory using `mkdir`.
+Create a directory for the course on your computer: `Introduction_to_programming` using the terminal. This directory will be your local directory containing your exercises, course materials, and group project. We suggest that we all work with the same directory names to make collaboration and debugging easier.
+
+To create the directory, use command prompt or powershell to first navigate to the path you want to create the directory using `cd`,  then create the directory using `mkdir`.
 
 We will have the following folder structure throughout the course. Notice our personal preference for snake case.
 
@@ -43,49 +43,156 @@ Introduction_to_programming/
 
 ```
 
-where `BECON_4222_Introduction_programming` is the main folder, `materials` will be created next week with git, and `group_project` will contain students' own work.
+where `Introduction_to_programming` is the main folder, `github_course_materials` will be created next week with git, and `group_project` will contain students' own work.
+
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+For instance, in Powershell, starting from my home directory `~`, which is `C:/Users/aurel`:
+
+```bash
+PS C:/Users/aurel> cd OneDrive/Documents  # Navigate to my documents directory
+PS C:/Users/aurel/OneDrive/Documents> mkdir Introduction_to_programming  # create my directory
+
+
+    Directory: C:/Users/aurel/OneDrive/Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/14/2026   7:36 AM                Introduction_to_programming
+
+
+PS C:/Users/aurel/OneDrive/Documents> cd Introduction_to_programming  # navigate to Introduction_to_programming
+PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> mkdir github_course_materials
+
+
+    Directory: C:/Users/aurel/OneDrive/Documents/Introduction_to_programming
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/14/2026   7:39 AM                github_course_materials
+
+
+PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> mkdir exercises
+
+
+    Directory: C:/Users/aurel/OneDrive/Documents/Introduction_to_programming
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/14/2026   7:39 AM                exercises
+
+
+PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> cd exercises
+PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises> mkdir week_01
+
+
+    Directory: C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/14/2026   7:39 AM                week_01
+
+
+PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises>
+```
+
+:::
 
 <br>
 
-# Install VS Code
+# Exercise 2: Install VS Code
 
-Now install VS Code on your computer. Follow instructions online.
-
-Create the "data science profile". See here for an introduction: [https://code.visualstudio.com/docs/configure/profiles](https://code.visualstudio.com/docs/configure/profiles)
+Now install VSCode on your computer. Follow instructions online. Then create the "data science profile" in VSCode. See here for an introduction: [https://code.visualstudio.com/docs/configure/profiles](https://code.visualstudio.com/docs/configure/profiles)
 
 
-Get familiar with VS Code. Open a terminal (on Windows, you might want to choose between powershell or command prompt). Understand what extensions are. In VScode, you should observe a left bar. In this bar, there is a tab for git, for extensions, etc. The first tab is usually your file access tab.
+## 2.1. Open VSCode in your course directory
 
-Install the following extensions:
+You should always make VS Code start from the directory your are working in. You can do this in the following ways:
 
-  - **Python** (Microsoft): For linting, IntelliSense, debugging, and testing
-  - **Pylance** (Microsoft): type checking, code navigation, autocompletion
-  - **Ruff**: for better linting, import sorting
-  - **Jupyter**: runs notebooks directly in VS Code.
+  1. Either use your terminal and navigate to `Introduction_to_programming` using `cd`. Then use `code .` to open VS code in your directory.
+  2. You can also open VS Code, and then use File/Open Folder.
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session. Here is a preview of how to open VS Code from the terminal:
+
+![](../../assets/img/open_vscode.gif){width="700px"}
+:::
+
+
+## 2.2. Open a terminal in VSCode
+
+An advantage of using VS Code is that you can use the terminal directly in VS Code. This allows you to have your code and your terminal in the same window, which is very convenient.
+
+In VS Code, open a terminal. Notice that you can choose between powershell or command prompt in Windowns, or bash in MacOs. In the terminal, understand where you are located. Find your current path directory using `pwd`.
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session. Here is a preview of how to open a terminal in VS Code:
+
+![](../../assets/img/open_terminal_vscode.gif){width="600px"}
+:::
+
+
+
+## 2.3. Get familiar with VS Code
+
+Take time to explore VS Code. Notice the left bar. In this bar, the first tab is to access all your files and folders within your directory (the directory in which VSCode is rooted). There is also a tab for extensions, etc.
+
+Install the following extensions (these help Python work better in VS Code):
+
+  - **Python** (Microsoft)
+  - **Pylance** (Microsoft)
+  - **Ruff**
+  - **Jupyter**
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session.
+:::
+
+## 2.4. Create and remove a file
+
+Using your terminal, create a file "hello.txt" in the `exercises/week_01` folder. Remove the file "hello.txt". After this, move your working directory back to `Introduction_to_programming`.
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+```bash
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> cd exercises/week_01
+
+# Solution 1 for bash users (git bash or MacOS): create the file hello.txt
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> touch hello.txt
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> rm hello.txt
+
+# Solution 2 for PowerShell users in Windows: create the file hello.txt
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> echo . > hello.txt
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> del hello.txt
+
+# Move back to Introduction_to_programming
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> cd ../..
+```
+
+:::
+
 
 <br>
 
-#### Solution:
-Tell them why such profiles are important and what they are needed for.
 
-
-# Use the terminal in VS Code
-
-0. You should always make VS Code start from the directory your are working in. You can do this in the following ways:
-
-    1. Either use your terminal and navigate to `BECON_4222_Introduction_programming` using `cd`. Then use `code .` to open VS code in your directory.
-    2. You can also open VS Code, and then use File/Open Folder.
-
-1. In VS Code, open a terminal. In the terminal, understand where you are located. Find your current path directory using `pwd`.
-2. Create a file "hello.txt" in the `exercises/week_01` folder. Remove the file "hello.txt".
-3. Finally, move your working directory to `BECON_4222_Introduction_programming`.
-
-<br>
-
-# Install python via `uv`
+# Exercise 3: Install python via `uv`
 
 You can use the following commands in your terminal to set everything up. Remember, left click works like copy-paste in many terminals. Go on the `uv` website for more information on how to install.
 
+## 3.1. Install `uv`
 
 ::: {.panel-tabset}
 
@@ -128,7 +235,7 @@ uv
 You should see something like this:
 
 ```bash
-PS C:/.../BEcon_4222_Introduction_Programming> uv
+PS C:/.../Introduction_to_programming> uv
 An extremely fast Python package manager.
 
 Usage: uv.exe [OPTIONS] <COMMAND>
@@ -143,11 +250,11 @@ Commands:
 
 <br>
 
-### Install python using `uv`
+## 3.2. [Optional] Install python using `uv`
 
 Now, we can install python. If Python is already installed on your system (on Windows mostly the case), `uv` will detect and use it without configuration.
 
-This should be done not in the uv branch but in the programs folder if they install python for the first time.
+`uv init` will automatically download Python to uv's managed directory if needed. If you need to install python, you can also do it manually with the following command:
 
 ```bash
 uv python install
@@ -157,31 +264,22 @@ We will use Python 3.
 
 <br>
 
-### Create a project for the lecture (your "environment")
+## 3.3. Create a project for the exercise
 
-<!-- @Aurelien: What is a bit annoying, is that it automatically creates a main.py file. Using python3 -m venv .venv. we could avoid this. I am wondering if, given that we stress the importance of having different environments for different projects, it would make more sense to create individual environments for every exercise? That way students get some practice in setting them up. Also, I have a follow-up question: in the bash, I must activate my environment in order to work in it. Does this happen with uv too? I don't see us doing it here so I conclude that uv is doing that in the background automatically based on the pwd. Happy to discuss :)
+Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. We will create a new environment for each exercise session. To create a closed environment, we use a project with `uv`, which will manage our python version and our packages.
 
+In the terminal, make sure you are in your working directory `~/Introduction_to_programming/exercises/week_01`. Use `uv init` to initialize your project. Then specify the version of python we will use in this environment. We will use python 3.14.1 (for this course, it does not matter much).
 
-@Lea: I like your suggestion of having an env for each exercise session (week01, week02, etc.). In uv you don't need to activate it in the same way as with pip. Either run `uv run main.py` or start `uv run python`. Or in vscode, make sure you select the right env.
-
-Feel free to make a suggestion. If not I'll change it myself.
-
-Regarding main.py: students can simply erase the file.
--->
-
-Remember, in the lecture we mentioned the importance of "closed environments" for Python. This is different than in R. To create a closed environment, we use a project with `uv`, which will manage our python version and our packages.
-
-In the terminal, use `uv init` to initialize your project. Make sure you are in your working directory `~/BECON_4222_Introduction_programming`. Then specify the version of python we will use in this environment. We will use python 3.14.3 (for this course, it does not matter much).
 
 ```bash
-uv init --python 3.14.3
+cd ~/OneDrive/Documents/Introduction_to_programming/exercises/week_01
+uv init --python 3.14.1
 ```
-
 
 You should observe the creation of different files:
 
 ```bash
-BECON_4222_Introduction_programming/
+Introduction_to_programming/exercises/week_01/
 ├── .python-version          # Specifies Python version (3.14.1) for this project
 ├── pyproject.toml           # Project configuration file. Defines project dependencies and settings
 ├── .gitignore               # Instructions for git. We will see this next week.
@@ -195,38 +293,74 @@ Now, we will install the following python packages in our environment: `ipykerne
 uv add ipykernel pandas numpy
 ```
 
-<!-- @Aurelien - it might make sense to work with requirements.txt for dependencies. Saves a lot of typing and allows exactly matching environments when students work in groups.
+You should observe different things happening:
 
-@Lea: actually, with uv you don't need this anymore. You have your .toml file and uv.lock that fulfill the same function. For later on with git and gitignore: we should push the pyproject.toml and the uv.lock files, but ignore the .venv folder. -->
-
-You should oberve different things happening:
   - the creation of a `.venv` folder, which contains your isolated Python environment
   - the creation of a `uv.lock` file, which "locks" the exact versions of all dependencies
   - your file `pyproject.toml` being updated under "dependencies"`[^1]
 
+
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session. Here is a preview of how to init uv and add dependencies:
+
+![](../../assets/img/init_uv.gif){width="800px"}
+![](../../assets/img/add_uv.gif){width="800px"}
+:::
+
 <br>
 
-# Open python using `uv`
+## 3.4 Open python using `uv`
 
 Open python with your terminal using `uv run python`.
 
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session. Here is a preview of how to run python in your `uv` environment:
+
+![](../../assets/img/runpython_uv.gif){width="800px"}
+:::
+
+
 <br>
 
-# Using a python script in VS code
+## 3.5 Using a python script in VS code
 
-Once in `BECON_4222_Introduction_programming`, open the `main.py`. The trick now is to **choose the right python interpreter**. Python interpreters are programs that read and execute your Python code. Each environment can have its own interpreter, which ensures you use the correct Python version and packages for your project. Since we defined our Python installation, we need to select the interpreter we chose from our `uv` environment.
+Once in `Introduction_to_programming/exercises/week_01`, open the `main.py`. The trick now is to **choose the right python interpreter**. Python interpreters are programs that read and execute your Python code. Each environment can have its own interpreter, which ensures you use the correct Python version and packages for your project. Since we defined our Python installation, we need to select the interpreter we chose from our `uv` environment.
 
-- In VS Code, use CTRL + SHIFT + P to open the palette. Then write "Select Python Interpreter". There will be a list of available Python interpreters. Chose the one corresponding to Python 3.14.1 in your `venv` (tagged "Workspace" by VS Code).
+- In VS Code, use CTRL/CMD + SHIFT + P to open the palette. Then write "Select Python Interpreter". There will be a list of available Python interpreters. Chose the one corresponding to Python 3.14.1 in your `venv` (tagged "Workspace" by VS Code).
+
+*Note*: it could be that VSCode does not detect your interpreter right away. In this case, first try to refresh VSCode using CTRL/CMD + SHIFT + P and then "Developer: Reload Window". Otherwise, select "Enter interpreter path" and navigate to the `venv` folder in your project, then select the `python.exe` file in this folder.
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session. Here is a preview of how to select the right python interpreter in VS Code:
 
 ![](../../assets/img/select_python_interpreter.png){width="640px"}
 
+:::
+
+
 - In VS Code, if you have a `.py` file open, check the Python interpreter at the bottom right and make sure you have the right one selected.
+
+::: {.callout-tip collapse="true"}
+#### Solution
+
+The solution to this exercise will be shown during the exercise session. Here is a preview of how to select the right python interpreter in VS Code:
 
 ![](../../assets/img/select_python_interpreter_bottomright.png){width="640px"}
 
+:::
+
+
+
 <br>
 
-## Create a Python script
+# Exercise 4: Create a Python script
 
 Create a first python script called `hello.py`, which contains the command `print('hello world')`. Run it from the script and run it with uv using the following command:
 

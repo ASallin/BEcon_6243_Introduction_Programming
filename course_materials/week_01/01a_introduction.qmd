@@ -6,15 +6,15 @@ date: "2026-02-20"
 code-line-numbers: false
 format:
   revealjs:
-    # template-partials:
-      #  - ../../style/title-slide.html
+    template-partials:
+      - ../../assets/style/title-slide.html
     width: 1280
     height: 720
     smaller: true
     embed-resources: true
     self-contained: true
     slide-number: c
-    # theme: ../../style/hsgtheme.scss
+    theme: ../../assets/style/hsgtheme.scss
 highlight-style: dracula
 cache: false
 echo: false
@@ -34,6 +34,8 @@ library(purrr)
 # Welcome to Introduction to Programming!
 
 
+# 3 slides what so what now what
+
 # Vision for this course
 
 ## It's an introductory course, and it is not
@@ -43,32 +45,77 @@ Introductory yes, but not in the traditional sense of the term.
 You know R, Data Handling, some of you did DSF, you are learning Econometrics.
 
 
-
-
-## By the end of the course, you will be able to...
-
-- [**Use essential tools for working with data**]{.green-bold} <br> We will work with the programming language R, but the concepts apply to any programming language.
-- [**Manage a data project from start to finish**]{.green-bold} <br> You will practice collecting, cleaning, and analyzing data to carry out a complete project in Economics (research, consulting, ...).
-- [**Formulate meaningful questions from data**]{.green-bold} <br> You will learn how to explore datasets and identify relevant questions.
-- [**Communicate insights effectively**]{.green-bold} <br> You will gain experience in presenting results clearly and persuasively.
+## Philosophy
 
 
 
-## Our commitment to these goals and to your learning process
+## Course concept: a note
 
-- **Transferrable skills**
-- **Hands-on approach**
-- **Emphasis on real-world relevance** <br>(caveat: this course is mandatory for Econ students, I have limited freedom in the syllabus)
-- **As much fun as possible (as coding can be fun...😎)**
+This is the first time we give this course.
 
+The materials are new, the syllabus is new.
 
 
-## Your commitment to the course
 
-- Prepare with reading, visit the lecture, recap key concepts in lecture notes (self-study)
-- Work on exercises, come to exercise session, tackle the tricky exercises together!
-- Code, code, and code. repeat...
-- 🤖 Use AI as a learning companion and sparring partner, not as a crutch 🩼! (more on that later)
+## Your team
+
+
+## Syllabus
+
+## Course structure
+
+
+
+# Organisation of the Course
+
+## Course concept: lectures
+
+- Lectures (Thursday morning)
+  - Background/Concepts
+  - Illustration of concepts
+  - Illustration of 'hands-on' approaches
+
+
+
+## Course concept: exercises
+
+- Exercise sheets (handed out every other week)
+  - Some conceptual questions
+  - Hands-on exercises/tutorials in Python
+
+- Starts at 12:30 without break until 14:00.
+- Q&A sessions for the group project: **08.05.2026** and **15.05.2016**.
+- Support from TA's will be offered only during the Q&A's sessions.
+
+
+
+
+
+# Examination
+
+## Exam information: group project
+
+
+
+#### Goals
+- Use real-world data in a project to practice and reinforce the concepts covered in the course.
+
+#### Project timeline
+
+- **May 20th, 23:59**: Submission.
+- **April 20th**: Project.
+- **April 20TH**: Deadline fro group formation. Group of five people.
+
+
+
+
+## Exam
+
+- **May 22nd, 10:15**: Exam.
+- Questions about project and course. Multiple choice for lectures, and essay questions to the group project.
+- You don't need to write code, but you need to understand code and interpret it.
+
+
 
 
 
@@ -104,93 +151,6 @@ You know R, Data Handling, some of you did DSF, you are learning Econometrics.
 
 
 
-# Organisation of the Course
-
-## Course concept: lectures
-
-- Lectures (Thursday morning)
-  - Background/Concepts
-  - Illustration of concepts
-  - Illustration of 'hands-on' approaches
-
-
-
-## Course concept: exercises
-
-- Exercise sheets (handed out every other week)
-  - Some conceptual questions
-  - Hands-on exercises/tutorials in R
-  - *First Exercises (set up R/RStudio) is available on StudyNet/Canvas today*
-
-
-
-## Course concept: exercise sessions
-
-- In-class exercise sessions (bi-weekly evening sessions)
-    - Discussion of exercises and additional input with Federica and Andrea
-    - Recap of concepts
-    - Q&A, support
-    - time for more coding!
-
-
-
-## Course concept: a note
-
-This is the first time we give this course.
-
-The materials are new, the syllabus is new.
-
-
-
-# The road ahead
-
-<!-- ## {class="inverse" background-image="../../img/roadahead2.jpg" background-size="100%" background-repeat="cover"} -->
-
-
-
-## Part I: Data (Science) fundamentals
-
-
-## Exam information
-
-The examination consists of two parts:
-
-- [Group written project]{.green-bold}, 35% of final grade.
-- [Short examination on the group project]{.green-bold}, 15% of final grade.
-- [Central written examination]{.green-bold}, 50% of final grade.
-
-
-## Exam information: group project
-
-#### Goals
-- Use real-world data in a project to practice and reinforce the concepts covered in the course.
-
-#### Project timeline
-
-- **October 16**: Release of Part 1 of the project (in lecture) and group formation.
-
-- **November 6, 23:59**: Intermediate submission (not graded).
-
-- **November 7**: Release of model solution for Part 1 and release of Part 2 of the project.
-
-- **December 11, 10:00**: Final submission (graded).
-
-The entire project will be evaluated after the final submission.
-
-
-
-## Exam information: short examination
-
-#### Goal
-Beyond the critical use of LLMs, students must demonstrate their own grasp of the material and ensure fair collaboration in group work, avoiding free-riding.
-
-<br>
-
-#### Important information
-- Date: **December 11th at the beginning of the lecture**.
-- Written examination: *digital, BYOD!*.
-- Duration: 20mn
-- This short exam consists of 2–3 questions about the homework project.
 
 
 
@@ -198,134 +158,17 @@ Beyond the critical use of LLMs, students must demonstrate their own grasp of th
 
 ## Core course resources
 
-- All information and materials (notes, slides, course sheet, syllabus, etc.) are available on Canvas.
-- Use github to be always updated about the course material
-
-  - Install git on your computer as explained [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-  - Clone the course repository using:
-
-
-```{r eval = FALSE}
-git clone https://github.com/ASallin/datahandling-lecture.git # to clone
-git checkout 2025 # to switch to the branch "2025*
-git pull origin 2025 # to update
-```
+- Everything on Canvas, then on github
+- Only one Canvas page
+- Questions only through Canvas forum
 
 
 
+# Contact for personal questions only!
 
-# How to best use AI for this course
+Aurélien : until Break
 
-<br>
+Franziska: after break.
 
-## 1. Use AI as your Learning Companion
+Do not contact the assistants.
 
-:::: {.columns}
-::: {.column width="55%"}
-❌ Ask AI to write full programs for you
-
-✅ Ask **structured questions** based on your own knowledge (idea: knowledge reinforcement)
-
-✅ Use AI to explore unknown and new approaches
-
-:::
-::: {.column width="45%"}
-
-You want to compute the mean of each element of the list `x`.
-
-```{r}
-x <- list(
-  c(1,2,3),
-  c(4,5,6)
-  )
-```
-
-- **Ask AI**:
-“I know that the function to compute the mean is `mean()`, and I know that it takes atomic vectors as argument. How do I apply the mean to each vector in the list? Give me two options, and explain pros/cons?”
-:::
-::::
-
-
-
-
-## 2. Use AI to better understand your code
-
-:::: {.columns}
-::: {.column width="55%"}
-
-✅ Use AI as a translator
-
-✅ Ask for explanations in plain language
-
-✅ Get step-by-step descriptions
-
-:::
-::: {.column width="45%"}
-
-You have the following piece of code:
-
-```{r}
-mat <- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3,
-             byrow = TRUE,
-             dimnames = list(c("row1", "row2"),
-                             c("C.1", "C.2", "C.3")))
-mat[1,] <- mat[1, ] + 10
-mat[1,] == mat[2,]
-```
-
-**Ask AI**:
-“Explain line by line what this R code does in plain English. What does the option `byrow = TRUE` do?”
-:::
-::::
-
-
-
-
-## 3. Use AI to debug
-
-:::: {.columns}
-::: {.column width="55%"}
-
-✅ Share error messages and context
-
-✅ Ask for possible causes
-
-✅ Ask for alternative solutions
-
-:::
-::: {.column width="45%"}
-
-You try:
-
-```r
-log("text")
-```
-
-R sends the following error message: "non-numeric argument to mathematical function"
-
-**Ask AI**:
-“Why does this error occur in R and how can I fix it?”
-:::
-::::
-
-
-## 4. Use AI as your Motivational Coach 🔥
-
-:::: {.columns}
-::: {.column width="55%"}
-✅ Ask for tips to stay motivated and understand **WHY** you're learning what you're learning
-
-✅ Ask for ways to make coding more enjoyable and directly relevant to your goals
-
-✅ Ask for ways to make your code and thinking process more like the product of experts
-
-:::
-::: {.column width="45%"}
-You don't see the point of learning to code functions and loops since AI can do it for you.
-
-**Ask AI**:
-“Why is learning to program functions important for an economist/data scientist? Give me some real-life examples. ”
-:::
-::::
-
-# Questions?

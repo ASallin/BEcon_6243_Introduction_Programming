@@ -206,8 +206,10 @@ lar--          04/01/2026    11:06                course_materials
 | Command | Description |
 |:--------|:------------|
 | `mkdir data` | Create/**M**a**k**e a **dir**ectory called "data" |
-| `touch hello.txt` | Create an empty text file named "hello" |
-| `rm hello.txt` | Delete a file (Careful! Can't be undone!) |
+| `touch hello.txt` | Create an empty text file named "hello" in `bash` |
+| `echo. > hello.txt` | Create an empty text file named "hello" in `PowerShell` |
+| `rm hello.txt` | Delete a file in `bash` (Careful! Can't be undone!) |
+| `del hello.txt` | Delete a file in `PowerShell` (Careful! Can't be undone!) |
 | `cat hello.txt` | Print contents of a file |
 | `nano hello.txt` | Edit a file |
 | `cp hello.txt hello_copy.txt` | Copy a file (`cp <source> <target>`) |
@@ -397,6 +399,20 @@ A **project** is simply a folder that contains your code, its configuration, and
 - uses modern project standards
 
 (Replaces pip, pip-tools, and virtualenv.)
+
+::: {.callout-note}
+### What is an isolated environment?
+
+An isolated environment keeps each project's packages separate:
+
+- **Without isolation:** If Project A needs `pandas` version 1.5 and Project B needs
+  `pandas` version 2.0, they conflict! ❌
+
+- **With isolation:** Each project has its own environment. Project A gets `pandas` 1.5,
+  Project B gets `pandas` 2.0. No conflicts! ✅
+
+This is different from R, where packages are typically installed globally.
+:::
 
 
 ## Virtual Environment Manager: `uv`
