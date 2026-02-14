@@ -113,7 +113,7 @@ The solution to this exercise will be shown during the exercise session. Here is
 
 An advantage of using VS Code is that you can use the terminal directly in VS Code. This allows you to have your code and your terminal in the same window, which is very convenient.
 
-In VS Code, open a terminal. Notice that you can choose between powershell or command prompt in Windowns, or bash in MacOs. In the terminal, understand where you are located. Find your current path directory using `pwd`.
+In VS Code, open a terminal. Notice that you can choose between powershell or command prompt in Windowns, or bash in MacOs. In the terminal, understand where you are located. Find your current path directory using `pwd` or `cd`.
 
 ::: {.callout-tip collapse="true"}
 #### Solution

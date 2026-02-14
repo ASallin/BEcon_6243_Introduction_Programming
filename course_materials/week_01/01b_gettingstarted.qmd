@@ -537,17 +537,13 @@ Think of each project as having its own **kitchen**:
 - Each kitchen has its own tools, ingredients, and equipment
 - If one recipe needs an old oven and another needs a new one, they don't conflict
 
-**In Python:** A **virtual environment** is an isolated setup for each project with its own packages and Python version. This solves the conflict problem!
+**In Python:** A **virtual environment** is an isolated setup for each project with its own packages and Python version. This solves the conflict problem.
 
 
 
 ## The Tool: `uv`
 
-`uv` is a modern Python package manager that makes environments **automatic and fast**.
-
-\
-
-**What `uv` does:**
+##### `uv` is a modern Python package manager that makes environments **automatic and fast**
 
 - manages virtual environments automatically
 - installs packages very fast
@@ -556,7 +552,9 @@ Think of each project as having its own **kitchen**:
 
 (Replaces pip, pip-tools, virtualenv, `pip freeze` or `requirements.txt`)
 
-**⚠️ Important:** Never install packages globally with system Python! Always use environments.
+\
+
+**⚠️ Important:** Never install packages globally with system Python! **Always use environments**.
 
 
 
