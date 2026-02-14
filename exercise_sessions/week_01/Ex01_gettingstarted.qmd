@@ -52,54 +52,36 @@ where `Introduction_to_programming` is the main folder, `github_course_materials
 For instance, in Powershell, starting from my home directory `~`, which is `C:/Users/aurel`:
 
 ```bash
-PS C:/Users/aurel> cd OneDrive/Documents  # Navigate to my documents directory
-PS C:/Users/aurel/OneDrive/Documents> mkdir Introduction_to_programming  # create my directory
+C:\Users\aurel>cd OneDrive/Documents
 
+C:\Users\aurel\OneDrive\Documents>mkdir Introduction_to_programming
 
-    Directory: C:/Users/aurel/OneDrive/Documents
+C:\Users\aurel\OneDrive\Documents>cd Introduction_to_programming
 
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming>mkdir github_course_materials
 
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   7:36 AM                Introduction_to_programming
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming>mkdir exercises
 
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming>cd exercises
 
-PS C:/Users/aurel/OneDrive/Documents> cd Introduction_to_programming  # navigate to Introduction_to_programming
-PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> mkdir github_course_materials
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming\exercises>mkdir week_01
 
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming\exercises>mkdir week_02
 
-    Directory: C:/Users/aurel/OneDrive/Documents/Introduction_to_programming
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming\exercises>cd ..
 
+C:\Users\aurel\OneDrive\Documents\Introduction_to_programming>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2E13-E362
 
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   7:39 AM                github_course_materials
+ Directory of C:\Users\aurel\OneDrive\Documents\Introduction_to_programming
 
-
-PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> mkdir exercises
-
-
-    Directory: C:/Users/aurel/OneDrive/Documents/Introduction_to_programming
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   7:39 AM                exercises
-
-
-PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> cd exercises
-PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises> mkdir week_01
-
-
-    Directory: C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   7:39 AM                week_01
-
-
-PS C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises>
+14/02/2026  10:28    <DIR>          .
+14/02/2026  10:27    <DIR>          ..
+14/02/2026  10:28    <DIR>          exercises
+14/02/2026  10:28    <DIR>          github_course_materials
+               0 File(s)              0 bytes
+               4 Dir(s)  304’672’137’216 bytes free
 ```
 
 :::
@@ -174,8 +156,8 @@ C:/Users/aurel/OneDrive/Documents/Introduction_to_programming> cd exercises/week
 C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> touch hello.txt
 C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> rm hello.txt
 
-# Solution 2 for PowerShell users in Windows: create the file hello.txt
-C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> echo . > hello.txt
+# Solution 2 for Command Prompt users in Windows: create the file hello.txt
+C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> echo. > hello.txt
 C:/Users/aurel/OneDrive/Documents/Introduction_to_programming/exercises/week_01> del hello.txt
 
 # Move back to Introduction_to_programming
